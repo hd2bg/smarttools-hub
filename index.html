@@ -1,545 +1,427 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="SmartTools Hub: free calculators, QR codes, image tools, text tools and productivity apps.">
-<title>SmartTools Hub - All Your Tools in One Place</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SmartTools Hub – Free Online Tools</title>
+<meta name="description" content="SmartTools Hub offers free online calculators, converters, QR codes, image tools, password generators and productivity tools.">
+<meta name="keywords" content="free online tools, calculator, QR code generator, image compressor, password generator, converter">
+<meta name="author" content="SmartTools Hub">
+<meta name="theme-color" content="#101827">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
 <style>
-:root{
---bg:#090f20;--panel:#111c34;--panel2:#172442;
---text:#f4f6ff;--muted:#a6b3d0;--border:#293b60;
---accent:#7650ff;--accent2:#08c8ff;--input:#0b152b;
---shadow:0 12px 35px #0004;
-}
-body.light{
---bg:#f2f5fc;--panel:#fff;--panel2:#edf1fb;
---text:#17223c;--muted:#66738d;--border:#dce3f0;
---accent:#6548ed;--accent2:#087cc8;--input:#f7f9fd;
---shadow:0 8px 25px #243c7010;
-}
+:root{--bg:#0b1220;--panel:#151f32;--text:#f4f7ff;--muted:#aab6ca;--accent:#7c5cff;--border:#29364d}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--text);
-font-family:Arial,sans-serif;transition:.2s}
-button,input,textarea,select{font:inherit}
-button{cursor:pointer}
-header{
-position:sticky;top:0;z-index:10;background:var(--panel);
-border-bottom:1px solid var(--border);padding:13px 5%;
-display:flex;justify-content:space-between;align-items:center;
-gap:15px;flex-wrap:wrap
-}
-.brand{display:flex;align-items:center;gap:12px}
-.logo{
-width:48px;height:48px;border-radius:14px;
-background:linear-gradient(135deg,#5927ff,#00bfff);
-display:grid;place-items:center;font-size:29px;
-box-shadow:0 0 22px #6845ff66
-}
-.brand h1{font-size:23px;margin:0}
-.brand h1 span{color:#a477ff}
-.brand small{color:var(--muted)}
-nav{display:flex;gap:8px;flex-wrap:wrap}
-nav a{color:var(--text);text-decoration:none;padding:10px;
-border-radius:8px;font-size:14px}
-nav a:hover{background:var(--panel2)}
-.header-button,.btn{
-background:linear-gradient(110deg,var(--accent),#4935d8);
-color:white;border:0;padding:11px 15px;border-radius:9px;
-font-weight:bold
-}
-.hero{
-text-align:center;padding:65px 15px 35px;
-background:radial-gradient(ellipse at 50% 0%,#37218a66,transparent 65%)
-}
-.hero h2{font-size:clamp(32px,6vw,58px);margin:0 0 14px}
-.gradient{background:linear-gradient(90deg,#28baff,#a36bff);
-color:transparent;background-clip:text}
-.hero p{color:var(--muted);font-size:17px}
-.searchbox{width:min(650px,94%);margin:25px auto 20px;
-display:flex;background:var(--panel);border:1px solid var(--border);
-border-radius:14px;overflow:hidden}
-.searchbox input{flex:1;min-width:0;border:0;background:transparent;
-color:var(--text);padding:17px;outline:none}
-.searchbox button{border-radius:0;padding:0 23px}
-.benefits{display:flex;justify-content:center;gap:25px;
-flex-wrap:wrap;color:var(--muted);font-size:13px}
-.benefits span:first-letter{color:var(--accent2)}
-main{max-width:1250px;margin:auto;padding:20px 22px 65px}
-.section-heading{display:flex;justify-content:space-between;
-align-items:center;gap:10px;flex-wrap:wrap;margin:25px 0 17px}
-.section-heading h2{margin:0;font-size:23px}
-#clock{color:var(--muted);font-size:13px}
-.categories{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:23px}
-.categories button{background:var(--panel);color:var(--muted);
-border:1px solid var(--border);padding:10px 15px;border-radius:22px}
-.categories button.active{background:var(--accent);color:white}
-.tools{display:grid;grid-template-columns:
-repeat(auto-fit,minmax(min(100%,260px),1fr));gap:17px}
-.card{background:var(--panel);border:1px solid var(--border);
-border-radius:15px;padding:20px;box-shadow:var(--shadow);
-min-width:0;scroll-margin-top:100px}
-.card h3{font-size:17px;margin:0 0 8px}
-.card p.desc{color:var(--muted);font-size:13px;min-height:30px}
-.card input,.card textarea,.card select{
-width:100%;background:var(--input);color:var(--text);
-border:1px solid var(--border);padding:11px;border-radius:8px;
-margin:6px 0;outline:none;min-width:0
-}
-.card textarea{resize:vertical;min-height:85px}
-.card button{margin:6px 3px 0 0}
-.btn{font-size:13px}
-.secondary{background:var(--panel2);color:var(--text);
-border:1px solid var(--border);padding:10px 13px;border-radius:8px}
-.result{color:var(--accent2);font-weight:bold;
-overflow-wrap:anywhere;min-height:18px;font-size:14px}
-.tool-icon{font-size:27px;margin-right:7px}
-.qr-output,.image-output{text-align:center;margin-top:12px}
-.qr-output img,.image-output img{max-width:100%;border-radius:8px}
-.task-list{padding:0;list-style:none}
-.task-list li{display:flex;align-items:center;gap:9px;
-padding:8px 0;border-bottom:1px solid var(--border);font-size:14px}
-.task-list li span{flex:1;overflow-wrap:anywhere}
-.task-list li.done span{text-decoration:line-through;color:var(--muted)}
-.delete{background:#9d3150;padding:6px 9px}
-.file-input{font-size:12px}
-.empty{text-align:center;color:var(--muted);display:none;padding:30px}
-.about{
-margin-top:35px;padding:28px;background:var(--panel);
-border:1px solid var(--border);border-radius:15px
-}
-.about p{color:var(--muted);line-height:1.7}
-footer{text-align:center;background:var(--panel);
-border-top:1px solid var(--border);padding:35px 15px;
-color:var(--muted);font-size:13px}
-footer a{color:var(--accent2);margin:0 9px;text-decoration:none}
-.hidden{display:none!important}
-@media(max-width:650px){
-header{justify-content:center}
-nav{justify-content:center}
-.hero{padding-top:42px}
-main{padding-left:14px;padding-right:14px}
-.searchbox button{padding:0 12px}
-}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,sans-serif;line-height:1.5}
+header{background:#111b2d;padding:22px 5%;display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap;border-bottom:1px solid var(--border)}
+.logo{font-size:24px;font-weight:bold;color:white}
+.logo span{color:#9b86ff}
+nav{display:flex;gap:9px;flex-wrap:wrap}
+button,a.nav{border:0;border-radius:9px;padding:10px 14px;background:var(--accent);color:white;cursor:pointer;text-decoration:none;font-weight:600}
+button:hover,a.nav:hover{opacity:.85}
+button.secondary{background:#29364d}
+main{max-width:1150px;margin:auto;padding:28px 18px}
+.hero{text-align:center;padding:45px 10px}
+.hero h1{font-size:clamp(30px,5vw,48px);margin:0 0 10px}
+.hero p,.muted{color:var(--muted)}
+.search{width:100%;max-width:550px;margin:20px auto;padding:14px;border-radius:10px;border:1px solid var(--border);background:var(--panel);color:white;font-size:16px;display:block}
+.filters{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:15px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.card{background:var(--panel);border:1px solid var(--border);border-radius:15px;padding:20px;min-width:0}
+.card h2,.card h3{margin-top:0}
+input,textarea,select{width:100%;padding:12px;margin:7px 0 12px;border:1px solid var(--border);border-radius:8px;background:#0d1728;color:white;font-size:15px}
+textarea{min-height:90px;resize:vertical}
+.result{padding:10px;background:#0d1728;border-radius:8px;overflow-wrap:anywhere;margin-top:10px}
+section.page{display:none}
+section.page.active{display:block}
+.tool{scroll-margin-top:20px}
+footer{text-align:center;padding:30px;color:var(--muted);border-top:1px solid var(--border);margin-top:40px}
+footer a{color:#b6a8ff;margin:0 8px}
+.small{font-size:13px;color:var(--muted)}
+hr{border:0;border-top:1px solid var(--border);margin:20px 0}
+@media(max-width:600px){header{justify-content:center}nav{justify-content:center}.hero{padding:25px 5px}}
 </style>
 </head>
 <body>
-
 <header>
- <div class="brand">
-  <div class="logo">⚡</div>
-  <div>
-   <h1>SmartTools <span>Hub</span></h1>
-   <small>Your everyday tools, all in one place.</small>
-  </div>
- </div>
- <nav>
-  <a href="#">Home</a>
-  <a href="#tools">Tools</a>
-  <a href="#about">About</a>
-  <a href="#contact">Contact</a>
- </nav>
- <button class="header-button" onclick="toggleTheme()" id="themeBtn">☀️ Light mode</button>
+  <div class="logo">SmartTools <span>Hub</span></div>
+  <nav>
+    <button onclick="showPage('home')">Home</button>
+    <button onclick="showPage('account')">Account</button>
+    <button onclick="showPage('about')">About</button>
+    <button onclick="showPage('privacy')">Privacy</button>
+    <button onclick="showPage('contact')">Contact</button>
+  </nav>
 </header>
 
-<section class="hero">
- <h2>Everything You Need,<br><span class="gradient">In One Place.</span></h2>
- <p>Discover free tools to make everyday tasks easier.</p>
- <div class="searchbox">
-  <input id="search" placeholder="🔍 Search for a tool..." oninput="filterTools()">
-  <button class="btn" onclick="filterTools()">Search</button>
- </div>
- <div class="benefits">
-  <span>✓ Free to use</span>
-  <span>✓ Fast and easy</span>
-  <span>✓ No sign-up</span>
-  <span>✓ Works on any device</span>
- </div>
+<main>
+<section id="home" class="page active">
+  <div class="hero">
+    <h1>All your smart tools in one place</h1>
+    <p>Free, fast and easy-to-use tools for everyday tasks.</p>
+    <input class="search" id="search" placeholder="Search for a tool..." oninput="filterTools()">
+    <div class="filters">
+      <button class="secondary" onclick="filterCategory('all')">All tools</button>
+      <button class="secondary" onclick="filterCategory('calculators')">Calculators</button>
+      <button class="secondary" onclick="filterCategory('converters')">Converters</button>
+      <button class="secondary" onclick="filterCategory('productivity')">Productivity</button>
+      <button class="secondary" onclick="filterCategory('other')">Other</button>
+    </div>
+  </div>
+
+  <div class="grid" id="tools">
+
+    <div class="card tool" data-category="calculators">
+      <h3>🧮 Calculator</h3>
+      <input id="calcInput" placeholder="Example: (12+5)*3">
+      <button onclick="calculate()">Calculate</button>
+      <div class="result" id="calcResult">Your answer will appear here.</div>
+    </div>
+
+    <div class="card tool" data-category="calculators">
+      <h3>Percentage Calculator</h3>
+      <label>What percentage?</label><input id="pct" type="number" placeholder="20">
+      <label>Of what number?</label><input id="pctOf" type="number" placeholder="150">
+      <button onclick="percentage()">Calculate</button>
+      <div class="result" id="pctResult"></div>
+    </div>
+
+    <div class="card tool" data-category="productivity">
+      <h3>📝 Word & Character Counter</h3>
+      <textarea id="wordText" placeholder="Type or paste your text..." oninput="countWords()"></textarea>
+      <div class="result" id="wordResult">Words: 0 | Characters: 0</div>
+    </div>
+
+    <div class="card tool" data-category="other">
+      <h3>🔐 Password Generator</h3>
+      <label>Password length</label><input id="passLength" type="number" min="6" max="64" value="16">
+      <button onclick="makePassword()">Generate password</button>
+      <div class="result" id="passResult"></div>
+      <button class="secondary" onclick="copyText('passResult')">Copy password</button>
+    </div>
+
+    <div class="card tool" data-category="converters">
+      <h3>📏 Length Converter</h3>
+      <input id="lengthValue" type="number" placeholder="Enter value">
+      <select id="lengthFrom">
+        <option value="m">Metres</option><option value="km">Kilometres</option>
+        <option value="cm">Centimetres</option><option value="mi">Miles</option>
+        <option value="ft">Feet</option><option value="in">Inches</option>
+      </select>
+      <select id="lengthTo">
+        <option value="ft">Feet</option><option value="m">Metres</option>
+        <option value="km">Kilometres</option><option value="cm">Centimetres</option>
+        <option value="mi">Miles</option><option value="in">Inches</option>
+      </select>
+      <button onclick="convertLength()">Convert</button>
+      <div class="result" id="lengthResult"></div>
+    </div>
+
+    <div class="card tool" data-category="converters">
+      <h3>🌡️ Temperature Converter</h3>
+      <input id="tempValue" type="number" placeholder="Temperature">
+      <select id="tempFrom"><option value="C">Celsius</option><option value="F">Fahrenheit</option></select>
+      <select id="tempTo"><option value="F">Fahrenheit</option><option value="C">Celsius</option></select>
+      <button onclick="convertTemp()">Convert</button>
+      <div class="result" id="tempResult"></div>
+    </div>
+
+    <div class="card tool" data-category="productivity">
+      <h3>🔠 Text Case Converter</h3>
+      <textarea id="caseText" placeholder="Enter text..."></textarea>
+      <button onclick="changeCase('upper')">UPPERCASE</button>
+      <button onclick="changeCase('lower')">lowercase</button>
+      <button class="secondary" onclick="changeCase('title')">Title Case</button>
+      <div class="result" id="caseResult"></div>
+    </div>
+
+    <div class="card tool" data-category="calculators">
+      <h3>🍕 Tip Calculator</h3>
+      <label>Bill amount</label><input id="bill" type="number" placeholder="50">
+      <label>Tip percentage</label><input id="tip" type="number" value="10">
+      <label>Number of people</label><input id="people" type="number" value="1">
+      <button onclick="tipCalc()">Calculate</button>
+      <div class="result" id="tipResult"></div>
+    </div>
+
+    <div class="card tool" data-category="other">
+      <h3>📱 QR Code Generator</h3>
+      <input id="qrText" placeholder="Enter text or a website URL">
+      <button onclick="makeQR()">Create QR code</button>
+      <div class="result" id="qrResult"></div>
+      <p class="small">QR creation uses the external QR Server service. Avoid entering private information.</p>
+    </div>
+
+    <div class="card tool" data-category="other">
+      <h3>🖼️ Image Compressor</h3>
+      <input id="compressFile" type="file" accept="image/*">
+      <label>Image quality</label><input id="quality" type="range" min=".1" max="1" step=".1" value=".7">
+      <button onclick="compressImage()">Compress image</button>
+      <div id="compressResult" class="result"></div>
+    </div>
+
+    <div class="card tool" data-category="other">
+      <h3>📐 Image Resizer</h3>
+      <input id="resizeFile" type="file" accept="image/*">
+      <input id="resizeWidth" type="number" placeholder="New width in pixels">
+      <input id="resizeHeight" type="number" placeholder="New height in pixels">
+      <button onclick="resizeImage()">Resize image</button>
+      <div id="resizeResult" class="result"></div>
+    </div>
+
+    <div class="card tool" data-category="productivity">
+      <h3>✅ To-do List</h3>
+      <input id="todoInput" placeholder="Add a task...">
+      <button onclick="addTodo()">Add task</button>
+      <ul id="todoList"></ul>
+    </div>
+
+    <div class="card tool" data-category="productivity">
+      <h3>📒 Notes</h3>
+      <textarea id="notes" placeholder="Write your notes here..."></textarea>
+      <button onclick="saveNotes()">Save notes</button>
+      <div id="notesStatus" class="result"></div>
+    </div>
+
+    <div class="card tool" data-category="other">
+      <h3>🕒 Live Clock</h3>
+      <div class="result" id="clock" style="font-size:26px;text-align:center"></div>
+    </div>
+  </div>
 </section>
 
-<main>
- <div class="section-heading" id="tools">
-  <h2>Explore Our Tools</h2>
-  <span id="clock"></span>
- </div>
+<section id="account" class="page">
+  <h1>Your Account</h1>
+  <div class="card">
+    <p>Create an account or sign in to SmartTools Hub.</p>
+    <label>Email address</label><input id="authEmail" type="email" placeholder="you@example.com">
+    <label>Password</label><input id="authPassword" type="password" placeholder="At least 6 characters">
+    <button onclick="signUp()">Create account</button>
+    <button class="secondary" onclick="signIn()">Sign in</button>
+    <button class="secondary" onclick="googleSignIn()">Continue with Google</button>
+    <button class="secondary" onclick="signOut()">Sign out</button>
+    <div id="authStatus" class="result">Connect Supabase to enable accounts.</div>
+    <p class="small">Your account is for signing in. To synchronise notes and tasks across devices, a separate cloud-saving feature must be configured.</p>
+  </div>
+</section>
 
- <div class="categories">
-  <button class="active" onclick="category('all',this)">All Tools</button>
-  <button onclick="category('calculators',this)">🧮 Calculators</button>
-  <button onclick="category('text',this)">📝 Text Tools</button>
-  <button onclick="category('converters',this)">🔄 Converters</button>
-  <button onclick="category('productivity',this)">💼 Productivity</button>
-  <button onclick="category('images',this)">🖼️ Image Tools</button>
- </div>
+<section id="about" class="page">
+  <h1>About SmartTools Hub</h1>
+  <div class="card">
+    <p>SmartTools Hub is a collection of useful online tools designed to make everyday tasks easier. Use calculators, converters, text tools, image utilities and productivity features in one place.</p>
+    <p>Our goal is to keep useful tools simple, accessible and easy to use.</p>
+  </div>
+</section>
 
- <div class="tools" id="toolGrid">
+<section id="privacy" class="page">
+  <h1>Privacy Policy</h1>
+  <div class="card">
+    <p><strong>Last updated: 9 November 2026</strong></p>
+    <h3>Information you provide</h3>
+    <p>If account registration is enabled, Supabase processes your email address and authentication information to provide sign-in services.</p>
+    <h3>Tools and information</h3>
+    <p>Most tools run in your browser. Notes and tasks are saved in your browser's local storage on that device. They are not automatically synchronised to your account.</p>
+    <h3>Third-party services</h3>
+    <p>The QR code tool sends the text you enter to QR Server to generate an image. Do not submit confidential information to this tool.</p>
+    <h3>Cookies and storage</h3>
+    <p>This website uses browser storage for local features. Supabase authentication may use browser storage to maintain your sign-in session.</p>
+    <h3>Your choices</h3>
+    <p>You can clear your browser storage to remove locally saved notes and tasks. You can contact us with privacy questions or requests.</p>
+    <h3>Contact</h3>
+    <p>Email: <a href="mailto:halimafatima0810@gmail.com">halimafatima0810@gmail.com</a></p>
+    <p class="small">Before launching publicly, review this policy and update it to reflect any analytics, advertising, or additional services you add.</p>
+  </div>
+</section>
 
- <!-- CALCULATOR -->
- <section class="card" data-category="calculators" data-name="calculator maths arithmetic">
-  <h3><span class="tool-icon">🧮</span>Calculator</h3>
-  <p class="desc">Perform everyday calculations.</p>
-  <input id="ca" type="number" placeholder="First number">
-  <select id="op">
-   <option value="+">Addition (+)</option>
-   <option value="-">Subtraction (-)</option>
-   <option value="*">Multiplication (×)</option>
-   <option value="/">Division (÷)</option>
-  </select>
-  <input id="cb" type="number" placeholder="Second number">
-  <button class="btn" onclick="calc()">Calculate</button>
-  <p class="result" id="cr"></p>
- </section>
-
- <!-- PERCENTAGE -->
- <section class="card" data-category="calculators" data-name="percentage calculator">
-  <h3><span class="tool-icon">📊</span>Percentage Calculator</h3>
-  <p class="desc">Find percentages of any number.</p>
-  <input id="pct" type="number" placeholder="Percentage">
-  <input id="pnum" type="number" placeholder="Your number">
-  <button class="btn" onclick="percentage()">Calculate</button>
-  <p class="result" id="pr"></p>
- </section>
-
- <!-- WORD COUNTER -->
- <section class="card" data-category="text" data-name="word counter character text">
-  <h3><span class="tool-icon">📝</span>Word Counter</h3>
-  <p class="desc">Count words and characters.</p>
-  <textarea id="wordText" placeholder="Type or paste your text..."></textarea>
-  <p class="result" id="wordResult">Words: 0 | Characters: 0</p>
- </section>
-
- <!-- PASSWORD -->
- <section class="card" data-category="productivity" data-name="password generator security">
-  <h3><span class="tool-icon">🔐</span>Password Generator</h3>
-  <p class="desc">Create a random secure password.</p>
-  <input id="passLen" type="number" min="8" max="64" value="16">
-  <button class="btn" onclick="password()">Generate Password</button>
-  <p class="result" id="passResult"></p>
-  <button class="secondary" onclick="copy('passResult')">Copy Password</button>
- </section>
-
- <!-- LENGTH -->
- <section class="card" data-category="converters" data-name="length kilometer miles converter">
-  <h3><span class="tool-icon">📏</span>Length Converter</h3>
-  <p class="desc">Convert kilometers and miles.</p>
-  <input id="lengthValue" type="number" placeholder="Enter distance">
-  <select id="lengthType">
-   <option value="km">Kilometers to miles</option>
-   <option value="mi">Miles to kilometers</option>
-  </select>
-  <button class="btn" onclick="lengthConvert()">Convert</button>
-  <p class="result" id="lengthResult"></p>
- </section>
-
- <!-- TEMPERATURE -->
- <section class="card" data-category="converters" data-name="temperature celsius fahrenheit converter">
-  <h3><span class="tool-icon">🌡️</span>Temperature Converter</h3>
-  <p class="desc">Convert Celsius and Fahrenheit.</p>
-  <input id="tempValue" type="number" placeholder="Temperature">
-  <select id="tempType">
-   <option value="cf">Celsius to Fahrenheit</option>
-   <option value="fc">Fahrenheit to Celsius</option>
-  </select>
-  <button class="btn" onclick="temperature()">Convert</button>
-  <p class="result" id="tempResult"></p>
- </section>
-
- <!-- CASE CONVERTER -->
- <section class="card" data-category="text" data-name="case converter uppercase lowercase">
-  <h3><span class="tool-icon">🔠</span>Case Converter</h3>
-  <p class="desc">Change text to uppercase or lowercase.</p>
-  <textarea id="caseText" placeholder="Enter text..."></textarea>
-  <button class="btn" onclick="caseChange('upper')">UPPERCASE</button>
-  <button class="secondary" onclick="caseChange('lower')">lowercase</button>
-  <button class="secondary" onclick="caseChange('title')">Title Case</button>
-  <p class="result" id="caseResult"></p>
- </section>
-
- <!-- TIP -->
- <section class="card" data-category="calculators" data-name="tip bill calculator split">
-  <h3><span class="tool-icon">💰</span>Tip Calculator</h3>
-  <p class="desc">Calculate tips and split a bill.</p>
-  <input id="bill" type="number" min="0" placeholder="Bill amount">
-  <input id="tip" type="number" min="0" value="10" placeholder="Tip percentage">
-  <input id="people" type="number" min="1" value="1" placeholder="People">
-  <button class="btn" onclick="tipCalc()">Calculate</button>
-  <p class="result" id="tipResult"></p>
- </section>
-
- <!-- QR CODE -->
- <section class="card" data-category="productivity" data-name="qr code generator scanner link">
-  <h3><span class="tool-icon">📱</span>QR Code Generator</h3>
-  <p class="desc">Turn links and text into QR codes.</p>
-  <input id="qrText" placeholder="Enter a link or text">
-  <button class="btn" onclick="makeQR()">Generate QR Code</button>
-  <div class="qr-output" id="qrOutput"></div>
- </section>
-
- <!-- IMAGE COMPRESSOR -->
- <section class="card" data-category="images" data-name="image compressor reduce compress photo">
-  <h3><span class="tool-icon">🖼️</span>Image Compressor</h3>
-  <p class="desc">Reduce image file size in your browser.</p>
-  <input class="file-input" id="compressFile" type="file" accept="image/*">
-  <label>Quality</label>
-  <input id="quality" type="range" min="20" max="95" value="75">
-  <button class="btn" onclick="compressImage()">Compress Image</button>
-  <div id="compressResult" class="image-output"></div>
- </section>
-
- <!-- IMAGE RESIZER -->
- <section class="card" data-category="images" data-name="image resizer resize photo">
-  <h3><span class="tool-icon">📐</span>Image Resizer</h3>
-  <p class="desc">Resize images to your preferred dimensions.</p>
-  <input class="file-input" id="resizeFile" type="file" accept="image/*">
-  <input id="resizeWidth" type="number" placeholder="New width in pixels">
-  <input id="resizeHeight" type="number" placeholder="New height in pixels">
-  <button class="btn" onclick="resizeImage()">Resize Image</button>
-  <div id="resizeResult" class="image-output"></div>
- </section>
-
- <!-- TODO -->
- <section class="card" data-category="productivity" data-name="todo task list planner">
-  <h3><span class="tool-icon">✅</span>To-Do List</h3>
-  <p class="desc">Create and manage your tasks.</p>
-  <input id="taskInput" placeholder="Add a new task...">
-  <button class="btn" onclick="addTask()">Add Task</button>
-  <ul class="task-list" id="taskList"></ul>
- </section>
-
- <!-- NOTES -->
- <section class="card" data-category="productivity" data-name="notes notebook save writing">
-  <h3><span class="tool-icon">📒</span>Notes App</h3>
-  <p class="desc">Write and save your notes in this browser.</p>
-  <textarea id="notesText" placeholder="Start writing your notes..."></textarea>
-  <button class="btn" onclick="saveNotes()">Save Notes</button>
-  <button class="secondary" onclick="clearNotes()">Clear</button>
-  <p class="result" id="notesStatus"></p>
- </section>
-
- <!-- LIVE CLOCK -->
- <section class="card" data-category="productivity" data-name="live clock time date">
-  <h3><span class="tool-icon">🕒</span>Live Clock</h3>
-  <p class="desc">Check your current time and date.</p>
-  <p id="liveTime" class="result" style="font-size:32px"></p>
-  <p id="liveDate"></p>
- </section>
-
- <!-- MORE -->
- <section class="card" data-category="productivity" data-name="more tools future updates">
-  <h3><span class="tool-icon">⭐</span>More Tools Coming Soon!</h3>
-  <p class="desc">We're always adding new tools to help you.</p>
-  <p>Stay tuned for more free features.</p>
-  <a href="#about" class="btn" style="display:inline-block;text-decoration:none">About Us</a>
- </section>
-
- </div>
- <p class="empty" id="empty">No tools found. Try another search.</p>
-
- <section class="about" id="about">
-  <h2>About SmartTools Hub</h2>
-  <p>SmartTools Hub brings useful everyday utilities together in one convenient place. Calculate, convert, create, organise and work smarter with free browser-based tools. No account is needed for the tools on this page.</p>
-  <p>Some features use your browser's local storage to save notes and tasks on your device. Image processing happens locally in your browser. QR generation uses an external service.</p>
- </section>
-
- <section class="about" id="contact">
-  <h2>Contact</h2>
-  <p>Have an idea for a new tool or found a problem? We'd love to hear your feedback.</p>
-  <p>Contact: <a href="mailto:YOUR-EMAIL@example.com">YOUR-EMAIL@example.com</a></p>
-  <p>Replace this placeholder with your real contact email before publishing.</p>
- </section>
+<section id="contact" class="page">
+  <h1>Contact Us</h1>
+  <div class="card">
+    <p>Have a question, suggestion or problem? Contact the SmartTools Hub team.</p>
+    <p>Email: <a href="mailto:halimafatima0810@gmail.com">halimafatima0810@gmail.com</a></p>
+    <a class="nav" href="mailto:halimafatima0810@gmail.com?subject=SmartTools%20Hub%20Enquiry">Send us an email</a>
+  </div>
+</section>
 </main>
 
 <footer>
- <div class="brand" style="justify-content:center">
-  <div class="logo">⚡</div>
-  <h2>SmartTools <span class="gradient">Hub</span></h2>
- </div>
- <p>Free tools. Simple solutions. Smarter everyday life.</p>
- <p>
-  <a href="#tools">Tools</a>
-  <a href="#about">About</a>
-  <a href="#contact">Contact</a>
- </p>
- <p>© 2026 SmartTools Hub. All rights reserved.</p>
+  <p>© <span id="year"></span> SmartTools Hub. All rights reserved.</p>
+  <a href="#" onclick="showPage('about');return false">About</a>
+  <a href="#" onclick="showPage('privacy');return false">Privacy Policy</a>
+  <a href="#" onclick="showPage('contact');return false">Contact</a>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
-const $=id=>document.getElementById(id);
-let selectedCategory='all';
+// SUPABASE SETUP: replace these two values with your own project details.
+const SUPABASE_URL = "YOUR_SUPABASE_PROJECT_URL";
+const SUPABASE_ANON_KEY = "YOUR_SUPABASE_PUBLISHABLE_OR_ANON_KEY";
+let supabaseClient = null;
 
-function toggleTheme(){
- document.body.classList.toggle('light');
- const light=document.body.classList.contains('light');
- $('themeBtn').textContent=light?'🌙 Dark mode':'☀️ Light mode';
- try{localStorage.setItem('sth-theme',light?'light':'dark')}catch(e){}
+if (SUPABASE_URL.startsWith("https://") && !SUPABASE_URL.includes("YOUR_") && !SUPABASE_ANON_KEY.includes("YOUR_")) {
+  supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 }
-try{
- if(localStorage.getItem('sth-theme')==='light'){
-  document.body.classList.add('light');
-  $('themeBtn').textContent='🌙 Dark mode';
- }
-}catch(e){}
 
-function calc(){
- const a=$('ca').value,b=$('cb').value,op=$('op').value;
- if(a===''||b==='')return $('cr').textContent='Enter both numbers.';
- if(op==='/'&&Number(b)===0)return $('cr').textContent='Cannot divide by zero.';
- const x=Number(a),y=Number(b);
- const n=op==='+'?x+y:op==='-'?x-y:op==='*'?x*y:x/y;
- $('cr').textContent='Result: '+n.toLocaleString();
-}
-function percentage(){
- if($('pct').value===''||$('pnum').value==='')return $('pr').textContent='Enter both numbers.';
- $('pr').textContent='Result: '+(Number($('pct').value)*Number($('pnum').value)/100).toLocaleString();
-}
-$('wordText').addEventListener('input',()=>{
- const t=$('wordText').value;
- $('wordResult').textContent='Words: '+(t.trim()?t.trim().split(/\s+/).length:0)+' | Characters: '+t.length;
-});
-function password(){
- const chars='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-_=+';
- const len=Number($('passLen').value);
- if(!Number.isInteger(len)||len<8||len>64)return $('passResult').textContent='Choose 8 to 64 characters.';
- const bytes=new Uint32Array(len);crypto.getRandomValues(bytes);
- $('passResult').textContent=Array.from(bytes,n=>chars[n%chars.length]).join('');
-}
-async function copy(id){
- const value=$(id).textContent;
- if(!value)return;
- try{await navigator.clipboard.writeText(value);alert('Copied!')}
- catch(e){alert('Select and copy the text manually.')}
-}
-function lengthConvert(){
- const v=$('lengthValue').value;
- if(v===''||!Number.isFinite(Number(v)))return $('lengthResult').textContent='Enter a valid number.';
- const n=Number(v),km=$('lengthType').value==='km';
- $('lengthResult').textContent=km?(n*0.621371).toFixed(3)+' miles':(n/0.621371).toFixed(3)+' kilometers';
-}
-function temperature(){
- const v=$('tempValue').value;
- if(v===''||!Number.isFinite(Number(v)))return $('tempResult').textContent='Enter a valid number.';
- const n=Number(v);
- $('tempResult').textContent=($('tempType').value==='cf'?n*9/5+32:(n-32)*5/9).toFixed(2)+'°';
-}
-function caseChange(type){
- const t=$('caseText').value;
- const result=type==='upper'?t.toUpperCase():type==='lower'?t.toLowerCase():t.toLowerCase().replace(/\b\w/g,c=>c.toUpperCase());
- $('caseResult').textContent=result;
-}
-function tipCalc(){
- const b=$('bill').value,t=$('tip').value,p=$('people').value;
- if(b===''||t===''||p===''||Number(b)<0||Number(t)<0||Number(p)<1)return $('tipResult').textContent='Enter valid values.';
- const total=Number(b)*(1+Number(t)/100);
- $('tipResult').textContent='Total: '+total.toFixed(2)+' | Per person: '+(total/Number(p)).toFixed(2);
-}
-function makeQR(){
- const v=$('qrText').value.trim();
- if(!v)return $('qrOutput').textContent='Enter some text or a link first.';
- const img=document.createElement('img');
- img.alt='Generated QR code';img.width=200;img.height=200;
- img.src='https://api.qrserver.com/v1/create-qr-code/?size=200x200&data='+encodeURIComponent(v);
- $('qrOutput').replaceChildren(img);
-}
-function downloadCanvas(canvas,name){
- canvas.toBlob(blob=>{
-  if(!blob)return alert('Could not create the image.');
-  const url=URL.createObjectURL(blob),a=document.createElement('a');
-  a.href=url;a.download=name;a.click();URL.revokeObjectURL(url);
- },'image/jpeg',.88);
-}
-function loadImage(file,callback){
- if(!file||!file.type.startsWith('image/'))return alert('Please choose an image file.');
- const img=new Image(),url=URL.createObjectURL(file);
- img.onload=()=>{callback(img);URL.revokeObjectURL(url)};
- img.onerror=()=>{URL.revokeObjectURL(url);alert('Could not load image.')};
- img.src=url;
-}
-function compressImage(){
- const file=$('compressFile').files[0];
- if(!file)return alert('Choose an image first.');
- loadImage(file,img=>{
-  const c=document.createElement('canvas');c.width=img.naturalWidth;c.height=img.naturalHeight;
-  c.getContext('2d').drawImage(img,0,0);
-  c.toBlob(blob=>{
-   if(!blob)return alert('Compression failed.');
-   const url=URL.createObjectURL(blob),a=document.createElement('a');
-   a.href=url;a.download='compressed-image.jpg';a.click();
-   $('compressResult').textContent='Original: '+(file.size/1024).toFixed(1)+' KB | New: '+(blob.size/1024).toFixed(1)+' KB';
-   URL.revokeObjectURL(url);
-  },'image/jpeg',Number($('quality').value)/100);
- });
-}
-function resizeImage(){
- const file=$('resizeFile').files[0],w=Number($('resizeWidth').value),h=Number($('resizeHeight').value);
- if(!file||!Number.isInteger(w)||!Number.isInteger(h)||w<1||h<1||w>8000||h>8000)return alert('Choose an image and enter valid dimensions (1–8000).');
- loadImage(file,img=>{
-  const c=document.createElement('canvas');c.width=w;c.height=h;
-  c.getContext('2d').drawImage(img,0,0,w,h);
-  c.toBlob(blob=>{
-   if(!blob)return alert('Resize failed.');
-   const url=URL.createObjectURL(blob),a=document.createElement('a');
-   a.href=url;a.download='resized-image.jpg';a.click();
-   $('resizeResult').textContent='Your resized image has been downloaded.';
-   URL.revokeObjectURL(url);
-  },'image/jpeg',.9);
- });
-}
-let tasks=[];
-try{tasks=JSON.parse(localStorage.getItem('sth-tasks')||'[]')}catch(e){}
-function renderTasks(){
- $('taskList').replaceChildren();
- tasks.forEach((task,i)=>{
-  const li=document.createElement('li');if(task.done)li.className='done';
-  const check=document.createElement('input');check.type='checkbox';check.checked=task.done;
-  check.addEventListener('change',()=>{tasks[i].done=check.checked;saveTasks()});
-  const span=document.createElement('span');span.textContent=task.text;
-  const del=document.createElement('button');del.className='delete';del.textContent='×';
-  del.addEventListener('click',()=>{tasks.splice(i,1);saveTasks()});
-  li.append(check,span,del);$('taskList').append(li);
- });
-}
-function saveTasks(){
- try{localStorage.setItem('sth-tasks',JSON.stringify(tasks))}catch(e){alert('Could not save tasks in this browser.')}
- renderTasks();
-}
-function addTask(){
- const t=$('taskInput').value.trim();if(!t)return;
- tasks.push({text:t,done:false});$('taskInput').value='';saveTasks();
-}
-$('taskInput').addEventListener('keydown',e=>{if(e.key==='Enter')addTask()});
-renderTasks();
-$('notesText').value=localStorage.getItem('sth-notes')||'';
-function saveNotes(){
- try{localStorage.setItem('sth-notes',$('notesText').value);$('notesStatus').textContent='✓ Notes saved in this browser.'}
- catch(e){$('notesStatus').textContent='Unable to save notes.'}
-}
-function clearNotes(){
- if(confirm('Clear your saved notes?')){
-  $('notesText').value='';localStorage.removeItem('sth-notes');$('notesStatus').textContent='Notes cleared.';
- }
-}
-function category(cat,button){
- selectedCategory=cat;
- document.querySelectorAll('.categories button').forEach(b=>b.classList.remove('active'));
- button.classList.add('active');filterTools();
+function showPage(id){
+  document.querySelectorAll("section.page").forEach(p=>p.classList.remove("active"));
+  document.getElementById(id).classList.add("active");
+  window.scrollTo(0,0);
 }
 function filterTools(){
- const q=$('search').value.toLowerCase();let count=0;
- document.querySelectorAll('.card[data-category]').forEach(card=>{
-  const show=(selectedCategory==='all'||card.dataset.category===selectedCategory)&&
-  card.dataset.name.includes(q);
-  card.classList.toggle('hidden',!show);if(show)count++;
- });
- $('empty').style.display=count?'none':'block';
+  const q=document.getElementById("search").value.toLowerCase();
+  document.querySelectorAll(".tool").forEach(t=>{
+    t.style.display=t.innerText.toLowerCase().includes(q)?"block":"none";
+  });
 }
-function updateClock(){
- const now=new Date();
- $('clock').textContent=now.toLocaleTimeString();
- $('liveTime').textContent=now.toLocaleTimeString();
- $('liveDate').textContent=now.toLocaleDateString(undefined,{weekday:'long',year:'numeric',month:'long',day:'numeric'});
+function filterCategory(cat){
+  document.getElementById("search").value="";
+  document.querySelectorAll(".tool").forEach(t=>{
+    t.style.display=cat==="all"||t.dataset.category===cat?"block":"none";
+  });
 }
-updateClock();setInterval(updateClock,1000);
+function calculate(){
+  const s=document.getElementById("calcInput").value.trim();
+  if(!/^[0-9+\-*/().%\s]+$/.test(s)){document.getElementById("calcResult").textContent="Please enter a valid maths expression.";return;}
+  try{
+    const result=Function('"use strict";return ('+s+')')();
+    document.getElementById("calcResult").textContent=Number.isFinite(result)?result:"Invalid calculation";
+  }catch(e){document.getElementById("calcResult").textContent="Invalid calculation";}
+}
+function percentage(){
+  const p=Number(document.getElementById("pct").value),n=Number(document.getElementById("pctOf").value);
+  document.getElementById("pctResult").textContent=(p*n/100).toLocaleString();
+}
+function countWords(){
+  const s=document.getElementById("wordText").value;
+  const words=s.trim()?s.trim().split(/\s+/).length:0;
+  document.getElementById("wordResult").textContent=`Words: ${words} | Characters: ${s.length} | Characters without spaces: ${s.replace(/\s/g,"").length}`;
+}
+function makePassword(){
+  const len=Math.max(6,Math.min(64,Number(document.getElementById("passLength").value)||16));
+  const chars="ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz23456789!@#$%&*?";
+  const random=new Uint32Array(len);crypto.getRandomValues(random);
+  document.getElementById("passResult").textContent=Array.from(random,x=>chars[x%chars.length]).join("");
+}
+function copyText(id){
+  const value=document.getElementById(id).innerText;
+  if(value)navigator.clipboard.writeText(value).then(()=>alert("Copied!")).catch(()=>alert("Copy was not available."));
+}
+const metres={m:1,km:1000,cm:.01,mi:1609.344,ft:.3048,in:.0254};
+function convertLength(){
+  const v=Number(document.getElementById("lengthValue").value);
+  const a=document.getElementById("lengthFrom").value,b=document.getElementById("lengthTo").value;
+  document.getElementById("lengthResult").textContent=Number.isFinite(v)?(v*metres[a]/metres[b]).toLocaleString(undefined,{maximumFractionDigits:6}):"Enter a number.";
+}
+function convertTemp(){
+  let v=Number(document.getElementById("tempValue").value);
+  const a=document.getElementById("tempFrom").value,b=document.getElementById("tempTo").value;
+  if(a===b){}else if(a==="C")v=v*9/5+32;else v=(v-32)*5/9;
+  document.getElementById("tempResult").textContent=v.toFixed(2)+"°"+b;
+}
+function changeCase(type){
+  let s=document.getElementById("caseText").value;
+  if(type==="upper")s=s.toUpperCase();
+  if(type==="lower")s=s.toLowerCase();
+  if(type==="title")s=s.toLowerCase().replace(/\b\w/g,c=>c.toUpperCase());
+  document.getElementById("caseResult").textContent=s;
+}
+function tipCalc(){
+  const bill=Number(document.getElementById("bill").value),tip=Number(document.getElementById("tip").value),people=Math.max(1,Number(document.getElementById("people").value)||1);
+  const total=bill*(1+tip/100);
+  document.getElementById("tipResult").textContent=`Total: ${total.toFixed(2)} | Each person: ${(total/people).toFixed(2)}`;
+}
+function makeQR(){
+  const value=document.getElementById("qrText").value.trim();
+  if(!value)return;
+  const img=document.createElement("img");
+  img.alt="Generated QR code";img.width=200;img.height=200;
+  img.src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data="+encodeURIComponent(value);
+  const area=document.getElementById("qrResult");area.replaceChildren(img);
+}
+function loadImage(file,callback){
+  if(!file||!file.type.startsWith("image/")){alert("Please choose an image.");return;}
+  const url=URL.createObjectURL(file),img=new Image();
+  img.onload=()=>callback(img,url);img.onerror=()=>{URL.revokeObjectURL(url);alert("Could not load image.");};
+  img.src=url;
+}
+function compressImage(){
+  const file=document.getElementById("compressFile").files[0];
+  loadImage(file,(img,url)=>{
+    const c=document.createElement("canvas");c.width=img.width;c.height=img.height;
+    c.getContext("2d").drawImage(img,0,0);
+    c.toBlob(blob=>{
+      URL.revokeObjectURL(url);
+      if(!blob)return;
+      const link=document.createElement("a");link.href=URL.createObjectURL(blob);link.download="compressed-image.jpg";link.textContent="Download compressed image";
+      const area=document.getElementById("compressResult");area.replaceChildren(link);
+      const info=document.createElement("p");info.textContent=`Original: ${(file.size/1024).toFixed(1)} KB | Compressed: ${(blob.size/1024).toFixed(1)} KB`;area.append(info);
+    },"image/jpeg",Number(document.getElementById("quality").value));
+  });
+}
+function resizeImage(){
+  const file=document.getElementById("resizeFile").files[0];
+  const w=Number(document.getElementById("resizeWidth").value),h=Number(document.getElementById("resizeHeight").value);
+  if(!w||!h||w<1||h<1||w>6000||h>6000){alert("Enter a width and height between 1 and 6000.");return;}
+  loadImage(file,(img,url)=>{
+    const c=document.createElement("canvas");c.width=w;c.height=h;
+    c.getContext("2d").drawImage(img,0,0,w,h);URL.revokeObjectURL(url);
+    c.toBlob(blob=>{
+      if(!blob)return;
+      const link=document.createElement("a");link.href=URL.createObjectURL(blob);link.download="resized-image.png";link.textContent="Download resized image";
+      document.getElementById("resizeResult").replaceChildren(link);
+    },"image/png");
+  });
+}
+let todos=JSON.parse(localStorage.getItem("sth_todos")||"[]");
+function renderTodos(){
+  const ul=document.getElementById("todoList");ul.replaceChildren();
+  todos.forEach((t,i)=>{
+    const li=document.createElement("li");
+    const label=document.createElement("span");label.textContent=t;
+    const del=document.createElement("button");del.textContent="Remove";del.className="secondary";del.onclick=()=>{todos.splice(i,1);saveTodos();};
+    li.append(label," ",del);ul.append(li);
+  });
+}
+function addTodo(){
+  const el=document.getElementById("todoInput"),v=el.value.trim();if(!v)return;
+  todos.push(v);el.value="";saveTodos();
+}
+function saveTodos(){localStorage.setItem("sth_todos",JSON.stringify(todos));renderTodos();}
+function saveNotes(){
+  localStorage.setItem("sth_notes",document.getElementById("notes").value);
+  document.getElementById("notesStatus").textContent="Notes saved on this device.";
+}
+document.getElementById("notes").value=localStorage.getItem("sth_notes")||"";
+function tickClock(){document.getElementById("clock").textContent=new Date().toLocaleTimeString();}
+setInterval(tickClock,1000);tickClock();renderTodos();
+document.getElementById("year").textContent=new Date().getFullYear();
+
+async function signUp(){
+  if(!supabaseClient){authMessage("Add your Supabase URL and key in the code first.");return;}
+  const email=document.getElementById("authEmail").value,password=document.getElementById("authPassword").value;
+  const {error}=await supabaseClient.auth.signUp({email,password});
+  authMessage(error?error.message:"Account request sent. Check your email if confirmation is enabled.");
+}
+async function signIn(){
+  if(!supabaseClient){authMessage("Add your Supabase URL and key in the code first.");return;}
+  const email=document.getElementById("authEmail").value,password=document.getElementById("authPassword").value;
+  const {error}=await supabaseClient.auth.signInWithPassword({email,password});
+  authMessage(error?error.message:"You are signed in!");
+}
+async function googleSignIn(){
+  if(!supabaseClient){authMessage("Add your Supabase URL and key in the code first.");return;}
+  const {error}=await supabaseClient.auth.signInWithOAuth({provider:"google",options:{redirectTo:location.origin+location.pathname}});
+  if(error)authMessage(error.message);
+}
+async function signOut(){
+  if(!supabaseClient){authMessage("Supabase is not configured yet.");return;}
+  const {error}=await supabaseClient.auth.signOut();
+  authMessage(error?error.message:"You have signed out.");
+}
+function authMessage(message){document.getElementById("authStatus").textContent=message;}
+if("serviceWorker" in navigator && location.protocol.startsWith("http")){
+  window.addEventListener("load",()=>navigator.serviceWorker.register("./sw.js").catch(console.error));
+}
 </script>
 </body>
 </html>
