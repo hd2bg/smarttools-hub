@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="SmartTools Hub offers free online calculators, word counters, password generators and unit converters.">
+<title>SmartTools Hub - Free Online Tools</title>
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;font-family:Arial,sans-serif;
+  background:#f5f7fc;color:#172033;
+}
+header{
+  background:#142b55;color:white;padding:25px 7%;
+}
+header h1{margin:0;font-size:27px}
+header p{color:#c8d6ef;margin-bottom:0}
+.hero{text-align:center;padding:45px 20px 25px}
+.hero h2{font-size:34px;margin-bottom:10px}
+.hero p{color:#64748b}
+.search{
+  width:min(500px,90%);padding:14px;
+  border:1px solid #d5ddeb;border-radius:10px;
+  font-size:16px;margin-top:15px;
+}
+main{max-width:1050px;margin:auto;padding:20px}
+.tools{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:18px;
+}
+.card{
+  background:white;padding:22px;border-radius:14px;
+  box-shadow:0 3px 15px #142b5510;
+}
+.card h3{margin-top:0}
+.card input,.card textarea,.card select{
+  width:100%;padding:11px;margin:7px 0;
+  border:1px solid #ccd5e3;border-radius:8px;
+  font-size:15px;
+}
+.card textarea{min-height:90px;resize:vertical}
+button{
+  background:#2864dc;color:white;border:0;
+  padding:11px 15px;border-radius:8px;
+  cursor:pointer;font-size:15px;
+}
+button:hover{background:#174db8}
+.result{font-weight:bold;color:#1761c8;overflow-wrap:anywhere}
+footer{text-align:center;padding:30px;color:#64748b}
+footer a{color:#2864dc;margin:0 8px}
+</style>
+</head>
+<body>
+<header>
+  <h1>⚡ SmartTools Hub</h1>
+  <p>Simple, free and useful online tools.</p>
+</header>
+
+<section class="hero">
+  <h2>Free Tools for Everyday Life</h2>
+  <p>Discover useful tools that make your work easier.</p>
+  <input class="search" id="search" placeholder="Search for a tool...">
+</section>
+
+<main>
+<div class="tools" id="tools">
+
+<section class="card" data-name="percentage calculator">
+<h3>📊 Percentage Calculator</h3>
+<p>Calculate a percentage of a number.</p>
+<input id="percent" type="number" placeholder="Percentage (%)">
+<input id="number" type="number" placeholder="Your number">
+<button onclick="percentage()">Calculate</button>
+<p class="result" id="percentResult"></p>
+</section>
+
+<section class="card" data-name="word counter text counter">
+<h3>📝 Word Counter</h3>
+<p>Count words and characters in your text.</p>
+<textarea id="textInput" placeholder="Type or paste your text..."></textarea>
+<p class="result" id="wordResult">Words: 0 | Characters: 0</p>
+</section>
+
+<section class="card" data-name="password generator">
+<h3>🔐 Password Generator</h3>
+<p>Create a random secure password.</p>
+<input id="passLength" type="number" min="8" max="64" value="16">
+<button onclick="password()">Generate Password</button>
+<p class="result" id="passResult"></p>
+<button onclick="copyPassword()">Copy Password</button>
+</section>
+
+<section class="card" data-name="unit converter length">
+<h3>📏 Length Converter</h3>
+<p>Convert kilometers to miles.</p>
+<input id="km" type="number" placeholder="Kilometers">
+<button onclick="convert()">Convert</button>
+<p class="result" id="convertResult"></p>
+</section>
+
+</div>
+</main>
+
+<footer>
+<p>© 2026 SmartTools Hub. All rights reserved.</p>
+<a href="privacy.html">Privacy Policy</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+</footer>
+
+<script>
+function percentage(){
+ const p=Number(document.getElementById('percent').value);
+ const n=Number(document.getElementById('number').value);
+ if(document.getElementById('percent').value==='' ||
+ document.getElementById('number').value===''){
+ document.getElementById('percentResult').textContent='Enter both numbers.';
+ return;
+ }
+ document.getElementById('percentResult').textContent=
+ (p*n/100).toLocaleString();
+}
+
+document.getElementById('textInput').addEventListener('input',function(){
+ const t=this.value;
+ const words=t.trim()?t.trim().split(/\s+/).length:0;
+ document.getElementById('wordResult').textContent=
+ 'Words: '+words+' | Characters: '+t.length;
+});
+
+function password(){
+ const chars='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*';
+ let len=Number(document.getElementById('passLength').value);
+ if(!Number.isInteger(len)||len<8||len>64){
+ document.getElementById('passResult').textContent='Choose a length from 8 to 64.';
+ return;
+ }
+ const random=new Uint32Array(len);
+ crypto.getRandomValues(random);
+ let result='';
+ for(let i=0;i<len;i++) result+=chars[random[i]%chars.length];
+ document.getElementById('passResult').textContent=result;
+}
+
+async function copyPassword(){
+ const value=document.getElementById('passResult').textContent;
+ if(!value||value.includes('Choose'))return;
+ try{
+ await navigator.clipboard.writeText(value);
+ alert('Password copied!');
+ }catch(e){alert('Copy is unavailable in this browser.');}
+}
+
+function convert(){
+ const value=document.getElementById('km').value;
+ if(value===''||!Number.isFinite(Number(value))){
+ document.getElementById('convertResult').textContent='Enter a valid distance.';
+ return;
+ }
+ document.getElementById('convertResult').textContent=
+ (Number(value)*0.621371).toFixed(3)+' miles';
+}
+
+document.getElementById('search').addEventListener('input',function(){
+ const query=this.value.toLowerCase();
+ document.querySelectorAll('.card').forEach(card=>{
+ card.style.display=card.dataset.name.includes(query)?'block':'none';
+ });
+});
+</script>
+</body>
+</html>
