@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hd2bg.github.io/smarttools-hub/sitemap.xml
