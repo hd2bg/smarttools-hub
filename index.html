@@ -3,391 +3,543 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="SmartTools Hub - Free online calculators, converters, productivity and text tools.">
-<title>SmartTools Hub | All-in-One Tools</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="SmartTools Hub: free calculators, QR codes, image tools, text tools and productivity apps.">
+<title>SmartTools Hub - All Your Tools in One Place</title>
 <style>
-:root {
-  --bg:#f3f6fc;--surface:#fff;--text:#17233d;
-  --muted:#71809a;--primary:#536dfe;--border:#e4e9f2;
-  --header:#111d39;--shadow:0 8px 28px #142b5510;
+:root{
+--bg:#090f20;--panel:#111c34;--panel2:#172442;
+--text:#f4f6ff;--muted:#a6b3d0;--border:#293b60;
+--accent:#7650ff;--accent2:#08c8ff;--input:#0b152b;
+--shadow:0 12px 35px #0004;
 }
-body.dark {
-  --bg:#101827;--surface:#1b2940;--text:#edf3ff;
-  --muted:#a5b4cc;--primary:#8295ff;--border:#30405b;
-  --header:#0b1220;--shadow:0 8px 28px #0003;
+body.light{
+--bg:#f2f5fc;--panel:#fff;--panel2:#edf1fb;
+--text:#17223c;--muted:#66738d;--border:#dce3f0;
+--accent:#6548ed;--accent2:#087cc8;--input:#f7f9fd;
+--shadow:0 8px 25px #243c7010;
 }
 *{box-sizing:border-box}
-body{
-  margin:0;font-family:Arial,sans-serif;
-  background:var(--bg);color:var(--text);
-  transition:.2s;
-}
+body{margin:0;background:var(--bg);color:var(--text);
+font-family:Arial,sans-serif;transition:.2s}
+button,input,textarea,select{font:inherit}
+button{cursor:pointer}
 header{
-  background:var(--header);color:white;
-  padding:20px 6%;display:flex;
-  align-items:center;justify-content:space-between;
-  gap:15px;flex-wrap:wrap;
+position:sticky;top:0;z-index:10;background:var(--panel);
+border-bottom:1px solid var(--border);padding:13px 5%;
+display:flex;justify-content:space-between;align-items:center;
+gap:15px;flex-wrap:wrap
 }
-.logo{font-size:25px;font-weight:bold}
-.logo span{color:#91a4ff}
-header p{margin:5px 0;color:#b9c8e5;font-size:13px}
-.header-actions{display:flex;gap:10px}
-.header-actions button{
-  background:#273a61;color:white;
-  border:1px solid #46577a;
+.brand{display:flex;align-items:center;gap:12px}
+.logo{
+width:48px;height:48px;border-radius:14px;
+background:linear-gradient(135deg,#5927ff,#00bfff);
+display:grid;place-items:center;font-size:29px;
+box-shadow:0 0 22px #6845ff66
 }
-button{
-  border:0;border-radius:9px;padding:11px 15px;
-  background:var(--primary);color:white;
-  cursor:pointer;font-size:14px;font-weight:bold;
+.brand h1{font-size:23px;margin:0}
+.brand h1 span{color:#a477ff}
+.brand small{color:var(--muted)}
+nav{display:flex;gap:8px;flex-wrap:wrap}
+nav a{color:var(--text);text-decoration:none;padding:10px;
+border-radius:8px;font-size:14px}
+nav a:hover{background:var(--panel2)}
+.header-button,.btn{
+background:linear-gradient(110deg,var(--accent),#4935d8);
+color:white;border:0;padding:11px 15px;border-radius:9px;
+font-weight:bold
 }
-button:hover{filter:brightness(.9)}
-.hero{text-align:center;padding:55px 15px 35px}
-.hero h1{font-size:clamp(28px,5vw,43px);margin:0 0 12px}
-.hero p{color:var(--muted);margin:0 0 20px}
-.search{
-  width:min(550px,92%);padding:16px;
-  border:1px solid var(--border);border-radius:12px;
-  background:var(--surface);color:var(--text);
-  font-size:16px;outline:none;
+.hero{
+text-align:center;padding:65px 15px 35px;
+background:radial-gradient(ellipse at 50% 0%,#37218a66,transparent 65%)
 }
-main{max-width:1200px;margin:auto;padding:10px 22px 55px}
-.topline{
-  display:flex;justify-content:space-between;
-  align-items:center;gap:12px;flex-wrap:wrap;
-  margin:15px 0 20px;
-}
-.topline h2{margin:0;font-size:22px}
+.hero h2{font-size:clamp(32px,6vw,58px);margin:0 0 14px}
+.gradient{background:linear-gradient(90deg,#28baff,#a36bff);
+color:transparent;background-clip:text}
+.hero p{color:var(--muted);font-size:17px}
+.searchbox{width:min(650px,94%);margin:25px auto 20px;
+display:flex;background:var(--panel);border:1px solid var(--border);
+border-radius:14px;overflow:hidden}
+.searchbox input{flex:1;min-width:0;border:0;background:transparent;
+color:var(--text);padding:17px;outline:none}
+.searchbox button{border-radius:0;padding:0 23px}
+.benefits{display:flex;justify-content:center;gap:25px;
+flex-wrap:wrap;color:var(--muted);font-size:13px}
+.benefits span:first-letter{color:var(--accent2)}
+main{max-width:1250px;margin:auto;padding:20px 22px 65px}
+.section-heading{display:flex;justify-content:space-between;
+align-items:center;gap:10px;flex-wrap:wrap;margin:25px 0 17px}
+.section-heading h2{margin:0;font-size:23px}
 #clock{color:var(--muted);font-size:13px}
-.categories{
-  display:flex;gap:9px;flex-wrap:wrap;margin-bottom:25px;
-}
-.categories button{
-  background:var(--surface);color:var(--muted);
-  border:1px solid var(--border);
-}
-.categories button.active{
-  background:var(--primary);color:white;border-color:var(--primary);
-}
-.tools{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(245px,1fr));
-  gap:18px;
-}
-.card{
-  background:var(--surface);padding:22px;
-  border:1px solid var(--border);border-radius:15px;
-  box-shadow:var(--shadow);min-width:0;
-}
-.card h3{margin:0 0 8px;font-size:18px}
-.card .description{color:var(--muted);font-size:13px;min-height:32px}
+.categories{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:23px}
+.categories button{background:var(--panel);color:var(--muted);
+border:1px solid var(--border);padding:10px 15px;border-radius:22px}
+.categories button.active{background:var(--accent);color:white}
+.tools{display:grid;grid-template-columns:
+repeat(auto-fit,minmax(min(100%,260px),1fr));gap:17px}
+.card{background:var(--panel);border:1px solid var(--border);
+border-radius:15px;padding:20px;box-shadow:var(--shadow);
+min-width:0;scroll-margin-top:100px}
+.card h3{font-size:17px;margin:0 0 8px}
+.card p.desc{color:var(--muted);font-size:13px;min-height:30px}
 .card input,.card textarea,.card select{
-  width:100%;padding:12px;margin:7px 0;
-  border:1px solid var(--border);border-radius:8px;
-  background:var(--bg);color:var(--text);
-  font-size:14px;
+width:100%;background:var(--input);color:var(--text);
+border:1px solid var(--border);padding:11px;border-radius:8px;
+margin:6px 0;outline:none;min-width:0
 }
-.card textarea{min-height:90px;resize:vertical}
-.card button{margin-top:7px}
-.result{
-  color:var(--primary);font-weight:bold;
-  overflow-wrap:anywhere;min-height:20px;
+.card textarea{resize:vertical;min-height:85px}
+.card button{margin:6px 3px 0 0}
+.btn{font-size:13px}
+.secondary{background:var(--panel2);color:var(--text);
+border:1px solid var(--border);padding:10px 13px;border-radius:8px}
+.result{color:var(--accent2);font-weight:bold;
+overflow-wrap:anywhere;min-height:18px;font-size:14px}
+.tool-icon{font-size:27px;margin-right:7px}
+.qr-output,.image-output{text-align:center;margin-top:12px}
+.qr-output img,.image-output img{max-width:100%;border-radius:8px}
+.task-list{padding:0;list-style:none}
+.task-list li{display:flex;align-items:center;gap:9px;
+padding:8px 0;border-bottom:1px solid var(--border);font-size:14px}
+.task-list li span{flex:1;overflow-wrap:anywhere}
+.task-list li.done span{text-decoration:line-through;color:var(--muted)}
+.delete{background:#9d3150;padding:6px 9px}
+.file-input{font-size:12px}
+.empty{text-align:center;color:var(--muted);display:none;padding:30px}
+.about{
+margin-top:35px;padding:28px;background:var(--panel);
+border:1px solid var(--border);border-radius:15px
 }
-.card .secondary{
-  background:var(--bg);color:var(--text);
-  border:1px solid var(--border);
-}
-.empty{text-align:center;color:var(--muted);padding:30px;display:none}
-footer{
-  text-align:center;padding:35px 15px;
-  background:var(--header);color:#bdc9df;font-size:13px;
-}
-footer a{color:#a8b8ff;margin:0 8px}
-@media(max-width:600px){
-  header{padding:18px}
-  .hero{padding-top:38px}
-  main{padding:10px 15px 40px}
+.about p{color:var(--muted);line-height:1.7}
+footer{text-align:center;background:var(--panel);
+border-top:1px solid var(--border);padding:35px 15px;
+color:var(--muted);font-size:13px}
+footer a{color:var(--accent2);margin:0 9px;text-decoration:none}
+.hidden{display:none!important}
+@media(max-width:650px){
+header{justify-content:center}
+nav{justify-content:center}
+.hero{padding-top:42px}
+main{padding-left:14px;padding-right:14px}
+.searchbox button{padding:0 12px}
 }
 </style>
 </head>
 <body>
 
 <header>
+ <div class="brand">
+  <div class="logo">⚡</div>
   <div>
-    <div class="logo">⚡ SmartTools <span>Hub</span></div>
-    <p>Your everyday tools, all in one place.</p>
+   <h1>SmartTools <span>Hub</span></h1>
+   <small>Your everyday tools, all in one place.</small>
   </div>
-  <div class="header-actions">
-    <button onclick="toggleTheme()" id="themeButton">🌙 Dark mode</button>
-  </div>
+ </div>
+ <nav>
+  <a href="#">Home</a>
+  <a href="#tools">Tools</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
+ </nav>
+ <button class="header-button" onclick="toggleTheme()" id="themeBtn">☀️ Light mode</button>
 </header>
 
 <section class="hero">
-  <h1>Everything You Need, In One Place.</h1>
-  <p>Discover free tools to make everyday tasks easier.</p>
-  <input class="search" id="search" placeholder="🔍 Search for a tool..." oninput="filterTools()">
+ <h2>Everything You Need,<br><span class="gradient">In One Place.</span></h2>
+ <p>Discover free tools to make everyday tasks easier.</p>
+ <div class="searchbox">
+  <input id="search" placeholder="🔍 Search for a tool..." oninput="filterTools()">
+  <button class="btn" onclick="filterTools()">Search</button>
+ </div>
+ <div class="benefits">
+  <span>✓ Free to use</span>
+  <span>✓ Fast and easy</span>
+  <span>✓ No sign-up</span>
+  <span>✓ Works on any device</span>
+ </div>
 </section>
 
 <main>
-  <div class="topline">
-    <h2>Explore Our Tools</h2>
-    <span id="clock"></span>
-  </div>
+ <div class="section-heading" id="tools">
+  <h2>Explore Our Tools</h2>
+  <span id="clock"></span>
+ </div>
 
-  <div class="categories">
-    <button class="active" onclick="setCategory('all',this)">All Tools</button>
-    <button onclick="setCategory('calculators',this)">Calculators</button>
-    <button onclick="setCategory('text',this)">Text Tools</button>
-    <button onclick="setCategory('converters',this)">Converters</button>
-    <button onclick="setCategory('productivity',this)">Productivity</button>
-  </div>
+ <div class="categories">
+  <button class="active" onclick="category('all',this)">All Tools</button>
+  <button onclick="category('calculators',this)">🧮 Calculators</button>
+  <button onclick="category('text',this)">📝 Text Tools</button>
+  <button onclick="category('converters',this)">🔄 Converters</button>
+  <button onclick="category('productivity',this)">💼 Productivity</button>
+  <button onclick="category('images',this)">🖼️ Image Tools</button>
+ </div>
 
-  <div class="tools" id="tools">
+ <div class="tools" id="toolGrid">
 
-    <section class="card" data-category="calculators" data-name="calculator maths arithmetic">
-      <h3>🧮 Calculator</h3>
-      <p class="description">Perform everyday calculations.</p>
-      <input id="calcA" type="number" placeholder="First number">
-      <select id="calcOp">
-        <option value="+">Addition (+)</option>
-        <option value="-">Subtraction (-)</option>
-        <option value="*">Multiplication (×)</option>
-        <option value="/">Division (÷)</option>
-      </select>
-      <input id="calcB" type="number" placeholder="Second number">
-      <button onclick="calculate()">Calculate</button>
-      <p class="result" id="calcResult"></p>
-    </section>
+ <!-- CALCULATOR -->
+ <section class="card" data-category="calculators" data-name="calculator maths arithmetic">
+  <h3><span class="tool-icon">🧮</span>Calculator</h3>
+  <p class="desc">Perform everyday calculations.</p>
+  <input id="ca" type="number" placeholder="First number">
+  <select id="op">
+   <option value="+">Addition (+)</option>
+   <option value="-">Subtraction (-)</option>
+   <option value="*">Multiplication (×)</option>
+   <option value="/">Division (÷)</option>
+  </select>
+  <input id="cb" type="number" placeholder="Second number">
+  <button class="btn" onclick="calc()">Calculate</button>
+  <p class="result" id="cr"></p>
+ </section>
 
-    <section class="card" data-category="calculators" data-name="percentage calculator">
-      <h3>📊 Percentage Calculator</h3>
-      <p class="description">Find percentages of any number.</p>
-      <input id="percent" type="number" placeholder="Percentage (%)">
-      <input id="number" type="number" placeholder="Your number">
-      <button onclick="percentage()">Calculate</button>
-      <p class="result" id="percentResult"></p>
-    </section>
+ <!-- PERCENTAGE -->
+ <section class="card" data-category="calculators" data-name="percentage calculator">
+  <h3><span class="tool-icon">📊</span>Percentage Calculator</h3>
+  <p class="desc">Find percentages of any number.</p>
+  <input id="pct" type="number" placeholder="Percentage">
+  <input id="pnum" type="number" placeholder="Your number">
+  <button class="btn" onclick="percentage()">Calculate</button>
+  <p class="result" id="pr"></p>
+ </section>
 
-    <section class="card" data-category="text" data-name="word counter text character counter">
-      <h3>📝 Word Counter</h3>
-      <p class="description">Count words and characters instantly.</p>
-      <textarea id="textInput" placeholder="Type or paste your text..."></textarea>
-      <p class="result" id="wordResult">Words: 0 | Characters: 0</p>
-    </section>
+ <!-- WORD COUNTER -->
+ <section class="card" data-category="text" data-name="word counter character text">
+  <h3><span class="tool-icon">📝</span>Word Counter</h3>
+  <p class="desc">Count words and characters.</p>
+  <textarea id="wordText" placeholder="Type or paste your text..."></textarea>
+  <p class="result" id="wordResult">Words: 0 | Characters: 0</p>
+ </section>
 
-    <section class="card" data-category="productivity" data-name="password generator security">
-      <h3>🔐 Password Generator</h3>
-      <p class="description">Generate a random secure password.</p>
-      <input id="passLength" type="number" min="8" max="64" value="16">
-      <button onclick="password()">Generate Password</button>
-      <p class="result" id="passResult"></p>
-      <button class="secondary" onclick="copyPassword()">Copy Password</button>
-    </section>
+ <!-- PASSWORD -->
+ <section class="card" data-category="productivity" data-name="password generator security">
+  <h3><span class="tool-icon">🔐</span>Password Generator</h3>
+  <p class="desc">Create a random secure password.</p>
+  <input id="passLen" type="number" min="8" max="64" value="16">
+  <button class="btn" onclick="password()">Generate Password</button>
+  <p class="result" id="passResult"></p>
+  <button class="secondary" onclick="copy('passResult')">Copy Password</button>
+ </section>
 
-    <section class="card" data-category="converters" data-name="length converter kilometer miles distance">
-      <h3>📏 Length Converter</h3>
-      <p class="description">Convert kilometers into miles.</p>
-      <input id="km" type="number" placeholder="Kilometers">
-      <button onclick="convertLength()">Convert</button>
-      <p class="result" id="lengthResult"></p>
-    </section>
+ <!-- LENGTH -->
+ <section class="card" data-category="converters" data-name="length kilometer miles converter">
+  <h3><span class="tool-icon">📏</span>Length Converter</h3>
+  <p class="desc">Convert kilometers and miles.</p>
+  <input id="lengthValue" type="number" placeholder="Enter distance">
+  <select id="lengthType">
+   <option value="km">Kilometers to miles</option>
+   <option value="mi">Miles to kilometers</option>
+  </select>
+  <button class="btn" onclick="lengthConvert()">Convert</button>
+  <p class="result" id="lengthResult"></p>
+ </section>
 
-    <section class="card" data-category="converters" data-name="temperature converter celsius fahrenheit">
-      <h3>🌡️ Temperature Converter</h3>
-      <p class="description">Convert Celsius and Fahrenheit.</p>
-      <input id="temp" type="number" placeholder="Enter temperature">
-      <select id="tempType">
-        <option value="cf">Celsius to Fahrenheit</option>
-        <option value="fc">Fahrenheit to Celsius</option>
-      </select>
-      <button onclick="convertTemp()">Convert</button>
-      <p class="result" id="tempResult"></p>
-    </section>
+ <!-- TEMPERATURE -->
+ <section class="card" data-category="converters" data-name="temperature celsius fahrenheit converter">
+  <h3><span class="tool-icon">🌡️</span>Temperature Converter</h3>
+  <p class="desc">Convert Celsius and Fahrenheit.</p>
+  <input id="tempValue" type="number" placeholder="Temperature">
+  <select id="tempType">
+   <option value="cf">Celsius to Fahrenheit</option>
+   <option value="fc">Fahrenheit to Celsius</option>
+  </select>
+  <button class="btn" onclick="temperature()">Convert</button>
+  <p class="result" id="tempResult"></p>
+ </section>
 
-    <section class="card" data-category="text" data-name="case converter uppercase lowercase text">
-      <h3>🔠 Case Converter</h3>
-      <p class="description">Change text to uppercase or lowercase.</p>
-      <textarea id="caseInput" placeholder="Enter your text..."></textarea>
-      <button onclick="changeCase('upper')">UPPERCASE</button>
-      <button class="secondary" onclick="changeCase('lower')">lowercase</button>
-      <p class="result" id="caseResult"></p>
-    </section>
+ <!-- CASE CONVERTER -->
+ <section class="card" data-category="text" data-name="case converter uppercase lowercase">
+  <h3><span class="tool-icon">🔠</span>Case Converter</h3>
+  <p class="desc">Change text to uppercase or lowercase.</p>
+  <textarea id="caseText" placeholder="Enter text..."></textarea>
+  <button class="btn" onclick="caseChange('upper')">UPPERCASE</button>
+  <button class="secondary" onclick="caseChange('lower')">lowercase</button>
+  <button class="secondary" onclick="caseChange('title')">Title Case</button>
+  <p class="result" id="caseResult"></p>
+ </section>
 
-    <section class="card" data-category="calculators" data-name="tip calculator restaurant bill">
-      <h3>💰 Tip Calculator</h3>
-      <p class="description">Calculate tips and split a bill.</p>
-      <input id="bill" type="number" min="0" placeholder="Bill amount">
-      <input id="tip" type="number" min="0" placeholder="Tip percentage" value="10">
-      <input id="people" type="number" min="1" value="1" placeholder="Number of people">
-      <button onclick="calculateTip()">Calculate</button>
-      <p class="result" id="tipResult"></p>
-    </section>
+ <!-- TIP -->
+ <section class="card" data-category="calculators" data-name="tip bill calculator split">
+  <h3><span class="tool-icon">💰</span>Tip Calculator</h3>
+  <p class="desc">Calculate tips and split a bill.</p>
+  <input id="bill" type="number" min="0" placeholder="Bill amount">
+  <input id="tip" type="number" min="0" value="10" placeholder="Tip percentage">
+  <input id="people" type="number" min="1" value="1" placeholder="People">
+  <button class="btn" onclick="tipCalc()">Calculate</button>
+  <p class="result" id="tipResult"></p>
+ </section>
 
-    <section class="card" data-category="productivity" data-name="clock current time date">
-      <h3>🕒 Live Clock</h3>
-      <p class="description">See the current time and date.</p>
-      <p class="result" id="liveClock" style="font-size:26px"></p>
-      <p id="liveDate"></p>
-    </section>
+ <!-- QR CODE -->
+ <section class="card" data-category="productivity" data-name="qr code generator scanner link">
+  <h3><span class="tool-icon">📱</span>QR Code Generator</h3>
+  <p class="desc">Turn links and text into QR codes.</p>
+  <input id="qrText" placeholder="Enter a link or text">
+  <button class="btn" onclick="makeQR()">Generate QR Code</button>
+  <div class="qr-output" id="qrOutput"></div>
+ </section>
 
-  </div>
-  <p class="empty" id="empty">No tools found. Try another search.</p>
+ <!-- IMAGE COMPRESSOR -->
+ <section class="card" data-category="images" data-name="image compressor reduce compress photo">
+  <h3><span class="tool-icon">🖼️</span>Image Compressor</h3>
+  <p class="desc">Reduce image file size in your browser.</p>
+  <input class="file-input" id="compressFile" type="file" accept="image/*">
+  <label>Quality</label>
+  <input id="quality" type="range" min="20" max="95" value="75">
+  <button class="btn" onclick="compressImage()">Compress Image</button>
+  <div id="compressResult" class="image-output"></div>
+ </section>
+
+ <!-- IMAGE RESIZER -->
+ <section class="card" data-category="images" data-name="image resizer resize photo">
+  <h3><span class="tool-icon">📐</span>Image Resizer</h3>
+  <p class="desc">Resize images to your preferred dimensions.</p>
+  <input class="file-input" id="resizeFile" type="file" accept="image/*">
+  <input id="resizeWidth" type="number" placeholder="New width in pixels">
+  <input id="resizeHeight" type="number" placeholder="New height in pixels">
+  <button class="btn" onclick="resizeImage()">Resize Image</button>
+  <div id="resizeResult" class="image-output"></div>
+ </section>
+
+ <!-- TODO -->
+ <section class="card" data-category="productivity" data-name="todo task list planner">
+  <h3><span class="tool-icon">✅</span>To-Do List</h3>
+  <p class="desc">Create and manage your tasks.</p>
+  <input id="taskInput" placeholder="Add a new task...">
+  <button class="btn" onclick="addTask()">Add Task</button>
+  <ul class="task-list" id="taskList"></ul>
+ </section>
+
+ <!-- NOTES -->
+ <section class="card" data-category="productivity" data-name="notes notebook save writing">
+  <h3><span class="tool-icon">📒</span>Notes App</h3>
+  <p class="desc">Write and save your notes in this browser.</p>
+  <textarea id="notesText" placeholder="Start writing your notes..."></textarea>
+  <button class="btn" onclick="saveNotes()">Save Notes</button>
+  <button class="secondary" onclick="clearNotes()">Clear</button>
+  <p class="result" id="notesStatus"></p>
+ </section>
+
+ <!-- LIVE CLOCK -->
+ <section class="card" data-category="productivity" data-name="live clock time date">
+  <h3><span class="tool-icon">🕒</span>Live Clock</h3>
+  <p class="desc">Check your current time and date.</p>
+  <p id="liveTime" class="result" style="font-size:32px"></p>
+  <p id="liveDate"></p>
+ </section>
+
+ <!-- MORE -->
+ <section class="card" data-category="productivity" data-name="more tools future updates">
+  <h3><span class="tool-icon">⭐</span>More Tools Coming Soon!</h3>
+  <p class="desc">We're always adding new tools to help you.</p>
+  <p>Stay tuned for more free features.</p>
+  <a href="#about" class="btn" style="display:inline-block;text-decoration:none">About Us</a>
+ </section>
+
+ </div>
+ <p class="empty" id="empty">No tools found. Try another search.</p>
+
+ <section class="about" id="about">
+  <h2>About SmartTools Hub</h2>
+  <p>SmartTools Hub brings useful everyday utilities together in one convenient place. Calculate, convert, create, organise and work smarter with free browser-based tools. No account is needed for the tools on this page.</p>
+  <p>Some features use your browser's local storage to save notes and tasks on your device. Image processing happens locally in your browser. QR generation uses an external service.</p>
+ </section>
+
+ <section class="about" id="contact">
+  <h2>Contact</h2>
+  <p>Have an idea for a new tool or found a problem? We'd love to hear your feedback.</p>
+  <p>Contact: <a href="mailto:YOUR-EMAIL@example.com">YOUR-EMAIL@example.com</a></p>
+  <p>Replace this placeholder with your real contact email before publishing.</p>
+ </section>
 </main>
 
 <footer>
-  <h3>⚡ SmartTools Hub</h3>
-  <p>Free tools. Simple solutions. Smarter everyday life.</p>
-  <p>© 2026 SmartTools Hub. All rights reserved.</p>
-  <a href="privacy.html">Privacy</a>
-  <a href="about.html">About</a>
-  <a href="contact.html">Contact</a>
+ <div class="brand" style="justify-content:center">
+  <div class="logo">⚡</div>
+  <h2>SmartTools <span class="gradient">Hub</span></h2>
+ </div>
+ <p>Free tools. Simple solutions. Smarter everyday life.</p>
+ <p>
+  <a href="#tools">Tools</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
+ </p>
+ <p>© 2026 SmartTools Hub. All rights reserved.</p>
 </footer>
 
 <script>
-let activeCategory = 'all';
+const $=id=>document.getElementById(id);
+let selectedCategory='all';
 
 function toggleTheme(){
-  document.body.classList.toggle('dark');
-  const dark=document.body.classList.contains('dark');
-  document.getElementById('themeButton').textContent=
-    dark?'☀️ Light mode':'🌙 Dark mode';
-  try{localStorage.setItem('smarttools-theme',dark?'dark':'light')}catch(e){}
+ document.body.classList.toggle('light');
+ const light=document.body.classList.contains('light');
+ $('themeBtn').textContent=light?'🌙 Dark mode':'☀️ Light mode';
+ try{localStorage.setItem('sth-theme',light?'light':'dark')}catch(e){}
 }
 try{
-  if(localStorage.getItem('smarttools-theme')==='dark'){
-    document.body.classList.add('dark');
-    document.getElementById('themeButton').textContent='☀️ Light mode';
-  }
+ if(localStorage.getItem('sth-theme')==='light'){
+  document.body.classList.add('light');
+  $('themeBtn').textContent='🌙 Dark mode';
+ }
 }catch(e){}
 
-function calculate(){
-  const a=document.getElementById('calcA').value;
-  const b=document.getElementById('calcB').value;
-  const op=document.getElementById('calcOp').value;
-  const result=document.getElementById('calcResult');
-  if(a===''||b===''){result.textContent='Enter both numbers.';return}
-  let answer;
-  if(op==='+')answer=Number(a)+Number(b);
-  if(op==='-')answer=Number(a)-Number(b);
-  if(op==='*')answer=Number(a)*Number(b);
-  if(op==='/'){
-    if(Number(b)===0){result.textContent='Cannot divide by zero.';return}
-    answer=Number(a)/Number(b);
-  }
-  result.textContent='Result: '+answer.toLocaleString();
+function calc(){
+ const a=$('ca').value,b=$('cb').value,op=$('op').value;
+ if(a===''||b==='')return $('cr').textContent='Enter both numbers.';
+ if(op==='/'&&Number(b)===0)return $('cr').textContent='Cannot divide by zero.';
+ const x=Number(a),y=Number(b);
+ const n=op==='+'?x+y:op==='-'?x-y:op==='*'?x*y:x/y;
+ $('cr').textContent='Result: '+n.toLocaleString();
 }
-
 function percentage(){
-  const p=document.getElementById('percent').value;
-  const n=document.getElementById('number').value;
-  const result=document.getElementById('percentResult');
-  if(p===''||n===''){result.textContent='Enter both numbers.';return}
-  result.textContent='Result: '+(Number(p)*Number(n)/100).toLocaleString();
+ if($('pct').value===''||$('pnum').value==='')return $('pr').textContent='Enter both numbers.';
+ $('pr').textContent='Result: '+(Number($('pct').value)*Number($('pnum').value)/100).toLocaleString();
 }
-
-document.getElementById('textInput').addEventListener('input',function(){
-  const t=this.value;
-  const words=t.trim()?t.trim().split(/\s+/).length:0;
-  document.getElementById('wordResult').textContent=
-    'Words: '+words+' | Characters: '+t.length;
+$('wordText').addEventListener('input',()=>{
+ const t=$('wordText').value;
+ $('wordResult').textContent='Words: '+(t.trim()?t.trim().split(/\s+/).length:0)+' | Characters: '+t.length;
 });
-
 function password(){
-  const chars='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*';
-  const len=Number(document.getElementById('passLength').value);
-  const output=document.getElementById('passResult');
-  if(!Number.isInteger(len)||len<8||len>64){
-    output.textContent='Choose a length from 8 to 64.';return;
-  }
-  const random=new Uint32Array(len);
-  crypto.getRandomValues(random);
-  let result='';
-  for(let i=0;i<len;i++)result+=chars[random[i]%chars.length];
-  output.textContent=result;
+ const chars='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-_=+';
+ const len=Number($('passLen').value);
+ if(!Number.isInteger(len)||len<8||len>64)return $('passResult').textContent='Choose 8 to 64 characters.';
+ const bytes=new Uint32Array(len);crypto.getRandomValues(bytes);
+ $('passResult').textContent=Array.from(bytes,n=>chars[n%chars.length]).join('');
 }
-
-async function copyPassword(){
-  const value=document.getElementById('passResult').textContent;
-  if(!value||value.includes('Choose'))return;
-  try{
-    await navigator.clipboard.writeText(value);
-    alert('Password copied!');
-  }catch(e){alert('Copy is unavailable. Select and copy the password manually.')}
+async function copy(id){
+ const value=$(id).textContent;
+ if(!value)return;
+ try{await navigator.clipboard.writeText(value);alert('Copied!')}
+ catch(e){alert('Select and copy the text manually.')}
 }
-
-function convertLength(){
-  const value=document.getElementById('km').value;
-  const output=document.getElementById('lengthResult');
-  if(value===''||!Number.isFinite(Number(value))){
-    output.textContent='Enter a valid distance.';return;
-  }
-  output.textContent=(Number(value)*0.621371).toFixed(3)+' miles';
+function lengthConvert(){
+ const v=$('lengthValue').value;
+ if(v===''||!Number.isFinite(Number(v)))return $('lengthResult').textContent='Enter a valid number.';
+ const n=Number(v),km=$('lengthType').value==='km';
+ $('lengthResult').textContent=km?(n*0.621371).toFixed(3)+' miles':(n/0.621371).toFixed(3)+' kilometers';
 }
-
-function convertTemp(){
-  const value=document.getElementById('temp').value;
-  const output=document.getElementById('tempResult');
-  if(value===''||!Number.isFinite(Number(value))){
-    output.textContent='Enter a valid temperature.';return;
-  }
-  const n=Number(value);
-  const result=document.getElementById('tempType').value==='cf'
-    ?n*9/5+32:(n-32)*5/9;
-  output.textContent=result.toFixed(2)+'°';
+function temperature(){
+ const v=$('tempValue').value;
+ if(v===''||!Number.isFinite(Number(v)))return $('tempResult').textContent='Enter a valid number.';
+ const n=Number(v);
+ $('tempResult').textContent=($('tempType').value==='cf'?n*9/5+32:(n-32)*5/9).toFixed(2)+'°';
 }
-
-function changeCase(type){
-  const value=document.getElementById('caseInput').value;
-  document.getElementById('caseResult').textContent=
-    type==='upper'?value.toUpperCase():value.toLowerCase();
+function caseChange(type){
+ const t=$('caseText').value;
+ const result=type==='upper'?t.toUpperCase():type==='lower'?t.toLowerCase():t.toLowerCase().replace(/\b\w/g,c=>c.toUpperCase());
+ $('caseResult').textContent=result;
 }
-
-function calculateTip(){
-  const bill=document.getElementById('bill').value;
-  const tip=document.getElementById('tip').value;
-  const people=document.getElementById('people').value;
-  const output=document.getElementById('tipResult');
-  if(bill===''||tip===''||people===''||
-     Number(bill)<0||Number(tip)<0||Number(people)<1){
-    output.textContent='Enter valid amounts and people.';return;
-  }
-  const total=Number(bill)*(1+Number(tip)/100);
-  output.textContent='Total: '+total.toFixed(2)+
-    ' | Each: '+(total/Number(people)).toFixed(2);
+function tipCalc(){
+ const b=$('bill').value,t=$('tip').value,p=$('people').value;
+ if(b===''||t===''||p===''||Number(b)<0||Number(t)<0||Number(p)<1)return $('tipResult').textContent='Enter valid values.';
+ const total=Number(b)*(1+Number(t)/100);
+ $('tipResult').textContent='Total: '+total.toFixed(2)+' | Per person: '+(total/Number(p)).toFixed(2);
 }
-
-function setCategory(category,button){
-  activeCategory=category;
-  document.querySelectorAll('.categories button').forEach(b=>b.classList.remove('active'));
-  button.classList.add('active');
-  filterTools();
+function makeQR(){
+ const v=$('qrText').value.trim();
+ if(!v)return $('qrOutput').textContent='Enter some text or a link first.';
+ const img=document.createElement('img');
+ img.alt='Generated QR code';img.width=200;img.height=200;
+ img.src='https://api.qrserver.com/v1/create-qr-code/?size=200x200&data='+encodeURIComponent(v);
+ $('qrOutput').replaceChildren(img);
 }
-
+function downloadCanvas(canvas,name){
+ canvas.toBlob(blob=>{
+  if(!blob)return alert('Could not create the image.');
+  const url=URL.createObjectURL(blob),a=document.createElement('a');
+  a.href=url;a.download=name;a.click();URL.revokeObjectURL(url);
+ },'image/jpeg',.88);
+}
+function loadImage(file,callback){
+ if(!file||!file.type.startsWith('image/'))return alert('Please choose an image file.');
+ const img=new Image(),url=URL.createObjectURL(file);
+ img.onload=()=>{callback(img);URL.revokeObjectURL(url)};
+ img.onerror=()=>{URL.revokeObjectURL(url);alert('Could not load image.')};
+ img.src=url;
+}
+function compressImage(){
+ const file=$('compressFile').files[0];
+ if(!file)return alert('Choose an image first.');
+ loadImage(file,img=>{
+  const c=document.createElement('canvas');c.width=img.naturalWidth;c.height=img.naturalHeight;
+  c.getContext('2d').drawImage(img,0,0);
+  c.toBlob(blob=>{
+   if(!blob)return alert('Compression failed.');
+   const url=URL.createObjectURL(blob),a=document.createElement('a');
+   a.href=url;a.download='compressed-image.jpg';a.click();
+   $('compressResult').textContent='Original: '+(file.size/1024).toFixed(1)+' KB | New: '+(blob.size/1024).toFixed(1)+' KB';
+   URL.revokeObjectURL(url);
+  },'image/jpeg',Number($('quality').value)/100);
+ });
+}
+function resizeImage(){
+ const file=$('resizeFile').files[0],w=Number($('resizeWidth').value),h=Number($('resizeHeight').value);
+ if(!file||!Number.isInteger(w)||!Number.isInteger(h)||w<1||h<1||w>8000||h>8000)return alert('Choose an image and enter valid dimensions (1–8000).');
+ loadImage(file,img=>{
+  const c=document.createElement('canvas');c.width=w;c.height=h;
+  c.getContext('2d').drawImage(img,0,0,w,h);
+  c.toBlob(blob=>{
+   if(!blob)return alert('Resize failed.');
+   const url=URL.createObjectURL(blob),a=document.createElement('a');
+   a.href=url;a.download='resized-image.jpg';a.click();
+   $('resizeResult').textContent='Your resized image has been downloaded.';
+   URL.revokeObjectURL(url);
+  },'image/jpeg',.9);
+ });
+}
+let tasks=[];
+try{tasks=JSON.parse(localStorage.getItem('sth-tasks')||'[]')}catch(e){}
+function renderTasks(){
+ $('taskList').replaceChildren();
+ tasks.forEach((task,i)=>{
+  const li=document.createElement('li');if(task.done)li.className='done';
+  const check=document.createElement('input');check.type='checkbox';check.checked=task.done;
+  check.addEventListener('change',()=>{tasks[i].done=check.checked;saveTasks()});
+  const span=document.createElement('span');span.textContent=task.text;
+  const del=document.createElement('button');del.className='delete';del.textContent='×';
+  del.addEventListener('click',()=>{tasks.splice(i,1);saveTasks()});
+  li.append(check,span,del);$('taskList').append(li);
+ });
+}
+function saveTasks(){
+ try{localStorage.setItem('sth-tasks',JSON.stringify(tasks))}catch(e){alert('Could not save tasks in this browser.')}
+ renderTasks();
+}
+function addTask(){
+ const t=$('taskInput').value.trim();if(!t)return;
+ tasks.push({text:t,done:false});$('taskInput').value='';saveTasks();
+}
+$('taskInput').addEventListener('keydown',e=>{if(e.key==='Enter')addTask()});
+renderTasks();
+$('notesText').value=localStorage.getItem('sth-notes')||'';
+function saveNotes(){
+ try{localStorage.setItem('sth-notes',$('notesText').value);$('notesStatus').textContent='✓ Notes saved in this browser.'}
+ catch(e){$('notesStatus').textContent='Unable to save notes.'}
+}
+function clearNotes(){
+ if(confirm('Clear your saved notes?')){
+  $('notesText').value='';localStorage.removeItem('sth-notes');$('notesStatus').textContent='Notes cleared.';
+ }
+}
+function category(cat,button){
+ selectedCategory=cat;
+ document.querySelectorAll('.categories button').forEach(b=>b.classList.remove('active'));
+ button.classList.add('active');filterTools();
+}
 function filterTools(){
-  const query=document.getElementById('search').value.toLowerCase();
-  let visible=0;
-  document.querySelectorAll('.card').forEach(card=>{
-    const matchesName=card.dataset.name.includes(query);
-    const matchesCategory=activeCategory==='all'||
-      card.dataset.category===activeCategory;
-    card.style.display=matchesName&&matchesCategory?'block':'none';
-    if(matchesName&&matchesCategory)visible++;
-  });
-  document.getElementById('empty').style.display=visible?'none':'block';
+ const q=$('search').value.toLowerCase();let count=0;
+ document.querySelectorAll('.card[data-category]').forEach(card=>{
+  const show=(selectedCategory==='all'||card.dataset.category===selectedCategory)&&
+  card.dataset.name.includes(q);
+  card.classList.toggle('hidden',!show);if(show)count++;
+ });
+ $('empty').style.display=count?'none':'block';
 }
-
 function updateClock(){
-  const now=new Date();
-  document.getElementById('clock').textContent=
-    now.toLocaleTimeString();
-  document.getElementById('liveClock').textContent=
-    now.toLocaleTimeString();
-  document.getElementById('liveDate').textContent=
-    now.toLocaleDateString(undefined,{weekday:'long',year:'numeric',month:'long',day:'numeric'});
+ const now=new Date();
+ $('clock').textContent=now.toLocaleTimeString();
+ $('liveTime').textContent=now.toLocaleTimeString();
+ $('liveDate').textContent=now.toLocaleDateString(undefined,{weekday:'long',year:'numeric',month:'long',day:'numeric'});
 }
-updateClock();
-setInterval(updateClock,1000);
+updateClock();setInterval(updateClock,1000);
 </script>
 </body>
 </html>
