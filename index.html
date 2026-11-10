@@ -5,379 +5,108 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#0b0818">
-<meta name="description" content="Discover SmartTools Hub: free online calculators, converters, image tools, QR codes, password generators and productivity tools.">
-<meta name="keywords" content="free online tools, calculator, percentage calculator, QR code generator, image compressor, password generator, converters">
+<meta name="description" content="Discover SmartTools Hub: free online calculators, converters, image tools, PDF tools, QR codes, password generators and productivity tools.">
+<meta name="keywords" content="free online tools, calculator, percentage calculator, PDF merger, PDF splitter, image to PDF, PDF rotator, QR code generator, image compressor, password generator">
 <meta name="author" content="SmartTools Hub">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://hd2bg.github.io/smarttools-hub/">
 <link rel="icon" href="./icon.svg" type="image/svg+xml">
 <link rel="manifest" href="./manifest.webmanifest">
 <meta name="google-site-verification" content="O4-X0IK6p27OpMJeA9PyBkZ2OqKrADu7Bu0OMQJTPeg">
-
 <meta property="og:type" content="website">
 <meta property="og:title" content="SmartTools Hub | Free Online Tools">
-<meta property="og:description" content="Your everyday tools, all in one place. Free calculators, converters and productivity tools.">
+<meta property="og:description" content="Your everyday tools, all in one place. Free calculators, converters, PDF and productivity tools.">
 <meta property="og:url" content="https://hd2bg.github.io/smarttools-hub/">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SmartTools Hub | Free Online Tools">
 <meta name="twitter:description" content="Your everyday tools, all in one place.">
-
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
   "@type":"WebSite",
   "name":"SmartTools Hub",
   "url":"https://hd2bg.github.io/smarttools-hub/",
-  "description":"Free online calculators, converters, image tools and productivity tools."
+  "description":"Free online calculators, converters, PDF tools, image tools and productivity tools."
 }
 </script>
-
 <title>SmartTools Hub | Free Online Tools</title>
 
 <style>
-:root {
-  --bg:#0b0818;
-  --surface:#141026;
-  --surface2:#1c1733;
-  --surface3:#241d40;
-  --purple:#8b5cf6;
-  --purple2:#a78bfa;
-  --pink:#d879ff;
-  --text:#f8f7ff;
-  --muted:#aaa3c2;
-  --border:rgba(180,155,255,.15);
-  --green:#4adea1;
-  --red:#fb7185;
-  --shadow:0 15px 45px rgba(0,0,0,.22);
+:root{
+  --bg:#0b0818;--surface:#141026;--surface2:#1c1733;
+  --surface3:#241d40;--purple:#8b5cf6;--purple2:#a78bfa;
+  --pink:#d879ff;--text:#f8f7ff;--muted:#aaa3c2;
+  --border:rgba(180,155,255,.15);--green:#4adea1;
+  --red:#fb7185;--shadow:0 15px 45px rgba(0,0,0,.22)
 }
-
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:100px}
 body{
-  margin:0;
-  color:var(--text);
-  background:
-    radial-gradient(ellipse at 50% -15%,rgba(124,58,237,.2),transparent 55%),
-    var(--bg);
+  margin:0;color:var(--text);
+  background:radial-gradient(ellipse at 50% -15%,rgba(124,58,237,.2),transparent 55%),var(--bg);
   font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
-  line-height:1.65;
+  line-height:1.65
 }
 button,input,textarea,select{font:inherit}
 button,a{-webkit-tap-highlight-color:transparent}
 button{cursor:pointer}
 a{color:var(--purple2)}
-button:focus-visible,a:focus-visible,input:focus-visible,
-textarea:focus-visible,select:focus-visible{
-  outline:3px solid var(--pink);
-  outline-offset:3px;
-}
+button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid var(--pink);outline-offset:3px}
 button:disabled{opacity:.5;cursor:not-allowed}
-
-.site-header{
-  position:sticky;
-  top:0;
-  z-index:20;
-  background:rgba(11,8,24,.88);
-  backdrop-filter:blur(18px);
-  border-bottom:1px solid var(--border);
-}
-.header-inner{
-  max-width:1240px;
-  margin:auto;
-  padding:14px 24px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:18px;
-}
-.brand{
-  display:flex;
-  align-items:center;
-  gap:11px;
-  color:var(--text);
-  text-decoration:none;
-  font-size:21px;
-  font-weight:850;
-  letter-spacing:-.7px;
-}
-.brand-icon{
-  width:39px;
-  height:39px;
-  border-radius:13px;
-  display:grid;
-  place-items:center;
-  background:linear-gradient(135deg,#8b5cf6,#d879ff);
-  box-shadow:0 5px 20px rgba(139,92,246,.35);
-  font-size:21px;
-}
+.site-header{position:sticky;top:0;z-index:20;background:rgba(11,8,24,.88);backdrop-filter:blur(18px);border-bottom:1px solid var(--border)}
+.header-inner{max-width:1240px;margin:auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand{display:flex;align-items:center;gap:11px;color:var(--text);text-decoration:none;font-size:21px;font-weight:850;letter-spacing:-.7px}
+.brand-icon{width:39px;height:39px;border-radius:13px;display:grid;place-items:center;background:linear-gradient(135deg,#8b5cf6,#d879ff);box-shadow:0 5px 20px rgba(139,92,246,.35);font-size:21px}
 .brand span{color:var(--purple2)}
-.nav{
-  display:flex;
-  align-items:center;
-  flex-wrap:wrap;
-  gap:5px;
-}
-.nav button{
-  border:0;
-  background:transparent;
-  color:var(--muted);
-  padding:9px 13px;
-  border-radius:10px;
-  font-size:14px;
-  font-weight:650;
-  transition:.2s;
-}
-.nav button:hover,.nav button.active{
-  background:var(--surface2);
-  color:white;
-}
-.nav .account-nav{
-  background:linear-gradient(135deg,var(--purple),#7043d8);
-  color:white;
-  padding:10px 17px;
-}
+.nav{display:flex;align-items:center;flex-wrap:wrap;gap:5px}
+.nav button{border:0;background:transparent;color:var(--muted);padding:9px 13px;border-radius:10px;font-size:14px;font-weight:650;transition:.2s}
+.nav button:hover,.nav button.active{background:var(--surface2);color:white}
+.nav .account-nav{background:linear-gradient(135deg,var(--purple),#7043d8);color:white;padding:10px 17px}
 .nav .account-nav:hover{filter:brightness(1.12)}
-
-main{
-  max-width:1240px;
-  min-height:70vh;
-  margin:auto;
-  padding:25px 24px 65px;
-}
+main{max-width:1240px;min-height:70vh;margin:auto;padding:25px 24px 65px}
 .page{display:none}
 .page.active{display:block;animation:fadeIn .35s ease}
-@keyframes fadeIn{
-  from{opacity:0;transform:translateY(7px)}
-  to{opacity:1;transform:translateY(0)}
-}
-
-.hero{
-  position:relative;
-  overflow:hidden;
-  text-align:center;
-  padding:76px 22px 55px;
-  border:1px solid var(--border);
-  border-radius:28px;
-  background:
-    radial-gradient(ellipse at 50% 0%,rgba(139,92,246,.27),transparent 65%),
-    linear-gradient(135deg,#17112d,#100d20);
-  box-shadow:var(--shadow);
-}
-.hero:before,.hero:after{
-  content:"";
-  position:absolute;
-  width:180px;
-  height:180px;
-  border-radius:50%;
-  filter:blur(65px);
-  opacity:.22;
-  pointer-events:none;
-}
+@keyframes fadeIn{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+.hero{position:relative;overflow:hidden;text-align:center;padding:76px 22px 55px;border:1px solid var(--border);border-radius:28px;background:radial-gradient(ellipse at 50% 0%,rgba(139,92,246,.27),transparent 65%),linear-gradient(135deg,#17112d,#100d20);box-shadow:var(--shadow)}
+.hero:before,.hero:after{content:"";position:absolute;width:180px;height:180px;border-radius:50%;filter:blur(65px);opacity:.22;pointer-events:none}
 .hero:before{background:#9b5cff;top:-100px;left:-70px}
 .hero:after{background:#e879f9;bottom:-130px;right:-50px}
 .hero-content{position:relative;z-index:1}
-.eyebrow{
-  display:inline-flex;
-  align-items:center;
-  gap:7px;
-  border:1px solid rgba(167,139,250,.3);
-  background:rgba(139,92,246,.12);
-  color:#c4b5fd;
-  border-radius:50px;
-  padding:7px 14px;
-  font-size:12px;
-  font-weight:750;
-  letter-spacing:1px;
-  text-transform:uppercase;
-}
-.hero h1{
-  max-width:850px;
-  margin:20px auto 15px;
-  font-size:clamp(36px,6vw,65px);
-  line-height:1.08;
-  letter-spacing:-2.7px;
-}
-.gradient-text{
-  background:linear-gradient(90deg,#a78bfa,#e9a8ff);
-  -webkit-background-clip:text;
-  background-clip:text;
-  color:transparent;
-}
-.hero p{
-  max-width:620px;
-  margin:0 auto;
-  color:var(--muted);
-  font-size:17px;
-}
-.hero-search{
-  position:relative;
-  max-width:590px;
-  margin:30px auto 0;
-}
-.hero-search input{
-  width:100%;
-  margin:0;
-  padding:17px 20px 17px 52px;
-  border:1px solid rgba(183,155,255,.24);
-  border-radius:15px;
-  background:#100d20;
-  color:white;
-  font-size:15px;
-  box-shadow:0 10px 35px rgba(0,0,0,.2);
-}
-.search-icon{
-  position:absolute;
-  left:19px;
-  top:50%;
-  transform:translateY(-50%);
-  font-size:19px;
-  pointer-events:none;
-}
-.hero-stats{
-  display:flex;
-  justify-content:center;
-  flex-wrap:wrap;
-  gap:32px;
-  margin-top:30px;
-}
-.stat{
-  color:var(--muted);
-  font-size:13px;
-}
+.eyebrow{display:inline-flex;align-items:center;gap:7px;border:1px solid rgba(167,139,250,.3);background:rgba(139,92,246,.12);color:#c4b5fd;border-radius:50px;padding:7px 14px;font-size:12px;font-weight:750;letter-spacing:1px;text-transform:uppercase}
+.hero h1{max-width:850px;margin:20px auto 15px;font-size:clamp(36px,6vw,65px);line-height:1.08;letter-spacing:-2.7px}
+.gradient-text{background:linear-gradient(90deg,#a78bfa,#e9a8ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{max-width:620px;margin:0 auto;color:var(--muted);font-size:17px}
+.hero-search{position:relative;max-width:590px;margin:30px auto 0}
+.hero-search input{width:100%;margin:0;padding:17px 20px 17px 52px;border:1px solid rgba(183,155,255,.24);border-radius:15px;background:#100d20;color:white;font-size:15px;box-shadow:0 10px 35px rgba(0,0,0,.2)}
+.search-icon{position:absolute;left:19px;top:50%;transform:translateY(-50%);font-size:19px;pointer-events:none}
+.hero-stats{display:flex;justify-content:center;flex-wrap:wrap;gap:32px;margin-top:30px}
+.stat{color:var(--muted);font-size:13px}
 .stat strong{color:white;font-size:16px;margin-right:5px}
-
-.section-heading{
-  display:flex;
-  justify-content:space-between;
-  align-items:end;
-  flex-wrap:wrap;
-  gap:12px;
-  margin:40px 0 19px;
-}
-.section-heading h2{
-  margin:0;
-  font-size:25px;
-  letter-spacing:-.7px;
-}
+.section-heading{display:flex;justify-content:space-between;align-items:end;flex-wrap:wrap;gap:12px;margin:40px 0 19px}
+.section-heading h2{margin:0;font-size:25px;letter-spacing:-.7px}
 .section-heading p{margin:3px 0 0;color:var(--muted);font-size:14px}
-.filters{
-  display:flex;
-  gap:8px;
-  flex-wrap:wrap;
-  margin:0 0 22px;
-}
-.filter-btn{
-  border:1px solid var(--border);
-  border-radius:50px;
-  padding:8px 15px;
-  color:var(--muted);
-  background:var(--surface);
-  font-size:13px;
-  font-weight:650;
-  transition:.2s;
-}
-.filter-btn:hover,.filter-btn.selected{
-  color:white;
-  border-color:var(--purple);
-  background:rgba(139,92,246,.18);
-}
-.tools-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));
-  gap:17px;
-}
-.tool-card{
-  min-width:0;
-  padding:21px;
-  border:1px solid var(--border);
-  border-radius:18px;
-  background:linear-gradient(145deg,rgba(28,23,51,.96),rgba(18,14,34,.96));
-  box-shadow:0 8px 25px rgba(0,0,0,.12);
-  transition:transform .22s,border-color .22s,box-shadow .22s;
-}
-.tool-card:hover{
-  transform:translateY(-4px);
-  border-color:rgba(167,139,250,.5);
-  box-shadow:0 14px 35px rgba(0,0,0,.22);
-}
-.tool-title{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  margin:0 0 17px;
-  font-size:17px;
-  letter-spacing:-.3px;
-}
-.tool-icon{
-  flex:0 0 42px;
-  width:42px;
-  height:42px;
-  display:grid;
-  place-items:center;
-  border-radius:13px;
-  background:rgba(139,92,246,.15);
-  border:1px solid rgba(167,139,250,.17);
-  font-size:21px;
-}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 22px}
+.filter-btn{border:1px solid var(--border);border-radius:50px;padding:8px 15px;color:var(--muted);background:var(--surface);font-size:13px;font-weight:650;transition:.2s}
+.filter-btn:hover,.filter-btn.selected{color:white;border-color:var(--purple);background:rgba(139,92,246,.18)}
+.tools-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:17px}
+.tool-card{min-width:0;padding:21px;border:1px solid var(--border);border-radius:18px;background:linear-gradient(145deg,rgba(28,23,51,.96),rgba(18,14,34,.96));box-shadow:0 8px 25px rgba(0,0,0,.12);transition:transform .22s,border-color .22s,box-shadow .22s}
+.tool-card:hover{transform:translateY(-4px);border-color:rgba(167,139,250,.5);box-shadow:0 14px 35px rgba(0,0,0,.22)}
+.tool-title{display:flex;align-items:center;gap:12px;margin:0 0 17px;font-size:17px;letter-spacing:-.3px}
+.tool-icon{flex:0 0 42px;width:42px;height:42px;display:grid;place-items:center;border-radius:13px;background:rgba(139,92,246,.15);border:1px solid rgba(167,139,250,.17);font-size:21px}
 .tool-card p{color:var(--muted)}
-input,textarea,select{
-  width:100%;
-  margin:7px 0 13px;
-  padding:12px 13px;
-  color:white;
-  background:#0e0b1b;
-  border:1px solid var(--border);
-  border-radius:10px;
-  font-size:14px;
-}
+input,textarea,select{width:100%;margin:7px 0 13px;padding:12px 13px;color:white;background:#0e0b1b;border:1px solid var(--border);border-radius:10px;font-size:14px}
 input::placeholder,textarea::placeholder{color:#77718d}
 input[type=range]{padding:0;accent-color:var(--purple)}
 input[type=file]{font-size:12px}
 textarea{min-height:100px;resize:vertical}
-label{
-  display:block;
-  margin-top:5px;
-  color:#c2bbd8;
-  font-size:13px;
-  font-weight:600;
-}
-.btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  gap:7px;
-  padding:11px 16px;
-  border:1px solid transparent;
-  border-radius:10px;
-  background:linear-gradient(135deg,#8b5cf6,#7043d8);
-  color:white;
-  font-size:13px;
-  font-weight:750;
-  text-decoration:none;
-  transition:filter .2s,transform .2s;
-}
+label{display:block;margin-top:5px;color:#c2bbd8;font-size:13px;font-weight:600}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;padding:11px 16px;border:1px solid transparent;border-radius:10px;background:linear-gradient(135deg,#8b5cf6,#7043d8);color:white;font-size:13px;font-weight:750;text-decoration:none;transition:filter .2s,transform .2s}
 .btn:hover{filter:brightness(1.14);transform:translateY(-1px)}
-.btn-secondary{
-  color:#ddd4ff;
-  background:var(--surface3);
-  border-color:var(--border);
-}
-.btn-google{
-  background:#fff;
-  color:#292333;
-}
+.btn-secondary{color:#ddd4ff;background:var(--surface3);border-color:var(--border)}
+.btn-google{background:#fff;color:#292333}
 .btn-full{width:100%}
 .btn + .btn{margin-left:5px}
-.result{
-  min-height:20px;
-  margin-top:12px;
-  padding:12px;
-  border:1px solid var(--border);
-  border-radius:10px;
-  background:#0e0b1b;
-  overflow-wrap:anywhere;
-  font-size:14px;
-}
+.result{min-height:20px;margin-top:12px;padding:12px;border:1px solid var(--border);border-radius:10px;background:#0e0b1b;overflow-wrap:anywhere;font-size:14px}
 .result img{display:block;max-width:100%;height:auto;border-radius:8px}
 .result a{color:#c4b5fd}
 .result:empty{display:none}
@@ -385,79 +114,28 @@ label{
 .muted{color:var(--muted)}
 .status-success{color:var(--green)}
 .status-error{color:var(--red)}
-.empty-message{
-  display:none;
-  padding:35px 10px;
-  text-align:center;
-  color:var(--muted);
-}
-.page-heading{
-  margin:20px 0 25px;
-  font-size:clamp(30px,5vw,42px);
-  letter-spacing:-1.4px;
-}
-.content-card{
-  padding:28px;
-  border:1px solid var(--border);
-  border-radius:19px;
-  background:var(--surface);
-  box-shadow:var(--shadow);
-}
+.empty-message{display:none;padding:35px 10px;text-align:center;color:var(--muted)}
+.page-heading{margin:20px 0 25px;font-size:clamp(30px,5vw,42px);letter-spacing:-1.4px}
+.content-card{padding:28px;border:1px solid var(--border);border-radius:19px;background:var(--surface);box-shadow:var(--shadow)}
 .content-card h2,.content-card h3{margin-top:23px}
 .content-card h3:first-child{margin-top:0}
 .content-card p,.content-card li{color:#c1bad4}
 .content-card a{color:#c4b5fd}
 .account-card{max-width:560px;margin:0 auto}
 .account-card .btn{margin:5px 5px 5px 0}
-.account-note{
-  margin-top:20px;
-  padding:13px;
-  border-radius:11px;
-  background:rgba(139,92,246,.09);
-  color:var(--muted);
-  font-size:12px;
-}
+.account-note{margin-top:20px;padding:13px;border-radius:11px;background:rgba(139,92,246,.09);color:var(--muted);font-size:12px}
 #todoList{padding-left:22px}
 #todoList li{margin:10px 0;overflow-wrap:anywhere}
 #todoList button{padding:5px 9px;margin-left:8px}
-footer{
-  border-top:1px solid var(--border);
-  background:#0a0715;
-  padding:35px 20px;
-  text-align:center;
-  color:var(--muted);
-}
+footer{border-top:1px solid var(--border);background:#0a0715;padding:35px 20px;text-align:center;color:var(--muted)}
 .footer-brand{font-weight:800;font-size:19px;color:white}
 .footer-brand span{color:var(--purple2)}
-.footer-links{
-  display:flex;
-  justify-content:center;
-  flex-wrap:wrap;
-  gap:20px;
-  margin:15px 0;
-}
+.footer-links{display:flex;justify-content:center;flex-wrap:wrap;gap:20px;margin:15px 0}
 .footer-links a{color:var(--muted);font-size:13px;text-decoration:none}
 .footer-links a:hover{color:white}
 footer p{font-size:12px}
-#toast{
-  position:fixed;
-  z-index:50;
-  bottom:22px;
-  left:50%;
-  transform:translate(-50%,20px);
-  padding:12px 18px;
-  border:1px solid var(--border);
-  border-radius:12px;
-  background:#241d40;
-  color:white;
-  box-shadow:var(--shadow);
-  opacity:0;
-  pointer-events:none;
-  transition:.25s;
-  font-size:13px;
-}
+#toast{position:fixed;z-index:50;bottom:22px;left:50%;transform:translate(-50%,20px);padding:12px 18px;border:1px solid var(--border);border-radius:12px;background:#241d40;color:white;box-shadow:var(--shadow);opacity:0;pointer-events:none;transition:.25s;font-size:13px}
 #toast.show{opacity:1;transform:translate(-50%,0)}
-
 @media(max-width:760px){
   .header-inner{flex-direction:column;padding:12px 14px;gap:10px}
   .nav{justify-content:center}
@@ -478,12 +156,10 @@ footer p{font-size:12px}
 </head>
 
 <body>
-
 <header class="site-header">
   <div class="header-inner">
     <a class="brand" href="#" onclick="showPage('home');return false">
-      <span class="brand-icon">✦</span>
-      SmartTools <span>Hub</span>
+      <span class="brand-icon">✦</span>SmartTools <span>Hub</span>
     </a>
     <nav class="nav" aria-label="Main navigation">
       <button class="active" data-page="home" onclick="showPage('home')">Home</button>
@@ -496,8 +172,6 @@ footer p{font-size:12px}
 </header>
 
 <main>
-
-<!-- HOME -->
 <section id="home" class="page active">
   <div class="hero">
     <div class="hero-content">
@@ -509,7 +183,7 @@ footer p{font-size:12px}
         <input id="search" type="search" placeholder="Search calculators, converters, tools..." aria-label="Search tools" oninput="filterTools()">
       </div>
       <div class="hero-stats">
-        <div class="stat"><strong>14+</strong> useful tools</div>
+        <div class="stat"><strong>18+</strong> useful tools</div>
         <div class="stat"><strong>Free</strong> to use</div>
         <div class="stat"><strong>Any device</strong> friendly</div>
       </div>
@@ -517,10 +191,7 @@ footer p{font-size:12px}
   </div>
 
   <div class="section-heading">
-    <div>
-      <h2>Explore your tools</h2>
-      <p>Choose a tool and get started.</p>
-    </div>
+    <div><h2>Explore your tools</h2><p>Choose a tool and get started.</p></div>
   </div>
 
   <div class="filters" aria-label="Filter tools">
@@ -529,11 +200,11 @@ footer p{font-size:12px}
     <button class="filter-btn" onclick="filterCategory('converters',this)">🔄 Converters</button>
     <button class="filter-btn" onclick="filterCategory('productivity',this)">✍️ Productivity</button>
     <button class="filter-btn" onclick="filterCategory('other',this)">✨ Other tools</button>
+    <button class="filter-btn" onclick="filterCategory('pdf',this)">📄 PDF tools</button>
   </div>
 
   <div class="tools-grid" id="tools">
 
-    <!-- 1 -->
     <div class="tool-card tool" data-category="calculators">
       <h3 class="tool-title"><span class="tool-icon">🧮</span>Calculator</h3>
       <input id="calcInput" placeholder="Example: (12+5)*3" aria-label="Math expression">
@@ -541,25 +212,20 @@ footer p{font-size:12px}
       <div class="result" id="calcResult" aria-live="polite">Your answer will appear here.</div>
     </div>
 
-    <!-- 2 -->
     <div class="tool-card tool" data-category="calculators">
       <h3 class="tool-title"><span class="tool-icon">📊</span>Percentage Calculator</h3>
-      <label for="pct">Percentage (%)</label>
-      <input id="pct" type="number" placeholder="20">
-      <label for="pctOf">Number</label>
-      <input id="pctOf" type="number" placeholder="150">
+      <label for="pct">Percentage (%)</label><input id="pct" type="number" placeholder="20">
+      <label for="pctOf">Number</label><input id="pctOf" type="number" placeholder="150">
       <button class="btn" onclick="percentage()">Calculate →</button>
       <div class="result" id="pctResult" aria-live="polite"></div>
     </div>
 
-    <!-- 3 -->
     <div class="tool-card tool" data-category="productivity">
       <h3 class="tool-title"><span class="tool-icon">📝</span>Word & Character Counter</h3>
       <textarea id="wordText" placeholder="Type or paste your text..." oninput="countWords()"></textarea>
       <div class="result" id="wordResult" aria-live="polite">Words: 0 | Characters: 0</div>
     </div>
 
-    <!-- 4 -->
     <div class="tool-card tool" data-category="other">
       <h3 class="tool-title"><span class="tool-icon">🔐</span>Password Generator</h3>
       <label for="passLength">Password length (6–64)</label>
@@ -569,37 +235,26 @@ footer p{font-size:12px}
       <button class="btn btn-secondary" onclick="copyText('passResult')">Copy password</button>
     </div>
 
-    <!-- 5 -->
     <div class="tool-card tool" data-category="converters">
       <h3 class="tool-title"><span class="tool-icon">📏</span>Length Converter</h3>
-      <label for="lengthValue">Value</label>
-      <input id="lengthValue" type="number" placeholder="Enter value">
+      <label for="lengthValue">Value</label><input id="lengthValue" type="number" placeholder="Enter value">
       <label for="lengthFrom">From</label>
-      <select id="lengthFrom">
-        <option value="m">Metres</option><option value="km">Kilometres</option><option value="cm">Centimetres</option><option value="mi">Miles</option><option value="ft">Feet</option><option value="in">Inches</option>
-      </select>
+      <select id="lengthFrom"><option value="m">Metres</option><option value="km">Kilometres</option><option value="cm">Centimetres</option><option value="mi">Miles</option><option value="ft">Feet</option><option value="in">Inches</option></select>
       <label for="lengthTo">To</label>
-      <select id="lengthTo">
-        <option value="ft">Feet</option><option value="m">Metres</option><option value="km">Kilometres</option><option value="cm">Centimetres</option><option value="mi">Miles</option><option value="in">Inches</option>
-      </select>
+      <select id="lengthTo"><option value="ft">Feet</option><option value="m">Metres</option><option value="km">Kilometres</option><option value="cm">Centimetres</option><option value="mi">Miles</option><option value="in">Inches</option></select>
       <button class="btn" onclick="convertLength()">Convert →</button>
       <div class="result" id="lengthResult" aria-live="polite"></div>
     </div>
 
-    <!-- 6 -->
     <div class="tool-card tool" data-category="converters">
       <h3 class="tool-title"><span class="tool-icon">🌡️</span>Temperature Converter</h3>
-      <label for="tempValue">Temperature</label>
-      <input id="tempValue" type="number" placeholder="Enter temperature">
-      <label for="tempFrom">From</label>
-      <select id="tempFrom"><option value="C">Celsius</option><option value="F">Fahrenheit</option></select>
-      <label for="tempTo">To</label>
-      <select id="tempTo"><option value="F">Fahrenheit</option><option value="C">Celsius</option></select>
+      <label for="tempValue">Temperature</label><input id="tempValue" type="number" placeholder="Enter temperature">
+      <label for="tempFrom">From</label><select id="tempFrom"><option value="C">Celsius</option><option value="F">Fahrenheit</option></select>
+      <label for="tempTo">To</label><select id="tempTo"><option value="F">Fahrenheit</option><option value="C">Celsius</option></select>
       <button class="btn" onclick="convertTemp()">Convert →</button>
       <div class="result" id="tempResult" aria-live="polite"></div>
     </div>
 
-    <!-- 7 -->
     <div class="tool-card tool" data-category="productivity">
       <h3 class="tool-title"><span class="tool-icon">🔠</span>Text Case Converter</h3>
       <textarea id="caseText" placeholder="Enter text to convert..."></textarea>
@@ -610,20 +265,15 @@ footer p{font-size:12px}
       <button class="btn btn-secondary" onclick="copyText('caseResult')">Copy text</button>
     </div>
 
-    <!-- 8 -->
     <div class="tool-card tool" data-category="calculators">
       <h3 class="tool-title"><span class="tool-icon">🍕</span>Tip Calculator</h3>
-      <label for="bill">Bill amount</label>
-      <input id="bill" type="number" min="0" placeholder="50">
-      <label for="tip">Tip percentage</label>
-      <input id="tip" type="number" min="0" value="10">
-      <label for="people">Number of people</label>
-      <input id="people" type="number" min="1" value="1">
+      <label for="bill">Bill amount</label><input id="bill" type="number" min="0" placeholder="50">
+      <label for="tip">Tip percentage</label><input id="tip" type="number" min="0" value="10">
+      <label for="people">Number of people</label><input id="people" type="number" min="1" value="1">
       <button class="btn" onclick="tipCalc()">Calculate →</button>
       <div class="result" id="tipResult" aria-live="polite"></div>
     </div>
 
-    <!-- 9 -->
     <div class="tool-card tool" data-category="other">
       <h3 class="tool-title"><span class="tool-icon">📱</span>QR Code Generator</h3>
       <input id="qrText" placeholder="Enter text or website URL">
@@ -632,31 +282,23 @@ footer p{font-size:12px}
       <p class="small">Uses an external QR service. Do not enter confidential information.</p>
     </div>
 
-    <!-- 10 -->
     <div class="tool-card tool" data-category="other">
       <h3 class="tool-title"><span class="tool-icon">🖼️</span>Image Compressor</h3>
-      <label for="compressFile">Choose an image</label>
-      <input id="compressFile" type="file" accept="image/*">
-      <label for="quality">Image quality</label>
-      <input id="quality" type="range" min=".1" max="1" step=".1" value=".7">
+      <label for="compressFile">Choose an image</label><input id="compressFile" type="file" accept="image/*">
+      <label for="quality">Image quality</label><input id="quality" type="range" min=".1" max="1" step=".1" value=".7">
       <button class="btn" onclick="compressImage()">Compress image →</button>
       <div class="result" id="compressResult" aria-live="polite"></div>
     </div>
 
-    <!-- 11 -->
     <div class="tool-card tool" data-category="other">
       <h3 class="tool-title"><span class="tool-icon">📐</span>Image Resizer</h3>
-      <label for="resizeFile">Choose an image</label>
-      <input id="resizeFile" type="file" accept="image/*">
-      <label for="resizeWidth">New width (pixels)</label>
-      <input id="resizeWidth" type="number" min="1" max="6000" placeholder="Width">
-      <label for="resizeHeight">New height (pixels)</label>
-      <input id="resizeHeight" type="number" min="1" max="6000" placeholder="Height">
+      <label for="resizeFile">Choose an image</label><input id="resizeFile" type="file" accept="image/*">
+      <label for="resizeWidth">New width (pixels)</label><input id="resizeWidth" type="number" min="1" max="6000" placeholder="Width">
+      <label for="resizeHeight">New height (pixels)</label><input id="resizeHeight" type="number" min="1" max="6000" placeholder="Height">
       <button class="btn" onclick="resizeImage()">Resize image →</button>
       <div class="result" id="resizeResult" aria-live="polite"></div>
     </div>
 
-    <!-- 12 -->
     <div class="tool-card tool" data-category="productivity">
       <h3 class="tool-title"><span class="tool-icon">✅</span>To-do List</h3>
       <input id="todoInput" placeholder="Add a task...">
@@ -664,7 +306,6 @@ footer p{font-size:12px}
       <ul id="todoList"></ul>
     </div>
 
-    <!-- 13 -->
     <div class="tool-card tool" data-category="productivity">
       <h3 class="tool-title"><span class="tool-icon">📒</span>Notes</h3>
       <textarea id="notes" placeholder="Write your notes here..."></textarea>
@@ -672,18 +313,64 @@ footer p{font-size:12px}
       <div id="notesStatus" class="result" aria-live="polite"></div>
     </div>
 
-    <!-- 14 -->
     <div class="tool-card tool" data-category="other">
       <h3 class="tool-title"><span class="tool-icon">🕒</span>Live Clock</h3>
       <div class="result" id="clock" style="font-size:30px;text-align:center;font-weight:800" aria-live="off"></div>
       <p class="small">Displays your device's local time.</p>
     </div>
 
+    <!-- PDF TOOL 1: MERGE -->
+    <div class="tool-card tool" data-category="pdf">
+      <h3 class="tool-title"><span class="tool-icon">📚</span>Merge PDFs</h3>
+      <p class="small">Combine multiple PDF files into one document. Files are processed in the order selected.</p>
+      <label for="mergeFiles">Choose PDF files</label>
+      <input id="mergeFiles" type="file" accept="application/pdf,.pdf" multiple>
+      <button class="btn" onclick="mergePDFs()">Merge PDFs →</button>
+      <div class="result" id="mergeResult" aria-live="polite"></div>
+    </div>
+
+    <!-- PDF TOOL 2: SPLIT -->
+    <div class="tool-card tool" data-category="pdf">
+      <h3 class="tool-title"><span class="tool-icon">✂️</span>Split PDF</h3>
+      <p class="small">Extract a range of pages into a separate PDF. Example: 1-3 or 1,3,5.</p>
+      <label for="splitFile">Choose a PDF</label>
+      <input id="splitFile" type="file" accept="application/pdf,.pdf">
+      <label for="splitPages">Pages to extract</label>
+      <input id="splitPages" type="text" placeholder="Example: 1-3,5">
+      <button class="btn" onclick="splitPDF()">Extract pages →</button>
+      <div class="result" id="splitResult" aria-live="polite"></div>
+    </div>
+
+    <!-- PDF TOOL 3: IMAGES TO PDF -->
+    <div class="tool-card tool" data-category="pdf">
+      <h3 class="tool-title"><span class="tool-icon">🖼️</span>Images to PDF</h3>
+      <p class="small">Turn JPG, PNG and other browser-readable images into a single PDF.</p>
+      <label for="imagePDFfiles">Choose images</label>
+      <input id="imagePDFfiles" type="file" accept="image/*" multiple>
+      <button class="btn" onclick="imagesToPDF()">Create PDF →</button>
+      <div class="result" id="imagePDFresult" aria-live="polite"></div>
+    </div>
+
+    <!-- PDF TOOL 4: ROTATE -->
+    <div class="tool-card tool" data-category="pdf">
+      <h3 class="tool-title"><span class="tool-icon">🔄</span>Rotate PDF</h3>
+      <p class="small">Rotate every page in a PDF by 90, 180 or 270 degrees.</p>
+      <label for="rotateFile">Choose a PDF</label>
+      <input id="rotateFile" type="file" accept="application/pdf,.pdf">
+      <label for="rotateDegrees">Rotation</label>
+      <select id="rotateDegrees">
+        <option value="90">90 degrees clockwise</option>
+        <option value="180">180 degrees</option>
+        <option value="270">270 degrees clockwise</option>
+      </select>
+      <button class="btn" onclick="rotatePDF()">Rotate PDF →</button>
+      <div class="result" id="rotateResult" aria-live="polite"></div>
+    </div>
+
   </div>
   <p id="noTools" class="empty-message">No tools found. Try another search.</p>
 </section>
 
-<!-- ACCOUNT -->
 <section id="account" class="page">
   <h1 class="page-heading">Your Account</h1>
   <div class="content-card account-card">
@@ -703,12 +390,11 @@ footer p{font-size:12px}
   </div>
 </section>
 
-<!-- ABOUT -->
 <section id="about" class="page">
   <h1 class="page-heading">About SmartTools Hub</h1>
   <div class="content-card">
     <h2>Tools that make everyday life easier.</h2>
-    <p>SmartTools Hub brings useful online tools together in one convenient place. From everyday calculations and unit conversions to image utilities and productivity features, our goal is to make common tasks simpler.</p>
+    <p>SmartTools Hub brings useful online tools together in one convenient place. From everyday calculations and unit conversions to PDF utilities, image tools and productivity features, our goal is to make common tasks simpler.</p>
     <h3>Simple by design</h3>
     <p>We aim to provide an easy-to-use experience across desktop, tablet and mobile devices.</p>
     <h3>Our goal</h3>
@@ -716,7 +402,6 @@ footer p{font-size:12px}
   </div>
 </section>
 
-<!-- PRIVACY -->
 <section id="privacy" class="page">
   <h1 class="page-heading">Privacy Policy</h1>
   <div class="content-card">
@@ -724,13 +409,13 @@ footer p{font-size:12px}
     <h3>Information and accounts</h3>
     <p>If you register or sign in, Supabase processes your email address and authentication information to provide account services. Google sign-in is handled through Google's authentication service.</p>
     <h3>Local tools and storage</h3>
-    <p>Most tools run in your browser. Notes and tasks are saved in your browser's local storage on that device. They are not automatically synchronised with your account.</p>
+    <p>Most tools run in your browser. PDF tools process the selected files locally in your browser using the pdf-lib library. Your selected PDF and image files are not uploaded by these tools to a SmartTools Hub server. Notes and tasks are saved in your browser's local storage on that device and are not automatically synchronised with your account.</p>
     <h3>QR code service</h3>
     <p>The QR code generator sends the text you enter to the external QR Server service to create a QR image. Do not enter confidential or sensitive information into this tool.</p>
     <h3>Browser storage</h3>
     <p>This website uses local storage for notes and tasks. Supabase authentication may use browser storage to maintain your sign-in session.</p>
     <h3>Third-party services</h3>
-    <p>Supabase provides authentication services, Google provides Google sign-in, and QR Server generates QR code images. Their own privacy policies apply to their services.</p>
+    <p>Supabase provides authentication services, Google provides Google sign-in, QR Server generates QR code images, and jsDelivr delivers the libraries used by this website. Their own privacy policies apply to their services.</p>
     <h3>Your choices</h3>
     <p>You can clear your browser storage to remove locally saved notes and tasks. You can contact us with privacy questions or requests.</p>
     <h3>Contact</h3>
@@ -739,7 +424,6 @@ footer p{font-size:12px}
   </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact" class="page">
   <h1 class="page-heading">Contact Us</h1>
   <div class="content-card">
@@ -749,7 +433,6 @@ footer p{font-size:12px}
     <a class="btn" href="mailto:halimafatima0810@gmail.com?subject=SmartTools%20Hub%20Enquiry">✉ Send us an email</a>
   </div>
 </section>
-
 </main>
 
 <footer>
@@ -763,10 +446,12 @@ footer p{font-size:12px}
   </div>
   <p>© <span id="year"></span> SmartTools Hub. All rights reserved.</p>
 </footer>
-
 <div id="toast" role="status" aria-live="polite"></div>
 
+<!-- External libraries -->
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="https://cdn.jsdelivr.net/npm/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+
 <script>
 "use strict";
 
@@ -781,7 +466,7 @@ try{
   }
 }catch(error){console.error("Supabase setup error:",error)}
 
-/* SMALL NOTIFICATION */
+/* NOTIFICATIONS */
 let toastTimer;
 function toast(message){
   const box=document.getElementById("toast");
@@ -803,13 +488,12 @@ function showPage(id){
   window.scrollTo({top:0,behavior:"smooth"});
 }
 
-/* TOOL SEARCH AND FILTERS */
+/* SEARCH AND FILTERS */
 let currentCategory="all";
 function filterTools(){
   currentCategory="all";
   document.querySelectorAll(".filter-btn").forEach(button=>button.classList.remove("selected"));
-  const allButton=document.querySelector(".filter-btn");
-  if(allButton)allButton.classList.add("selected");
+  document.querySelector(".filter-btn").classList.add("selected");
   applyToolFilters();
 }
 function filterCategory(category,button){
@@ -918,8 +602,8 @@ function makePassword(){
   const chars="ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz23456789!@#$%&*?";
   const random=new Uint32Array(length);
   crypto.getRandomValues(random);
-  const password=Array.from(random,n=>chars[n%chars.length]).join("");
-  document.getElementById("passResult").textContent=password;
+  document.getElementById("passResult").textContent=
+    Array.from(random,n=>chars[n%chars.length]).join("");
 }
 
 /* COPY */
@@ -927,10 +611,8 @@ async function copyText(id){
   const element=document.getElementById(id);
   const value=element.innerText||element.textContent;
   if(!value.trim()){toast("Nothing to copy yet.");return}
-  try{
-    await navigator.clipboard.writeText(value);
-    toast("Copied to clipboard!");
-  }catch(error){toast("Copy unavailable. Please copy manually.")}
+  try{await navigator.clipboard.writeText(value);toast("Copied to clipboard!")}
+  catch(error){toast("Copy unavailable. Please copy manually.")}
 }
 
 /* 5. LENGTH CONVERTER */
@@ -941,8 +623,7 @@ function convertLength(){
   if(input===""||!Number.isFinite(Number(input))){output.textContent="Please enter a valid number.";return}
   const from=document.getElementById("lengthFrom").value;
   const to=document.getElementById("lengthTo").value;
-  const result=Number(input)*metres[from]/metres[to];
-  output.textContent=result.toLocaleString(undefined,{maximumFractionDigits:6});
+  output.textContent=(Number(input)*metres[from]/metres[to]).toLocaleString(undefined,{maximumFractionDigits:6});
 }
 
 /* 6. TEMPERATURE */
@@ -972,15 +653,12 @@ function tipCalc(){
   const tipInput=document.getElementById("tip").value;
   const peopleInput=document.getElementById("people").value;
   const output=document.getElementById("tipResult");
-  if(billInput===""||tipInput===""||peopleInput===""){
-    output.textContent="Please complete all fields.";return;
-  }
+  if(billInput===""||tipInput===""||peopleInput===""){output.textContent="Please complete all fields.";return}
   const bill=Number(billInput),tip=Number(tipInput),people=Number(peopleInput);
   if(!Number.isFinite(bill)||!Number.isFinite(tip)||!Number.isFinite(people)||bill<0||tip<0||people<1){
     output.textContent="Please enter valid positive numbers.";return;
   }
-  const tipAmount=bill*tip/100;
-  const total=bill+tipAmount;
+  const tipAmount=bill*tip/100,total=bill+tipAmount;
   output.textContent=`Tip: ${tipAmount.toFixed(2)} | Total: ${total.toFixed(2)} | Each person: ${(total/people).toFixed(2)}`;
 }
 
@@ -990,8 +668,7 @@ function makeQR(){
   const area=document.getElementById("qrResult");
   if(!value){area.textContent="Please enter text or a URL.";return}
   const img=document.createElement("img");
-  img.alt="Generated QR code";
-  img.width=200;img.height=200;img.loading="lazy";
+  img.alt="Generated QR code";img.width=200;img.height=200;img.loading="lazy";
   img.src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data="+encodeURIComponent(value);
   img.onerror=()=>{area.textContent="Could not load the QR code. Please try again."};
   area.replaceChildren(img);
@@ -1062,7 +739,6 @@ try{
   todos=JSON.parse(localStorage.getItem("sth_todos")||"[]");
   if(!Array.isArray(todos))todos=[];
 }catch(error){todos=[]}
-
 function renderTodos(){
   const list=document.getElementById("todoList");
   list.replaceChildren();
@@ -1074,8 +750,7 @@ function renderTodos(){
     remove.className="btn btn-secondary";
     remove.textContent="Remove";
     remove.onclick=()=>{todos.splice(index,1);saveTodos()};
-    li.append(label," ",remove);
-    list.append(li);
+    li.append(label," ",remove);list.append(li);
   });
 }
 function addTodo(){
@@ -1085,10 +760,8 @@ function addTodo(){
   todos.push(value);input.value="";saveTodos();
 }
 function saveTodos(){
-  try{
-    localStorage.setItem("sth_todos",JSON.stringify(todos));
-    renderTodos();
-  }catch(error){toast("Could not save tasks in this browser.")}
+  try{localStorage.setItem("sth_todos",JSON.stringify(todos));renderTodos()}
+  catch(error){toast("Could not save tasks in this browser.")}
 }
 
 /* 13. NOTES */
@@ -1099,17 +772,166 @@ function saveNotes(){
     localStorage.setItem("sth_notes",notesInput.value);
     document.getElementById("notesStatus").textContent="Notes saved on this device.";
     toast("Notes saved!");
-  }catch(error){
-    document.getElementById("notesStatus").textContent="Could not save notes in this browser.";
-  }
+  }catch(error){document.getElementById("notesStatus").textContent="Could not save notes in this browser."}
 }
 
 /* 14. LIVE CLOCK */
-function tickClock(){
-  document.getElementById("clock").textContent=new Date().toLocaleTimeString();
-}
+function tickClock(){document.getElementById("clock").textContent=new Date().toLocaleTimeString()}
 tickClock();
 setInterval(tickClock,1000);
+
+/* PDF TOOL HELPERS */
+function pdfLibraryReady(){
+  if(!window.PDFLib){
+    toast("The PDF library could not load. Check your internet connection and refresh.");
+    return false;
+  }
+  return true;
+}
+function setPdfMessage(id,message,isError=false){
+  const area=document.getElementById(id);
+  area.textContent=message;
+  area.className="result "+(isError?"status-error":"status-success");
+}
+function downloadPDF(bytes,filename){
+  const blob=new Blob([bytes],{type:"application/pdf"});
+  const url=URL.createObjectURL(blob);
+  const link=document.createElement("a");
+  link.href=url;link.download=filename;
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  setTimeout(()=>URL.revokeObjectURL(url),60000);
+}
+function safePDFName(name){
+  return name.replace(/\.pdf$/i,"").replace(/[^a-z0-9_-]/gi,"-").slice(0,60)||"document";
+}
+
+/* 15. MERGE PDF FILES */
+async function mergePDFs(){
+  if(!pdfLibraryReady())return;
+  const files=Array.from(document.getElementById("mergeFiles").files);
+  if(files.length<2){setPdfMessage("mergeResult","Please select at least two PDF files.",true);return}
+  try{
+    setPdfMessage("mergeResult","Merging your PDFs. Please wait...");
+    const merged=await PDFLib.PDFDocument.create();
+    for(const file of files){
+      const source=await PDFLib.PDFDocument.load(await file.arrayBuffer());
+      const copied=await merged.copyPages(source,source.getPageIndices());
+      copied.forEach(page=>merged.addPage(page));
+    }
+    const bytes=await merged.save();
+    downloadPDF(bytes,"merged-document.pdf");
+    setPdfMessage("mergeResult",`Success! ${files.length} PDF files have been merged and downloaded.`);
+  }catch(error){
+    console.error(error);
+    setPdfMessage("mergeResult","Could not merge these files. Check that they are valid, unencrypted PDFs.",true);
+  }
+}
+
+/* 16. SPLIT PDF: EXTRACT SELECTED PAGES */
+function parsePageSelection(value,total){
+  const pages=new Set();
+  const parts=value.split(",").map(part=>part.trim()).filter(Boolean);
+  if(!parts.length)throw Error("Enter the page numbers you want to extract.");
+  for(const part of parts){
+    const match=part.match(/^(\d+)\s*-\s*(\d+)$/);
+    if(match){
+      const start=Number(match[1]),end=Number(match[2]);
+      if(start<1||end<start||end>total)throw Error(`Enter page ranges between 1 and ${total}.`);
+      for(let page=start;page<=end;page++)pages.add(page-1);
+    }else if(/^\d+$/.test(part)){
+      const page=Number(part);
+      if(page<1||page>total)throw Error(`Page numbers must be between 1 and ${total}.`);
+      pages.add(page-1);
+    }else{
+      throw Error("Use a format such as 1-3 or 1,3,5.");
+    }
+  }
+  return Array.from(pages).sort((a,b)=>a-b);
+}
+async function splitPDF(){
+  if(!pdfLibraryReady())return;
+  const file=document.getElementById("splitFile").files[0];
+  if(!file){setPdfMessage("splitResult","Please choose a PDF file.",true);return}
+  try{
+    setPdfMessage("splitResult","Preparing your selected pages...");
+    const source=await PDFLib.PDFDocument.load(await file.arrayBuffer());
+    const selected=parsePageSelection(document.getElementById("splitPages").value,source.getPageCount());
+    const output=await PDFLib.PDFDocument.create();
+    const pages=await output.copyPages(source,selected);
+    pages.forEach(page=>output.addPage(page));
+    const bytes=await output.save();
+    downloadPDF(bytes,safePDFName(file.name)+"-pages.pdf");
+    setPdfMessage("splitResult",`Success! Extracted ${selected.length} page(s) into a new PDF.`);
+  }catch(error){
+    console.error(error);
+    setPdfMessage("splitResult",error.message||"Could not split this PDF. Check that it is a valid, unencrypted PDF.",true);
+  }
+}
+
+/* 17. IMAGES TO PDF */
+async function imagesToPDF(){
+  if(!pdfLibraryReady())return;
+  const files=Array.from(document.getElementById("imagePDFfiles").files);
+  if(!files.length){setPdfMessage("imagePDFresult","Please choose one or more images.",true);return}
+  try{
+    setPdfMessage("imagePDFresult","Creating your PDF. Please wait...");
+    const pdf=await PDFLib.PDFDocument.create();
+    for(const file of files){
+      if(!file.type.startsWith("image/"))continue;
+      const bitmap=await createImageBitmap(file);
+      const canvas=document.createElement("canvas");
+      canvas.width=bitmap.width;canvas.height=bitmap.height;
+      const context=canvas.getContext("2d");
+      context.fillStyle="#ffffff";
+      context.fillRect(0,0,canvas.width,canvas.height);
+      context.drawImage(bitmap,0,0);
+      bitmap.close();
+      const pngBlob=await new Promise(resolve=>canvas.toBlob(resolve,"image/png"));
+      if(!pngBlob)throw Error("One of the images could not be processed.");
+      const image=await pdf.embedPng(await pngBlob.arrayBuffer());
+      const pageWidth=595.28,pageHeight=841.89,margin=30;
+      const scale=Math.min((pageWidth-margin*2)/image.width,(pageHeight-margin*2)/image.height);
+      const width=image.width*scale,height=image.height*scale;
+      const page=pdf.addPage([pageWidth,pageHeight]);
+      page.drawImage(image,{
+        x:(pageWidth-width)/2,
+        y:(pageHeight-height)/2,
+        width,height
+      });
+    }
+    if(pdf.getPageCount()===0)throw Error("No supported images were selected.");
+    const bytes=await pdf.save();
+    downloadPDF(bytes,"images-to-pdf.pdf");
+    setPdfMessage("imagePDFresult",`Success! Created a PDF with ${pdf.getPageCount()} page(s).`);
+  }catch(error){
+    console.error(error);
+    setPdfMessage("imagePDFresult",error.message||"Could not create the PDF from these images.",true);
+  }
+}
+
+/* 18. ROTATE PDF */
+async function rotatePDF(){
+  if(!pdfLibraryReady())return;
+  const file=document.getElementById("rotateFile").files[0];
+  if(!file){setPdfMessage("rotateResult","Please choose a PDF file.",true);return}
+  try{
+    setPdfMessage("rotateResult","Rotating your PDF. Please wait...");
+    const pdf=await PDFLib.PDFDocument.load(await file.arrayBuffer());
+    const amount=Number(document.getElementById("rotateDegrees").value);
+    pdf.getPages().forEach(page=>{
+      const current=page.getRotation().angle;
+      page.setRotation(PDFLib.degrees((current+amount)%360));
+    });
+    const bytes=await pdf.save();
+    downloadPDF(bytes,safePDFName(file.name)+"-rotated.pdf");
+    setPdfMessage("rotateResult",`Success! Rotated all ${pdf.getPageCount()} page(s) and downloaded the PDF.`);
+  }catch(error){
+    console.error(error);
+    setPdfMessage("rotateResult","Could not rotate this file. Check that it is a valid, unencrypted PDF.",true);
+  }
+}
 
 /* FOOTER AND INITIAL DISPLAY */
 document.getElementById("year").textContent=new Date().getFullYear();
