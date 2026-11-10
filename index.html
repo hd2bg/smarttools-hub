@@ -125,6 +125,17 @@
     .footer-brand{font-weight:800}.footer-brand span{color:#c1aaff}
     .footer-copy{color:var(--soft);font-size:12px}
     .footer-links{display:flex;gap:17px;flex-wrap:wrap}.footer-links a{color:var(--muted);font-size:12px;text-decoration:none}.footer-links a:hover{color:white}
+    .guide-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:20px 0 34px}
+    .guide-card{padding:22px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(145deg,var(--surface),rgba(27,23,50,.72))}
+    .guide-card h2{margin:0 0 9px;font-size:19px;letter-spacing:-.4px}
+    .guide-card p,.guide-card li{color:var(--muted);font-size:14px}
+    .guide-card p{margin:8px 0}
+    .guide-card ul{padding-left:20px;margin:9px 0}
+    .guide-card .btn{margin-top:8px;text-decoration:none}
+    .faq-list{max-width:900px;display:grid;gap:11px;margin:18px 0}
+    .faq-list details{padding:17px 19px;border:1px solid var(--line);border-radius:14px;background:rgba(27,23,50,.72)}
+    .faq-list summary{cursor:pointer;font-weight:750;color:var(--text)}
+    .faq-list details p{margin:10px 0 0;color:var(--muted);font-size:14px}
     .privacy-note{padding:12px 14px;border:1px solid rgba(225,140,255,.18);border-radius:12px;background:rgba(155,123,255,.08);color:var(--muted);font-size:12px}
 
     .language-control{display:flex;align-items:center;gap:7px;flex-shrink:0}
@@ -156,6 +167,7 @@
       .tool-grid{grid-template-columns:1fr;gap:12px}
       .tool-card{padding:17px}
       .feature-strip{grid-template-columns:1fr}
+      .guide-grid{grid-template-columns:1fr}
       .section-head{align-items:start;flex-direction:column;margin-top:30px}
       .content-card{padding:19px}
       .footer-inner{justify-content:center;text-align:center;padding:24px 15px}
@@ -173,6 +185,7 @@
     <nav class="nav" aria-label="Main navigation">
       <button class="active" data-page="home" onclick="showPage('home')">Home</button>
       <button data-page="account" onclick="showPage('account')">Account</button>
+      <button data-page="guides" onclick="showPage('guides')">Guides &amp; FAQ</button>
       <button data-page="about" onclick="showPage('about')">About</button>
       <button data-page="privacy" onclick="showPage('privacy')">Privacy</button>
       <button data-page="contact" onclick="showPage('contact')">Contact</button>
@@ -530,6 +543,30 @@
   </div>
 </section>
 
+<section id="guides" class="page">
+  <div class="page-intro"><h1>Guides &amp; frequently asked questions</h1><p>Practical tips to help you get more from SmartTools Hub.</p></div>
+  <div class="guide-grid">
+    <article class="guide-card"><h2>1. How to use online calculators</h2><p>Choose the calculator that matches your task, enter the numbers in the labelled fields, then select Calculate. Check that you have entered values in the correct units before using the result.</p><ul><li>Use the percentage calculator for discounts, increases and proportions.</li><li>Use the loan calculator for an estimate of regular repayments.</li><li>Use the age or date difference calculator to compare dates.</li></ul><button class="btn btn-secondary" onclick="openToolSearch('calculator')">Find calculator tools</button></article>
+    <article class="guide-card"><h2>2. Convert measurements accurately</h2><p>Converters help change a value from one unit to another. Enter the amount, choose the starting unit and the target unit, and read the converted result.</p><ul><li>Length and area converters help with everyday measurements.</li><li>Temperature conversion supports common temperature scales.</li><li>Data size conversion helps compare bytes and larger units.</li></ul><button class="btn btn-secondary" onclick="openToolSearch('converter')">Find converter tools</button></article>
+    <article class="guide-card"><h2>3. Compress and resize images</h2><p>Image compression can reduce file size, while resizing changes image dimensions. Start with a copy of your original image and check the result before replacing the original.</p><ul><li>Use an appropriate output quality to balance clarity and file size.</li><li>Keep the original if you may need full resolution later.</li><li>Check the final dimensions and file size before sharing.</li></ul><button class="btn btn-secondary" onclick="openToolSearch('image')">Find image tools</button></article>
+    <article class="guide-card"><h2>4. Work with PDF files</h2><p>Use the PDF tools to combine documents, extract pages, rotate pages or create a PDF from images. Select only the files you intend to process and review the downloaded result.</p><ul><li>Keep a backup of important documents.</li><li>Check page order after merging or extracting.</li><li>Large files may take longer depending on your device.</li></ul><button class="btn btn-secondary" onclick="openToolSearch('pdf')">Find PDF tools</button></article>
+    <article class="guide-card"><h2>5. Make text tasks quicker</h2><p>Text utilities can count words and characters, change letter case, remove duplicate lines, find and replace phrases, and reverse text.</p><ul><li>Paste or type text into the tool's input area.</li><li>Review the output before copying it elsewhere.</li><li>Avoid entering confidential or sensitive information.</li></ul><button class="btn btn-secondary" onclick="openToolSearch('text')">Find text tools</button></article>
+    <article class="guide-card"><h2>6. Use developer utilities</h2><p>Developer tools can format JSON, encode or decode URLs and Base64, convert CSV and JSON, and create UUIDs. They are intended as convenient helpers, not a replacement for testing your application.</p><ul><li>Validate data before using it in production.</li><li>Do not paste API secrets, passwords or private customer data.</li><li>Check converted output for formatting and correctness.</li></ul><button class="btn btn-secondary" onclick="openToolSearch('json')">Find developer tools</button></article>
+  </div>
+  <div class="page-intro"><h2>Frequently asked questions</h2><p>Quick answers about using the website.</p></div>
+  <div class="faq-list">
+    <details><summary>Are the tools free to use?</summary><p>The tools on SmartTools Hub are provided for free at present. Some tools may rely on third-party libraries or services to work.</p></details>
+    <details><summary>Do I need to install anything?</summary><p>No desktop installation is needed. Open the website in a modern browser on a computer, tablet or phone.</p></details>
+    <details><summary>Do the tools work on mobile?</summary><p>The website is designed to adapt to smaller screens. Very large files or demanding tasks may work better on a computer.</p></details>
+    <details><summary>Are my files uploaded?</summary><p>The PDF and image processing tools on this site are designed to process selected files in your browser. The QR code generator sends the text you enter to its external QR service. See the Privacy Policy for details.</p></details>
+    <details><summary>Are my notes and to-do items saved to my account?</summary><p>No. Notes and to-do items are currently stored in local browser storage on the device you use and are not synchronised between devices.</p></details>
+    <details><summary>Why might a tool not work?</summary><p>Check that your browser is up to date, required fields are filled in and the file format is supported. You can also refresh the page and try again.</p></details>
+    <details><summary>Can I use the results commercially?</summary><p>You are responsible for checking the accuracy, permissions and any third-party terms that apply to your intended use. Do not rely on calculator outputs as professional financial, legal or medical advice.</p></details>
+    <details><summary>How can I suggest a new tool?</summary><p>Send your idea through the Contact section. Include a short description of what the tool should do.</p></details>
+  </div>
+  <div class="content-card"><h2>Need more help?</h2><p>Have an idea or found a problem? We welcome feedback.</p><a class="btn" href="mailto:halimafatima0810@gmail.com?subject=SmartTools%20Hub%20Feedback">Contact SmartTools Hub</a></div>
+</section>
+
 <section id="about" class="page">
   <div class="page-intro"><h1>Tools that make life simpler.</h1><p>Get everyday digital tasks done in one convenient place.</p></div>
   <div class="content-card">
@@ -577,6 +614,7 @@
   <div class="footer-inner">
     <div><div class="footer-brand">✦ SmartTools <span>Hub</span></div><div class="footer-copy">Useful tools for your everyday.</div></div>
     <div class="footer-links">
+      <a href="#guides" onclick="showPage('guides');return false">Guides &amp; FAQ</a>
       <a href="#about" onclick="showPage('about');return false">About</a>
       <a href="#privacy" onclick="showPage('privacy');return false">Privacy policy</a>
       <a href="#contact" onclick="showPage('contact');return false">Contact</a>
@@ -610,6 +648,15 @@ function showPage(id) {
     button.classList.toggle("active", button.dataset.page === id);
   });
   window.scrollTo({top:0,behavior:window.matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth"});
+}
+
+/* Guide shortcuts open the home page with a relevant search already filled in. */
+function openToolSearch(term) {
+  showPage("home");
+  const field = document.getElementById("search");
+  field.value = term;
+  setCategory("all");
+  field.focus();
 }
 
 /* Search and category filters work together. */
