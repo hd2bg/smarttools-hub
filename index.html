@@ -2,1018 +2,990 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#0b0818">
-<meta name="description" content="Discover SmartTools Hub: free online calculators, converters, image tools, PDF tools, QR codes, password generators and productivity tools.">
-<meta name="keywords" content="free online tools, calculator, percentage calculator, PDF merger, PDF splitter, image to PDF, PDF rotator, QR code generator, image compressor, password generator">
-<meta name="author" content="SmartTools Hub">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://hd2bg.github.io/smarttools-hub/">
-<link rel="icon" href="./icon.svg" type="image/svg+xml">
-<link rel="manifest" href="./manifest.webmanifest">
-<meta name="google-site-verification" content="O4-X0IK6p27OpMJeA9PyBkZ2OqKrADu7Bu0OMQJTPeg">
-<meta property="og:type" content="website">
-<meta property="og:title" content="SmartTools Hub | Free Online Tools">
-<meta property="og:description" content="Your everyday tools, all in one place. Free calculators, converters, PDF and productivity tools.">
-<meta property="og:url" content="https://hd2bg.github.io/smarttools-hub/">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SmartTools Hub | Free Online Tools">
-<meta name="twitter:description" content="Your everyday tools, all in one place.">
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"WebSite",
-  "name":"SmartTools Hub",
-  "url":"https://hd2bg.github.io/smarttools-hub/",
-  "description":"Free online calculators, converters, PDF tools, image tools and productivity tools."
-}
-</script>
-<title>SmartTools Hub | Free Online Tools</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#100d20">
+  <meta name="color-scheme" content="dark">
+  <title>SmartTools Hub | 48 Free Online Tools</title>
+  <meta name="description" content="Explore 48 free online tools: calculators, converters, text and developer utilities, image and PDF tools, and productivity helpers.">
+  <meta name="keywords" content="free online tools, online calculator, percentage calculator, QR code generator, image compressor, password generator, unit converter">
+  <meta name="author" content="SmartTools Hub">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://hd2bg.github.io/smarttools-hub/">
+  <link rel="icon" href="./icon.svg" type="image/svg+xml">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <meta name="google-site-verification" content="O4-X0IK6p27OpMJeA9PyBkZ2OqKrADu7Bu0OMQJTPeg">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SmartTools Hub">
+  <meta property="og:title" content="SmartTools Hub | Free Online Tools">
+  <meta property="og:description" content="48 free calculators, converters, text utilities, image and PDF tools — all in one place.">
+  <meta property="og:url" content="https://hd2bg.github.io/smarttools-hub/">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="SmartTools Hub | Free Online Tools">
+  <meta name="twitter:description" content="Handy free tools for everyday tasks, all in one place.">
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "name":"SmartTools Hub",
+    "url":"https://hd2bg.github.io/smarttools-hub/",
+    "description":"Free browser-based calculators, converters, image tools and productivity utilities."
+  }
+  </script>
+  <style>
+    :root{
+      color-scheme:dark;
+      --bg:#100d20;--bg2:#15112a;--surface:#1b1732;--surface2:#231d40;
+      --surface3:#2b2450;--text:#f7f5ff;--muted:#b7b0ce;--soft:#8f87aa;
+      --line:rgba(196,180,255,.15);--purple:#9b7bff;--purple2:#7552ed;
+      --pink:#e18cff;--green:#52d6a0;--red:#ff858e;--shadow:0 18px 55px rgba(0,0,0,.24);
+      --radius:20px;--max:1180px
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:100px}
+    body{margin:0;background:radial-gradient(ellipse at 50% -20%,rgba(126,83,230,.22),transparent 48%),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}
+    button,input,textarea,select{font:inherit}
+    button,a,input,textarea,select{-webkit-tap-highlight-color:transparent}
+    a{color:#c6b5ff}
+    button{cursor:pointer}
+    button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid var(--pink);outline-offset:3px}
+    .site-header{position:sticky;top:0;z-index:20;background:rgba(16,13,32,.88);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+    .header-inner{max-width:var(--max);margin:auto;padding:14px 22px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--text);font-size:20px;font-weight:850;letter-spacing:-.7px;white-space:nowrap}
+    .brand-mark{width:39px;height:39px;display:grid;place-items:center;border-radius:13px;background:linear-gradient(135deg,var(--purple),#bd72ef);box-shadow:0 7px 22px rgba(155,123,255,.3);font-size:20px}
+    .brand span:last-child{color:#c1aaff}
+    .nav{display:flex;align-items:center;gap:5px;flex-wrap:wrap}
+    .nav button{background:transparent;border:1px solid transparent;color:var(--muted);padding:9px 13px;border-radius:11px;font-weight:650;transition:.2s}
+    .nav button:hover,.nav button.active{background:rgba(155,123,255,.13);border-color:var(--line);color:white}
+    .nav .nav-cta{background:linear-gradient(135deg,var(--purple2),#9b68ef);color:#fff;padding-inline:16px}
+    main{max-width:var(--max);margin:auto;padding:26px 22px 70px;min-height:68vh}
+    .page{display:none}.page.active{display:block;animation:appear .28s ease}
+    @keyframes appear{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:none}}
+    .hero{position:relative;overflow:hidden;text-align:center;padding:66px 24px 43px;border:1px solid var(--line);border-radius:30px;background:linear-gradient(135deg,rgba(117,82,237,.22),rgba(225,140,255,.08) 55%,rgba(27,23,50,.8));box-shadow:var(--shadow)}
+    .hero:before,.hero:after{content:"";position:absolute;border-radius:50%;filter:blur(2px);pointer-events:none}
+    .hero:before{width:260px;height:260px;right:-110px;top:-135px;background:rgba(191,126,255,.17)}
+    .hero:after{width:210px;height:210px;left:-100px;bottom:-145px;background:rgba(117,82,237,.2)}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border:1px solid rgba(196,180,255,.22);border-radius:999px;background:rgba(16,13,32,.35);color:#d5c8ff;font-size:12px;font-weight:750;letter-spacing:.09em;text-transform:uppercase}
+    .hero h1{position:relative;max-width:780px;margin:18px auto 13px;font-size:clamp(36px,6vw,64px);line-height:1.06;letter-spacing:-2.8px}
+    .gradient-text{background:linear-gradient(90deg,#c5aaff,#f0b5ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .hero p{max-width:650px;margin:0 auto;color:var(--muted);font-size:clamp(15px,2vw,18px)}
+    .hero-search{position:relative;z-index:1;max-width:620px;margin:27px auto 0;display:flex;align-items:center;gap:10px;padding:7px 8px 7px 16px;border:1px solid rgba(208,190,255,.22);border-radius:16px;background:rgba(13,10,27,.72);box-shadow:0 12px 35px rgba(0,0,0,.18)}
+    .hero-search .search-icon{font-size:20px;color:#c6b5ff}
+    .hero-search input{flex:1;min-width:0;margin:0;padding:11px 4px;border:0;background:transparent;color:white;outline:none}
+    .hero-search input:focus-visible{outline:none}
+    .hero-search button{border:0;border-radius:11px;padding:11px 17px;background:linear-gradient(135deg,var(--purple2),#a56bf0);color:white;font-weight:750}
+    .hero-meta{position:relative;z-index:1;display:flex;justify-content:center;gap:22px;flex-wrap:wrap;margin-top:23px;color:#c5bddb;font-size:13px}
+    .hero-meta span{display:flex;align-items:center;gap:7px}
+    .section-head{display:flex;align-items:end;justify-content:space-between;gap:15px;margin:38px 2px 17px}
+    .section-head h2{margin:0;font-size:24px;letter-spacing:-.7px}
+    .section-head p{margin:3px 0 0;color:var(--muted);font-size:14px}
+    .count-label{color:var(--soft);font-size:13px;white-space:nowrap}
+    .filters{display:flex;gap:8px;overflow-x:auto;padding:2px 1px 13px;scrollbar-width:thin}
+    .filter-btn{white-space:nowrap;border:1px solid var(--line);border-radius:999px;background:rgba(27,23,50,.8);color:var(--muted);padding:9px 15px;font-size:13px;font-weight:700;transition:.2s}
+    .filter-btn:hover,.filter-btn.active{color:white;border-color:rgba(178,147,255,.55);background:rgba(142,103,244,.23)}
+    .tool-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+    .tool-card{position:relative;min-width:0;padding:20px;border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(155deg,rgba(35,29,64,.96),rgba(25,21,46,.96));box-shadow:0 10px 28px rgba(0,0,0,.13);transition:transform .2s,border-color .2s,box-shadow .2s}
+    .tool-card:hover{transform:translateY(-3px);border-color:rgba(175,146,255,.42);box-shadow:0 17px 35px rgba(0,0,0,.22)}
+    .tool-card h3{display:flex;align-items:center;gap:10px;margin:0 0 14px;font-size:17px;letter-spacing:-.3px}
+    .tool-icon{width:37px;height:37px;display:grid;place-items:center;flex:0 0 37px;border-radius:12px;background:rgba(155,123,255,.15);font-size:19px}
+    .tool-card label{display:block;margin:5px 0 3px;color:var(--muted);font-size:12px;font-weight:650}
+    input,textarea,select{width:100%;min-width:0;margin:6px 0 12px;padding:11px 12px;border:1px solid rgba(196,180,255,.17);border-radius:11px;background:#120f25;color:var(--text);font-size:14px}
+    input::placeholder,textarea::placeholder{color:#77708f}
+    input[type=range]{padding:0;accent-color:var(--purple);border:0;background:transparent}
+    input[type=file]{font-size:12px}
+    textarea{min-height:90px;resize:vertical}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;border:1px solid transparent;border-radius:11px;padding:10px 14px;background:linear-gradient(135deg,var(--purple2),#9e6bea);color:#fff;font-size:13px;font-weight:750;transition:filter .2s,transform .2s}
+    .btn:hover{filter:brightness(1.1);transform:translateY(-1px)}
+    .btn-secondary{background:rgba(155,123,255,.1);border-color:var(--line);color:#ded5ff}
+    .btn-row{display:flex;gap:8px;flex-wrap:wrap}
+    .btn-row .btn{flex:1}
+    .result{min-height:38px;margin-top:11px;padding:10px 12px;border:1px solid rgba(196,180,255,.12);border-radius:11px;background:rgba(13,10,27,.55);color:#e6e0f8;font-size:13px;overflow-wrap:anywhere}
+    .result:empty{display:none}
+    .result img{display:block;max-width:100%;height:auto;border-radius:9px}
+    .result a{color:#c8b6ff;font-weight:700}
+    .small{color:var(--soft);font-size:11px;line-height:1.5}
+    .empty-message{display:none;text-align:center;padding:35px;color:var(--muted);border:1px dashed var(--line);border-radius:16px}
+    .feature-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin:23px 0 0}
+    .feature{padding:17px;border:1px solid var(--line);border-radius:16px;background:rgba(27,23,50,.55)}
+    .feature strong{display:block;font-size:14px}.feature span{display:block;margin-top:3px;color:var(--muted);font-size:12px}
+    .page-intro{margin:14px 0 22px}.page-intro h1{margin:0 0 7px;font-size:clamp(30px,4vw,42px);letter-spacing:-1.5px}.page-intro p{margin:0;color:var(--muted)}
+    .content-card{max-width:800px;padding:26px;border:1px solid var(--line);border-radius:22px;background:linear-gradient(145deg,var(--surface),rgba(27,23,50,.78));box-shadow:var(--shadow)}
+    .content-card h2,.content-card h3{margin-top:23px}.content-card h2:first-child,.content-card h3:first-child{margin-top:0}
+    .content-card p,.content-card li{color:var(--muted)}
+    .content-card a{color:#c6b5ff}
+    .auth-card{max-width:520px}.auth-card .btn{width:100%;margin:4px 0}
+    .auth-divider{display:flex;align-items:center;gap:12px;margin:13px 0;color:var(--soft);font-size:12px}
+    .auth-divider:before,.auth-divider:after{content:"";height:1px;flex:1;background:var(--line)}
+    .status-success{color:var(--green)}.status-error{color:var(--red)}
+    #todoList{padding-left:20px}#todoList li{margin:8px 0;color:var(--muted);overflow-wrap:anywhere}
+    #todoList button{padding:5px 9px;margin-left:8px}
+    .clock-result{font-size:27px;text-align:center;font-weight:800;letter-spacing:1px}
+    .site-footer{border-top:1px solid var(--line);background:rgba(12,10,24,.55)}
+    .footer-inner{max-width:var(--max);margin:auto;padding:28px 22px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}
+    .footer-brand{font-weight:800}.footer-brand span{color:#c1aaff}
+    .footer-copy{color:var(--soft);font-size:12px}
+    .footer-links{display:flex;gap:17px;flex-wrap:wrap}.footer-links a{color:var(--muted);font-size:12px;text-decoration:none}.footer-links a:hover{color:white}
+    .privacy-note{padding:12px 14px;border:1px solid rgba(225,140,255,.18);border-radius:12px;background:rgba(155,123,255,.08);color:var(--muted);font-size:12px}
 
-<style>
-:root{
-  --bg:#0b0818;--surface:#141026;--surface2:#1c1733;
-  --surface3:#241d40;--purple:#8b5cf6;--purple2:#a78bfa;
-  --pink:#d879ff;--text:#f8f7ff;--muted:#aaa3c2;
-  --border:rgba(180,155,255,.15);--green:#4adea1;
-  --red:#fb7185;--shadow:0 15px 45px rgba(0,0,0,.22)
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:100px}
-body{
-  margin:0;color:var(--text);
-  background:radial-gradient(ellipse at 50% -15%,rgba(124,58,237,.2),transparent 55%),var(--bg);
-  font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
-  line-height:1.65
-}
-button,input,textarea,select{font:inherit}
-button,a{-webkit-tap-highlight-color:transparent}
-button{cursor:pointer}
-a{color:var(--purple2)}
-button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid var(--pink);outline-offset:3px}
-button:disabled{opacity:.5;cursor:not-allowed}
-.site-header{position:sticky;top:0;z-index:20;background:rgba(11,8,24,.88);backdrop-filter:blur(18px);border-bottom:1px solid var(--border)}
-.header-inner{max-width:1240px;margin:auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:18px}
-.brand{display:flex;align-items:center;gap:11px;color:var(--text);text-decoration:none;font-size:21px;font-weight:850;letter-spacing:-.7px}
-.brand-icon{width:39px;height:39px;border-radius:13px;display:grid;place-items:center;background:linear-gradient(135deg,#8b5cf6,#d879ff);box-shadow:0 5px 20px rgba(139,92,246,.35);font-size:21px}
-.brand span{color:var(--purple2)}
-.nav{display:flex;align-items:center;flex-wrap:wrap;gap:5px}
-.nav button{border:0;background:transparent;color:var(--muted);padding:9px 13px;border-radius:10px;font-size:14px;font-weight:650;transition:.2s}
-.nav button:hover,.nav button.active{background:var(--surface2);color:white}
-.nav .account-nav{background:linear-gradient(135deg,var(--purple),#7043d8);color:white;padding:10px 17px}
-.nav .account-nav:hover{filter:brightness(1.12)}
-main{max-width:1240px;min-height:70vh;margin:auto;padding:25px 24px 65px}
-.page{display:none}
-.page.active{display:block;animation:fadeIn .35s ease}
-@keyframes fadeIn{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
-.hero{position:relative;overflow:hidden;text-align:center;padding:76px 22px 55px;border:1px solid var(--border);border-radius:28px;background:radial-gradient(ellipse at 50% 0%,rgba(139,92,246,.27),transparent 65%),linear-gradient(135deg,#17112d,#100d20);box-shadow:var(--shadow)}
-.hero:before,.hero:after{content:"";position:absolute;width:180px;height:180px;border-radius:50%;filter:blur(65px);opacity:.22;pointer-events:none}
-.hero:before{background:#9b5cff;top:-100px;left:-70px}
-.hero:after{background:#e879f9;bottom:-130px;right:-50px}
-.hero-content{position:relative;z-index:1}
-.eyebrow{display:inline-flex;align-items:center;gap:7px;border:1px solid rgba(167,139,250,.3);background:rgba(139,92,246,.12);color:#c4b5fd;border-radius:50px;padding:7px 14px;font-size:12px;font-weight:750;letter-spacing:1px;text-transform:uppercase}
-.hero h1{max-width:850px;margin:20px auto 15px;font-size:clamp(36px,6vw,65px);line-height:1.08;letter-spacing:-2.7px}
-.gradient-text{background:linear-gradient(90deg,#a78bfa,#e9a8ff);-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero p{max-width:620px;margin:0 auto;color:var(--muted);font-size:17px}
-.hero-search{position:relative;max-width:590px;margin:30px auto 0}
-.hero-search input{width:100%;margin:0;padding:17px 20px 17px 52px;border:1px solid rgba(183,155,255,.24);border-radius:15px;background:#100d20;color:white;font-size:15px;box-shadow:0 10px 35px rgba(0,0,0,.2)}
-.search-icon{position:absolute;left:19px;top:50%;transform:translateY(-50%);font-size:19px;pointer-events:none}
-.hero-stats{display:flex;justify-content:center;flex-wrap:wrap;gap:32px;margin-top:30px}
-.stat{color:var(--muted);font-size:13px}
-.stat strong{color:white;font-size:16px;margin-right:5px}
-.section-heading{display:flex;justify-content:space-between;align-items:end;flex-wrap:wrap;gap:12px;margin:40px 0 19px}
-.section-heading h2{margin:0;font-size:25px;letter-spacing:-.7px}
-.section-heading p{margin:3px 0 0;color:var(--muted);font-size:14px}
-.filters{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 22px}
-.filter-btn{border:1px solid var(--border);border-radius:50px;padding:8px 15px;color:var(--muted);background:var(--surface);font-size:13px;font-weight:650;transition:.2s}
-.filter-btn:hover,.filter-btn.selected{color:white;border-color:var(--purple);background:rgba(139,92,246,.18)}
-.tools-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:17px}
-.tool-card{min-width:0;padding:21px;border:1px solid var(--border);border-radius:18px;background:linear-gradient(145deg,rgba(28,23,51,.96),rgba(18,14,34,.96));box-shadow:0 8px 25px rgba(0,0,0,.12);transition:transform .22s,border-color .22s,box-shadow .22s}
-.tool-card:hover{transform:translateY(-4px);border-color:rgba(167,139,250,.5);box-shadow:0 14px 35px rgba(0,0,0,.22)}
-.tool-title{display:flex;align-items:center;gap:12px;margin:0 0 17px;font-size:17px;letter-spacing:-.3px}
-.tool-icon{flex:0 0 42px;width:42px;height:42px;display:grid;place-items:center;border-radius:13px;background:rgba(139,92,246,.15);border:1px solid rgba(167,139,250,.17);font-size:21px}
-.tool-card p{color:var(--muted)}
-input,textarea,select{width:100%;margin:7px 0 13px;padding:12px 13px;color:white;background:#0e0b1b;border:1px solid var(--border);border-radius:10px;font-size:14px}
-input::placeholder,textarea::placeholder{color:#77718d}
-input[type=range]{padding:0;accent-color:var(--purple)}
-input[type=file]{font-size:12px}
-textarea{min-height:100px;resize:vertical}
-label{display:block;margin-top:5px;color:#c2bbd8;font-size:13px;font-weight:600}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;padding:11px 16px;border:1px solid transparent;border-radius:10px;background:linear-gradient(135deg,#8b5cf6,#7043d8);color:white;font-size:13px;font-weight:750;text-decoration:none;transition:filter .2s,transform .2s}
-.btn:hover{filter:brightness(1.14);transform:translateY(-1px)}
-.btn-secondary{color:#ddd4ff;background:var(--surface3);border-color:var(--border)}
-.btn-google{background:#fff;color:#292333}
-.btn-full{width:100%}
-.btn + .btn{margin-left:5px}
-.result{min-height:20px;margin-top:12px;padding:12px;border:1px solid var(--border);border-radius:10px;background:#0e0b1b;overflow-wrap:anywhere;font-size:14px}
-.result img{display:block;max-width:100%;height:auto;border-radius:8px}
-.result a{color:#c4b5fd}
-.result:empty{display:none}
-.small{font-size:12px;color:var(--muted)}
-.muted{color:var(--muted)}
-.status-success{color:var(--green)}
-.status-error{color:var(--red)}
-.empty-message{display:none;padding:35px 10px;text-align:center;color:var(--muted)}
-.page-heading{margin:20px 0 25px;font-size:clamp(30px,5vw,42px);letter-spacing:-1.4px}
-.content-card{padding:28px;border:1px solid var(--border);border-radius:19px;background:var(--surface);box-shadow:var(--shadow)}
-.content-card h2,.content-card h3{margin-top:23px}
-.content-card h3:first-child{margin-top:0}
-.content-card p,.content-card li{color:#c1bad4}
-.content-card a{color:#c4b5fd}
-.account-card{max-width:560px;margin:0 auto}
-.account-card .btn{margin:5px 5px 5px 0}
-.account-note{margin-top:20px;padding:13px;border-radius:11px;background:rgba(139,92,246,.09);color:var(--muted);font-size:12px}
-#todoList{padding-left:22px}
-#todoList li{margin:10px 0;overflow-wrap:anywhere}
-#todoList button{padding:5px 9px;margin-left:8px}
-footer{border-top:1px solid var(--border);background:#0a0715;padding:35px 20px;text-align:center;color:var(--muted)}
-.footer-brand{font-weight:800;font-size:19px;color:white}
-.footer-brand span{color:var(--purple2)}
-.footer-links{display:flex;justify-content:center;flex-wrap:wrap;gap:20px;margin:15px 0}
-.footer-links a{color:var(--muted);font-size:13px;text-decoration:none}
-.footer-links a:hover{color:white}
-footer p{font-size:12px}
-#toast{position:fixed;z-index:50;bottom:22px;left:50%;transform:translate(-50%,20px);padding:12px 18px;border:1px solid var(--border);border-radius:12px;background:#241d40;color:white;box-shadow:var(--shadow);opacity:0;pointer-events:none;transition:.25s;font-size:13px}
-#toast.show{opacity:1;transform:translate(-50%,0)}
-@media(max-width:760px){
-  .header-inner{flex-direction:column;padding:12px 14px;gap:10px}
-  .nav{justify-content:center}
-  .nav button{padding:8px 10px;font-size:12px}
-  main{padding:17px 13px 45px}
-  .hero{padding:53px 15px 37px;border-radius:21px}
-  .hero h1{letter-spacing:-1.5px}
-  .hero p{font-size:15px}
-  .hero-stats{gap:12px 22px}
-  .section-heading{margin-top:30px}
-  .tool-card{padding:17px}
-  .content-card{padding:20px}
-}
-@media(prefers-reduced-motion:reduce){
-  *,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}
-}
-</style>
+    .language-control{display:flex;align-items:center;gap:7px;flex-shrink:0}
+    .language-control label{font-size:18px;color:#d5c8ff}
+    .language-control select{width:auto;min-width:112px;margin:0;padding:8px 10px;border-radius:10px;background:#211a3d;color:var(--text);border:1px solid var(--line);font-size:12px}
+    .tool-card[hidden]{display:none!important}
+    .markdown-preview{min-height:70px;white-space:normal}
+    .markdown-preview h1,.markdown-preview h2,.markdown-preview h3{margin:8px 0;color:var(--text)}
+    .markdown-preview p{margin:6px 0}
+    .markdown-preview code{background:#100d20;padding:2px 5px;border-radius:5px}
+    @media(max-width:900px){.header-inner{flex-wrap:wrap}.language-control{margin-left:auto}}
+    @media(max-width:640px){.language-control{margin:0 auto}.language-control select{min-width:130px}}
+    html[dir="rtl"] body{text-align:right}
+    html[dir="rtl"] .nav{direction:rtl}
+    html[dir="rtl"] .hero-search{direction:rtl}
+
+    @media(max-width:900px){.tool-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:640px){
+      .header-inner{padding:11px 14px;flex-direction:column;gap:9px}
+      .brand{font-size:18px}.brand-mark{width:34px;height:34px}
+      .nav{width:100%;justify-content:center;gap:3px}
+      .nav button{padding:7px 9px;font-size:12px}
+      main{padding:16px 13px 48px}
+      .hero{padding:43px 15px 28px;border-radius:22px}
+      .hero h1{letter-spacing:-1.7px}
+      .hero-search{gap:6px;padding-left:11px}
+      .hero-search button{padding:10px 11px;font-size:12px}
+      .hero-meta{gap:10px 16px;font-size:11px}
+      .tool-grid{grid-template-columns:1fr;gap:12px}
+      .tool-card{padding:17px}
+      .feature-strip{grid-template-columns:1fr}
+      .section-head{align-items:start;flex-direction:column;margin-top:30px}
+      .content-card{padding:19px}
+      .footer-inner{justify-content:center;text-align:center;padding:24px 15px}
+      .footer-links{justify-content:center}
+    }
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+  </style>
 </head>
-
 <body>
 <header class="site-header">
   <div class="header-inner">
-    <a class="brand" href="#" onclick="showPage('home');return false">
-      <span class="brand-icon">✦</span>SmartTools <span>Hub</span>
+    <a class="brand" href="#home" onclick="showPage('home');return false" aria-label="SmartTools Hub home">
+      <span class="brand-mark" aria-hidden="true">✦</span><span>SmartTools <span>Hub</span></span>
     </a>
     <nav class="nav" aria-label="Main navigation">
       <button class="active" data-page="home" onclick="showPage('home')">Home</button>
-      <button data-page="account" class="account-nav" onclick="showPage('account')">My Account</button>
+      <button data-page="account" onclick="showPage('account')">Account</button>
       <button data-page="about" onclick="showPage('about')">About</button>
       <button data-page="privacy" onclick="showPage('privacy')">Privacy</button>
       <button data-page="contact" onclick="showPage('contact')">Contact</button>
     </nav>
+    <div class="language-control"><label for="languageSelect" aria-label="Choose language">🌐</label><select id="languageSelect" aria-label="Choose language" onchange="setLanguage(this.value)"><option value="en">English</option><option value="ar">العربية</option><option value="ur">اردو</option><option value="fr">Français</option><option value="es">Español</option><option value="de">Deutsch</option><option value="it">Italiano</option><option value="tr">Türkçe</option><option value="hi">हिन्दी</option></select></div>
   </div>
 </header>
 
 <main>
 <section id="home" class="page active">
   <div class="hero">
-    <div class="hero-content">
-      <div class="eyebrow">✦ Your everyday productivity toolkit</div>
-      <h1>Everything you need.<br><span class="gradient-text">One smart place.</span></h1>
-      <p>Simple, useful online tools designed to make everyday tasks quicker and easier. No complicated setup. Just get things done.</p>
-      <div class="hero-search">
-        <span class="search-icon">⌕</span>
-        <input id="search" type="search" placeholder="Search calculators, converters, tools..." aria-label="Search tools" oninput="filterTools()">
-      </div>
-      <div class="hero-stats">
-        <div class="stat"><strong>18+</strong> useful tools</div>
-        <div class="stat"><strong>Free</strong> to use</div>
-        <div class="stat"><strong>Any device</strong> friendly</div>
-      </div>
+    <span class="eyebrow">✦ Simple tools. Smarter days.</span>
+    <h1>Everything you need,<br><span class="gradient-text">all in one hub.</span></h1>
+    <p>Useful online tools for everyday tasks. Calculate, convert, create and stay organised — quickly and simply.</p>
+    <div class="hero-search">
+      <span class="search-icon" aria-hidden="true">⌕</span>
+      <input id="search" type="search" placeholder="Search 48 free tools..." aria-label="Search tools" oninput="applyToolFilters()">
+      <button type="button" onclick="document.getElementById('search').focus()">Search</button>
+    </div>
+    <div class="hero-meta">
+      <span>✓ Free to use</span><span>✓ Works in your browser</span><span>✓ Mobile friendly</span>
     </div>
   </div>
 
-  <div class="section-heading">
-    <div><h2>Explore your tools</h2><p>Choose a tool and get started.</p></div>
+  <div class="feature-strip">
+    <div class="feature"><strong>⚡ Quick and simple</strong><span>Get everyday tasks done without complicated steps.</span></div>
+    <div class="feature"><strong>🔒 Browser-based tools</strong><span>Most calculations and image actions happen on your device.</span></div>
+    <div class="feature"><strong>📱 Ready for mobile</strong><span>Use SmartTools Hub on desktop, tablet or phone.</span></div>
   </div>
 
-  <div class="filters" aria-label="Filter tools">
-    <button class="filter-btn selected" onclick="filterCategory('all',this)">All tools</button>
-    <button class="filter-btn" onclick="filterCategory('calculators',this)">🧮 Calculators</button>
-    <button class="filter-btn" onclick="filterCategory('converters',this)">🔄 Converters</button>
-    <button class="filter-btn" onclick="filterCategory('productivity',this)">✍️ Productivity</button>
-    <button class="filter-btn" onclick="filterCategory('other',this)">✨ Other tools</button>
-    <button class="filter-btn" onclick="filterCategory('pdf',this)">📄 PDF tools</button>
+  <div class="section-head">
+    <div><h2>Explore the tools</h2><p>Choose a tool and get started.</p></div>
+    <span class="count-label" id="toolCount">48 tools</span>
+  </div>
+  <div class="filters" aria-label="Filter tools by category">
+    <button class="filter-btn active" data-category="all" onclick="setCategory('all')">All tools</button>
+    <button class="filter-btn" data-category="calculators" onclick="setCategory('calculators')">Calculators</button>
+    <button class="filter-btn" data-category="converters" onclick="setCategory('converters')">Converters</button>
+    <button class="filter-btn" data-category="productivity" onclick="setCategory('productivity')">Productivity</button>
+    <button class="filter-btn" data-category="other" onclick="setCategory('other')">Other tools</button>
+    <button class="filter-btn" data-category="text" onclick="setCategory('text')">Text tools</button>
+    <button class="filter-btn" data-category="developer" onclick="setCategory('developer')">Developer</button>
+    <button class="filter-btn" data-category="files" onclick="setCategory('files')">PDF & files</button>
   </div>
 
-  <div class="tools-grid" id="tools">
-
-    <div class="tool-card tool" data-category="calculators">
-      <h3 class="tool-title"><span class="tool-icon">🧮</span>Calculator</h3>
-      <input id="calcInput" placeholder="Example: (12+5)*3" aria-label="Math expression">
-      <button class="btn" onclick="calculate()">Calculate →</button>
+  <div class="tool-grid" id="tools">
+    <article class="tool-card tool" data-category="calculators" data-keywords="math arithmetic calculator">
+      <h3><span class="tool-icon">🧮</span>Calculator</h3>
+      <input id="calcInput" placeholder="Example: (12 + 5) * 3" aria-label="Math expression">
+      <button class="btn" onclick="calculate()">Calculate</button>
       <div class="result" id="calcResult" aria-live="polite">Your answer will appear here.</div>
-    </div>
-
-    <div class="tool-card tool" data-category="calculators">
-      <h3 class="tool-title"><span class="tool-icon">📊</span>Percentage Calculator</h3>
-      <label for="pct">Percentage (%)</label><input id="pct" type="number" placeholder="20">
+    </article>
+    <article class="tool-card tool" data-category="calculators" data-keywords="percentage percent">
+      <h3><span class="tool-icon">📊</span>Percentage Calculator</h3>
+      <label for="pct">Percentage</label><input id="pct" type="number" placeholder="20">
       <label for="pctOf">Number</label><input id="pctOf" type="number" placeholder="150">
-      <button class="btn" onclick="percentage()">Calculate →</button>
+      <button class="btn" onclick="percentage()">Calculate</button>
       <div class="result" id="pctResult" aria-live="polite"></div>
-    </div>
-
-    <div class="tool-card tool" data-category="productivity">
-      <h3 class="tool-title"><span class="tool-icon">📝</span>Word & Character Counter</h3>
+    </article>
+    <article class="tool-card tool" data-category="productivity" data-keywords="word character count text writing">
+      <h3><span class="tool-icon">📝</span>Word & Character Counter</h3>
       <textarea id="wordText" placeholder="Type or paste your text..." oninput="countWords()"></textarea>
       <div class="result" id="wordResult" aria-live="polite">Words: 0 | Characters: 0</div>
-    </div>
-
-    <div class="tool-card tool" data-category="other">
-      <h3 class="tool-title"><span class="tool-icon">🔐</span>Password Generator</h3>
-      <label for="passLength">Password length (6–64)</label>
-      <input id="passLength" type="number" min="6" max="64" value="16">
-      <button class="btn" onclick="makePassword()">Generate password →</button>
+    </article>
+    <article class="tool-card tool" data-category="other" data-keywords="secure random password generator">
+      <h3><span class="tool-icon">🔐</span>Password Generator</h3>
+      <label for="passLength">Password length (6–64)</label><input id="passLength" type="number" min="6" max="64" value="16">
+      <button class="btn" onclick="makePassword()">Generate password</button>
       <div class="result" id="passResult" aria-live="polite"></div>
       <button class="btn btn-secondary" onclick="copyText('passResult')">Copy password</button>
-    </div>
-
-    <div class="tool-card tool" data-category="converters">
-      <h3 class="tool-title"><span class="tool-icon">📏</span>Length Converter</h3>
+    </article>
+    <article class="tool-card tool" data-category="converters" data-keywords="length distance metres miles feet inches">
+      <h3><span class="tool-icon">📏</span>Length Converter</h3>
       <label for="lengthValue">Value</label><input id="lengthValue" type="number" placeholder="Enter value">
-      <label for="lengthFrom">From</label>
-      <select id="lengthFrom"><option value="m">Metres</option><option value="km">Kilometres</option><option value="cm">Centimetres</option><option value="mi">Miles</option><option value="ft">Feet</option><option value="in">Inches</option></select>
-      <label for="lengthTo">To</label>
-      <select id="lengthTo"><option value="ft">Feet</option><option value="m">Metres</option><option value="km">Kilometres</option><option value="cm">Centimetres</option><option value="mi">Miles</option><option value="in">Inches</option></select>
-      <button class="btn" onclick="convertLength()">Convert →</button>
-      <div class="result" id="lengthResult" aria-live="polite"></div>
-    </div>
-
-    <div class="tool-card tool" data-category="converters">
-      <h3 class="tool-title"><span class="tool-icon">🌡️</span>Temperature Converter</h3>
+      <label for="lengthFrom">From</label><select id="lengthFrom"><option value="m">Metres</option><option value="km">Kilometres</option><option value="cm">Centimetres</option><option value="mi">Miles</option><option value="ft">Feet</option><option value="in">Inches</option></select>
+      <label for="lengthTo">To</label><select id="lengthTo"><option value="ft">Feet</option><option value="m">Metres</option><option value="km">Kilometres</option><option value="cm">Centimetres</option><option value="mi">Miles</option><option value="in">Inches</option></select>
+      <button class="btn" onclick="convertLength()">Convert</button><div class="result" id="lengthResult" aria-live="polite"></div>
+    </article>
+    <article class="tool-card tool" data-category="converters" data-keywords="temperature celsius fahrenheit">
+      <h3><span class="tool-icon">🌡️</span>Temperature Converter</h3>
       <label for="tempValue">Temperature</label><input id="tempValue" type="number" placeholder="Enter temperature">
       <label for="tempFrom">From</label><select id="tempFrom"><option value="C">Celsius</option><option value="F">Fahrenheit</option></select>
       <label for="tempTo">To</label><select id="tempTo"><option value="F">Fahrenheit</option><option value="C">Celsius</option></select>
-      <button class="btn" onclick="convertTemp()">Convert →</button>
-      <div class="result" id="tempResult" aria-live="polite"></div>
-    </div>
-
-    <div class="tool-card tool" data-category="productivity">
-      <h3 class="tool-title"><span class="tool-icon">🔠</span>Text Case Converter</h3>
-      <textarea id="caseText" placeholder="Enter text to convert..."></textarea>
-      <button class="btn" onclick="changeCase('upper')">UPPERCASE</button>
-      <button class="btn btn-secondary" onclick="changeCase('lower')">lowercase</button>
+      <button class="btn" onclick="convertTemp()">Convert</button><div class="result" id="tempResult" aria-live="polite"></div>
+    </article>
+    <article class="tool-card tool" data-category="productivity" data-keywords="text case uppercase lowercase title">
+      <h3><span class="tool-icon">🔠</span>Text Case Converter</h3>
+      <textarea id="caseText" placeholder="Enter text..."></textarea>
+      <div class="btn-row"><button class="btn" onclick="changeCase('upper')">UPPERCASE</button><button class="btn btn-secondary" onclick="changeCase('lower')">lowercase</button></div>
       <button class="btn btn-secondary" onclick="changeCase('title')">Title Case</button>
       <div class="result" id="caseResult" aria-live="polite"></div>
       <button class="btn btn-secondary" onclick="copyText('caseResult')">Copy text</button>
-    </div>
-
-    <div class="tool-card tool" data-category="calculators">
-      <h3 class="tool-title"><span class="tool-icon">🍕</span>Tip Calculator</h3>
+    </article>
+    <article class="tool-card tool" data-category="calculators" data-keywords="tip gratuity bill split people">
+      <h3><span class="tool-icon">🍕</span>Tip Calculator</h3>
       <label for="bill">Bill amount</label><input id="bill" type="number" min="0" placeholder="50">
       <label for="tip">Tip percentage</label><input id="tip" type="number" min="0" value="10">
       <label for="people">Number of people</label><input id="people" type="number" min="1" value="1">
-      <button class="btn" onclick="tipCalc()">Calculate →</button>
-      <div class="result" id="tipResult" aria-live="polite"></div>
-    </div>
-
-    <div class="tool-card tool" data-category="other">
-      <h3 class="tool-title"><span class="tool-icon">📱</span>QR Code Generator</h3>
-      <input id="qrText" placeholder="Enter text or website URL">
-      <button class="btn" onclick="makeQR()">Create QR code →</button>
-      <div class="result" id="qrResult" aria-live="polite"></div>
-      <p class="small">Uses an external QR service. Do not enter confidential information.</p>
-    </div>
-
-    <div class="tool-card tool" data-category="other">
-      <h3 class="tool-title"><span class="tool-icon">🖼️</span>Image Compressor</h3>
+      <button class="btn" onclick="tipCalc()">Calculate</button><div class="result" id="tipResult" aria-live="polite"></div>
+    </article>
+    <article class="tool-card tool" data-category="other" data-keywords="qr code generator scan website link">
+      <h3><span class="tool-icon">📱</span>QR Code Generator</h3>
+      <label for="qrText">Text or website address</label><input id="qrText" placeholder="https://example.com">
+      <button class="btn" onclick="makeQR()">Create QR code</button><div class="result" id="qrResult" aria-live="polite"></div>
+      <p class="small">QR generation sends the entered content to an external service. Do not enter passwords or private information.</p>
+    </article>
+    <article class="tool-card tool" data-category="other" data-keywords="image compressor reduce file size photo">
+      <h3><span class="tool-icon">🖼️</span>Image Compressor</h3>
       <label for="compressFile">Choose an image</label><input id="compressFile" type="file" accept="image/*">
       <label for="quality">Image quality</label><input id="quality" type="range" min=".1" max="1" step=".1" value=".7">
-      <button class="btn" onclick="compressImage()">Compress image →</button>
-      <div class="result" id="compressResult" aria-live="polite"></div>
-    </div>
-
-    <div class="tool-card tool" data-category="other">
-      <h3 class="tool-title"><span class="tool-icon">📐</span>Image Resizer</h3>
+      <button class="btn" onclick="compressImage()">Compress image</button><div id="compressResult" class="result" aria-live="polite"></div>
+    </article>
+    <article class="tool-card tool" data-category="other" data-keywords="image resizer resize dimensions pixels photo">
+      <h3><span class="tool-icon">📐</span>Image Resizer</h3>
       <label for="resizeFile">Choose an image</label><input id="resizeFile" type="file" accept="image/*">
       <label for="resizeWidth">New width (pixels)</label><input id="resizeWidth" type="number" min="1" max="6000" placeholder="Width">
       <label for="resizeHeight">New height (pixels)</label><input id="resizeHeight" type="number" min="1" max="6000" placeholder="Height">
-      <button class="btn" onclick="resizeImage()">Resize image →</button>
-      <div class="result" id="resizeResult" aria-live="polite"></div>
-    </div>
-
-    <div class="tool-card tool" data-category="productivity">
-      <h3 class="tool-title"><span class="tool-icon">✅</span>To-do List</h3>
-      <input id="todoInput" placeholder="Add a task...">
-      <button class="btn" onclick="addTodo()">+ Add task</button>
-      <ul id="todoList"></ul>
-    </div>
-
-    <div class="tool-card tool" data-category="productivity">
-      <h3 class="tool-title"><span class="tool-icon">📒</span>Notes</h3>
-      <textarea id="notes" placeholder="Write your notes here..."></textarea>
-      <button class="btn" onclick="saveNotes()">Save notes</button>
-      <div id="notesStatus" class="result" aria-live="polite"></div>
-    </div>
-
-    <div class="tool-card tool" data-category="other">
-      <h3 class="tool-title"><span class="tool-icon">🕒</span>Live Clock</h3>
-      <div class="result" id="clock" style="font-size:30px;text-align:center;font-weight:800" aria-live="off"></div>
-      <p class="small">Displays your device's local time.</p>
-    </div>
-
-    <!-- PDF TOOL 1: MERGE -->
-    <div class="tool-card tool" data-category="pdf">
-      <h3 class="tool-title"><span class="tool-icon">📚</span>Merge PDFs</h3>
-      <p class="small">Combine multiple PDF files into one document. Files are processed in the order selected.</p>
-      <label for="mergeFiles">Choose PDF files</label>
-      <input id="mergeFiles" type="file" accept="application/pdf,.pdf" multiple>
-      <button class="btn" onclick="mergePDFs()">Merge PDFs →</button>
-      <div class="result" id="mergeResult" aria-live="polite"></div>
-    </div>
-
-    <!-- PDF TOOL 2: SPLIT -->
-    <div class="tool-card tool" data-category="pdf">
-      <h3 class="tool-title"><span class="tool-icon">✂️</span>Split PDF</h3>
-      <p class="small">Extract a range of pages into a separate PDF. Example: 1-3 or 1,3,5.</p>
-      <label for="splitFile">Choose a PDF</label>
-      <input id="splitFile" type="file" accept="application/pdf,.pdf">
-      <label for="splitPages">Pages to extract</label>
-      <input id="splitPages" type="text" placeholder="Example: 1-3,5">
-      <button class="btn" onclick="splitPDF()">Extract pages →</button>
-      <div class="result" id="splitResult" aria-live="polite"></div>
-    </div>
-
-    <!-- PDF TOOL 3: IMAGES TO PDF -->
-    <div class="tool-card tool" data-category="pdf">
-      <h3 class="tool-title"><span class="tool-icon">🖼️</span>Images to PDF</h3>
-      <p class="small">Turn JPG, PNG and other browser-readable images into a single PDF.</p>
-      <label for="imagePDFfiles">Choose images</label>
-      <input id="imagePDFfiles" type="file" accept="image/*" multiple>
-      <button class="btn" onclick="imagesToPDF()">Create PDF →</button>
-      <div class="result" id="imagePDFresult" aria-live="polite"></div>
-    </div>
-
-    <!-- PDF TOOL 4: ROTATE -->
-    <div class="tool-card tool" data-category="pdf">
-      <h3 class="tool-title"><span class="tool-icon">🔄</span>Rotate PDF</h3>
-      <p class="small">Rotate every page in a PDF by 90, 180 or 270 degrees.</p>
-      <label for="rotateFile">Choose a PDF</label>
-      <input id="rotateFile" type="file" accept="application/pdf,.pdf">
-      <label for="rotateDegrees">Rotation</label>
-      <select id="rotateDegrees">
-        <option value="90">90 degrees clockwise</option>
-        <option value="180">180 degrees</option>
-        <option value="270">270 degrees clockwise</option>
-      </select>
-      <button class="btn" onclick="rotatePDF()">Rotate PDF →</button>
-      <div class="result" id="rotateResult" aria-live="polite"></div>
-    </div>
-
+      <button class="btn" onclick="resizeImage()">Resize image</button><div id="resizeResult" class="result" aria-live="polite"></div>
+    </article>
+    <article class="tool-card tool" data-category="productivity" data-keywords="todo tasks checklist list">
+      <h3><span class="tool-icon">✅</span>To-do List</h3>
+      <label for="todoInput">New task</label><input id="todoInput" placeholder="Add a task...">
+      <button class="btn" onclick="addTodo()">Add task</button><ul id="todoList"></ul>
+    </article>
+    <article class="tool-card tool" data-category="productivity" data-keywords="notes notepad save writing">
+      <h3><span class="tool-icon">📒</span>Notes</h3>
+      <label for="notes">Your notes</label><textarea id="notes" placeholder="Write your notes here..."></textarea>
+      <button class="btn" onclick="saveNotes()">Save notes</button><div id="notesStatus" class="result" aria-live="polite"></div>
+      <p class="small">Notes are saved only in this browser on this device.</p>
+    </article>
+    <article class="tool-card tool" data-category="other" data-keywords="clock time live current">
+      <h3><span class="tool-icon">🕒</span>Live Clock</h3>
+      <div class="result clock-result" id="clock" aria-live="off"></div>
+      <p class="small">Shows the time using your device's local settings.</p>
+    </article>
   </div>
-  <p id="noTools" class="empty-message">No tools found. Try another search.</p>
+
+    <article class="tool-card tool" data-category="calculators" data-keywords="bmi body mass index health weight height">
+      <h3><span class="tool-icon">⚖️</span>BMI Calculator</h3>
+      <label for="bmiWeight">Weight (kg)</label><input id="bmiWeight" type="number" min="1" step="0.1" placeholder="70">
+      <label for="bmiHeight">Height (cm)</label><input id="bmiHeight" type="number" min="1" step="0.1" placeholder="175">
+      <button class="btn" onclick="calculateBMI()">Calculate BMI</button><div class="result" id="bmiResult" aria-live="polite"></div>
+      <p class="small">BMI is a general screening measure, not a medical diagnosis.</p>
+    </article>
+    <article class="tool-card tool" data-category="calculators" data-keywords="age birthday date of birth years months days">
+      <h3><span class="tool-icon">🎂</span>Age Calculator</h3>
+      <label for="birthDate">Date of birth</label><input id="birthDate" type="date">
+      <button class="btn" onclick="calculateAge()">Calculate age</button><div class="result" id="ageResult" aria-live="polite"></div>
+    </article>
+    <article class="tool-card tool" data-category="calculators" data-keywords="discount sale savings price percentage">
+      <h3><span class="tool-icon">🏷️</span>Discount Calculator</h3>
+      <label for="discountPrice">Original price</label><input id="discountPrice" type="number" min="0" step="0.01" placeholder="100">
+      <label for="discountPercent">Discount (%)</label><input id="discountPercent" type="number" min="0" max="100" step="0.1" placeholder="20">
+      <button class="btn" onclick="calculateDiscount()">Calculate saving</button><div class="result" id="discountResult" aria-live="polite"></div>
+    </article>
+    <article class="tool-card tool" data-category="calculators" data-keywords="loan mortgage repayment interest monthly payment finance">
+      <h3><span class="tool-icon">🏦</span>Loan Repayment Calculator</h3>
+      <label for="loanAmount">Loan amount</label><input id="loanAmount" type="number" min="0" placeholder="10000">
+      <label for="loanRate">Annual interest (%)</label><input id="loanRate" type="number" min="0" step="0.01" placeholder="5">
+      <label for="loanYears">Term (years)</label><input id="loanYears" type="number" min="1" max="50" placeholder="5">
+      <button class="btn" onclick="calculateLoan()">Calculate payment</button><div class="result" id="loanResult" aria-live="polite"></div>
+      <p class="small">Illustrative estimate; excludes fees and lender-specific terms.</p>
+    </article>
+    <article class="tool-card tool" data-category="calculators" data-keywords="compound interest savings investment growth finance">
+      <h3><span class="tool-icon">📈</span>Compound Interest Calculator</h3>
+      <label for="compoundPrincipal">Starting amount</label><input id="compoundPrincipal" type="number" min="0" placeholder="1000">
+      <label for="compoundRate">Annual rate (%)</label><input id="compoundRate" type="number" min="0" step="0.1" placeholder="5">
+      <label for="compoundYears">Years</label><input id="compoundYears" type="number" min="0" max="100" placeholder="10">
+      <button class="btn" onclick="calculateCompound()">Calculate growth</button><div class="result" id="compoundResult" aria-live="polite"></div>
+    </article>
+    <article class="tool-card tool" data-category="calculators" data-keywords="date difference days weeks months between dates">
+      <h3><span class="tool-icon">📅</span>Date Difference Calculator</h3>
+      <label for="dateStart">Start date</label><input id="dateStart" type="date">
+      <label for="dateEnd">End date</label><input id="dateEnd" type="date">
+      <button class="btn" onclick="calculateDateDifference()">Find difference</button><div class="result" id="dateDiffResult" aria-live="polite"></div>
+    </article>
+    <article class="tool-card tool" data-category="converters" data-keywords="weight mass kilograms grams pounds ounces converter">
+      <h3><span class="tool-icon">🏋️</span>Weight Converter</h3>
+      <label for="weightValue">Value</label><input id="weightValue" type="number" placeholder="Enter value">
+      <label for="weightFrom">From</label><select id="weightFrom"><option value="kg">Kilograms</option><option value="g">Grams</option><option value="lb">Pounds</option><option value="oz">Ounces</option></select>
+      <label for="weightTo">To</label><select id="weightTo"><option value="lb">Pounds</option><option value="kg">Kilograms</option><option value="g">Grams</option><option value="oz">Ounces</option></select>
+      <button class="btn" onclick="convertWeight()">Convert weight</button><div class="result" id="weightResult" aria-live="polite"></div>
+    </article>
+    <article class="tool-card tool" data-category="converters" data-keywords="speed velocity kmh mph metres per second converter">
+      <h3><span class="tool-icon">🚗</span>Speed Converter</h3>
+      <label for="speedValue">Value</label><input id="speedValue" type="number" placeholder="Enter speed">
+      <label for="speedFrom">From</label><select id="speedFrom"><option value="kmh">Kilometres/hour</option><option value="mph">Miles/hour</option><option value="ms">Metres/second</option></select>
+      <label for="speedTo">To</label><select id="speedTo"><option value="mph">Miles/hour</option><option value="kmh">Kilometres/hour</option><option value="ms">Metres/second</option></select>
+      <button class="btn" onclick="convertSpeed()">Convert speed</button><div class="result" id="speedResult" aria-live="polite"></div>
+    </article>
+    <article class="tool-card tool" data-category="converters" data-keywords="area square metres acres hectares square feet converter">
+      <h3><span class="tool-icon">📐</span>Area Converter</h3>
+      <label for="areaValue">Value</label><input id="areaValue" type="number" placeholder="Enter area">
+      <label for="areaFrom">From</label><select id="areaFrom"><option value="m2">Square metres</option><option value="ft2">Square feet</option><option value="acre">Acres</option><option value="ha">Hectares</option></select>
+      <label for="areaTo">To</label><select id="areaTo"><option value="ft2">Square feet</option><option value="m2">Square metres</option><option value="acre">Acres</option><option value="ha">Hectares</option></select>
+      <button class="btn" onclick="convertArea()">Convert area</button><div class="result" id="areaResult" aria-live="polite"></div>
+    </article>
+    <article class="tool-card tool" data-category="converters" data-keywords="volume litres millilitres gallons cups fluid ounces converter">
+      <h3><span class="tool-icon">🧪</span>Volume Converter</h3>
+      <label for="volumeValue">Value</label><input id="volumeValue" type="number" placeholder="Enter volume">
+      <label for="volumeFrom">From</label><select id="volumeFrom"><option value="l">Litres</option><option value="ml">Millilitres</option><option value="gal">US gallons</option><option value="cup">US cups</option></select>
+      <label for="volumeTo">To</label><select id="volumeTo"><option value="ml">Millilitres</option><option value="l">Litres</option><option value="gal">US gallons</option><option value="cup">US cups</option></select>
+      <button class="btn" onclick="convertVolume()">Convert volume</button><div class="result" id="volumeResult" aria-live="polite"></div>
+    </article>
+    <article class="tool-card tool" data-category="converters" data-keywords="data storage bytes kilobytes megabytes gigabytes terabytes">
+      <h3><span class="tool-icon">💾</span>Data Size Converter</h3>
+      <label for="dataValue">Value</label><input id="dataValue" type="number" min="0" placeholder="Enter size">
+      <label for="dataFrom">From</label><select id="dataFrom"><option>Bytes</option><option>KB</option><option>MB</option><option>GB</option><option>TB</option></select>
+      <label for="dataTo">To</label><select id="dataTo"><option>MB</option><option>Bytes</option><option>KB</option><option>GB</option><option>TB</option></select>
+      <button class="btn" onclick="convertDataSize()">Convert size</button><div class="result" id="dataResult" aria-live="polite"></div>
+    </article>
+    <article class="tool-card tool" data-category="other" data-keywords="random number picker generator range">
+      <h3><span class="tool-icon">🎲</span>Random Number Generator</h3>
+      <label for="randomMin">Minimum</label><input id="randomMin" type="number" value="1">
+      <label for="randomMax">Maximum</label><input id="randomMax" type="number" value="100">
+      <button class="btn" onclick="generateRandomNumber()">Generate number</button><div class="result" id="randomResult" aria-live="polite"></div>
+    </article>
+    <article class="tool-card tool" data-category="developer" data-keywords="uuid guid unique identifier generate">
+      <h3><span class="tool-icon">🆔</span>UUID Generator</h3>
+      <button class="btn" onclick="generateUUID()">Generate UUID</button><div class="result" id="uuidResult" aria-live="polite"></div><button class="btn btn-secondary" onclick="copyText('uuidResult')">Copy UUID</button>
+    </article>
+    <article class="tool-card tool" data-category="developer" data-keywords="base64 encode decode developer text">
+      <h3><span class="tool-icon">🔡</span>Base64 Encoder / Decoder</h3>
+      <textarea id="base64Input" placeholder="Enter text or Base64..."></textarea>
+      <div class="btn-row"><button class="btn" onclick="base64Convert('encode')">Encode</button><button class="btn btn-secondary" onclick="base64Convert('decode')">Decode</button></div><div class="result" id="base64Result" aria-live="polite"></div>
+    </article>
+    <article class="tool-card tool" data-category="developer" data-keywords="url encode decode percent encoding web developer">
+      <h3><span class="tool-icon">🔗</span>URL Encoder / Decoder</h3>
+      <textarea id="urlInput" placeholder="Enter a URL or encoded text..."></textarea>
+      <div class="btn-row"><button class="btn" onclick="urlConvert('encode')">Encode</button><button class="btn btn-secondary" onclick="urlConvert('decode')">Decode</button></div><div class="result" id="urlResult" aria-live="polite"></div>
+    </article>
+    <article class="tool-card tool" data-category="developer" data-keywords="json formatter validator beautify minify code">
+      <h3><span class="tool-icon">{ }</span>JSON Formatter & Validator</h3>
+      <textarea id="jsonInput" placeholder='Paste JSON here, e.g. {"name":"Alex"}'></textarea>
+      <div class="btn-row"><button class="btn" onclick="formatJSON(false)">Pretty print</button><button class="btn btn-secondary" onclick="formatJSON(true)">Minify</button></div><div class="result" id="jsonResult" aria-live="polite"></div>
+    </article>
+    <article class="tool-card tool" data-category="text" data-keywords="remove duplicate repeated lines clean text">
+      <h3><span class="tool-icon">🧹</span>Duplicate Line Remover</h3>
+      <textarea id="dedupeInput" placeholder="Paste lines of text..."></textarea>
+      <button class="btn" onclick="removeDuplicateLines()">Remove duplicates</button><div class="result" id="dedupeResult" aria-live="polite"></div>
+    </article>
+    <article class="tool-card tool" data-category="text" data-keywords="find replace text editor words">
+      <h3><span class="tool-icon">🔎</span>Find & Replace</h3>
+      <textarea id="replaceInput" placeholder="Paste your text..."></textarea>
+      <label for="findText">Find</label><input id="findText" placeholder="Text to find">
+      <label for="replaceText">Replace with</label><input id="replaceText" placeholder="Replacement text">
+      <button class="btn" onclick="findReplace()">Replace all</button><div class="result" id="replaceResult" aria-live="polite"></div>
+    </article>
+    <article class="tool-card tool" data-category="text" data-keywords="reverse text string backwards">
+      <h3><span class="tool-icon">🔄</span>Text Reverser</h3>
+      <textarea id="reverseInput" placeholder="Enter text to reverse..."></textarea>
+      <button class="btn" onclick="reverseText()">Reverse text</button><div class="result" id="reverseResult" aria-live="polite"></div>
+    </article>
+    <article class="tool-card tool" data-category="text" data-keywords="url slug generator seo friendly title">
+      <h3><span class="tool-icon">🔖</span>URL Slug Generator</h3>
+      <input id="slugInput" placeholder="Enter a page title...">
+      <button class="btn" onclick="makeSlug()">Create slug</button><div class="result" id="slugResult" aria-live="polite"></div>
+    </article>
+    <article class="tool-card tool" data-category="developer" data-keywords="html entities escape unescape encode">
+      <h3><span class="tool-icon">&lt;/&gt;</span>HTML Entity Encoder</h3>
+      <textarea id="htmlInput" placeholder="Enter HTML or text..."></textarea>
+      <div class="btn-row"><button class="btn" onclick="htmlConvert('encode')">Encode</button><button class="btn btn-secondary" onclick="htmlConvert('decode')">Decode</button></div><div class="result" id="htmlResult" aria-live="polite"></div>
+    </article>
+    <article class="tool-card tool" data-category="other" data-keywords="color picker hex rgb converter design">
+      <h3><span class="tool-icon">🎨</span>Colour Picker & HEX / RGB</h3>
+      <label for="colorPicker">Choose a colour</label><input id="colorPicker" type="color" value="#9b7bff" oninput="showColor()">
+      <label for="colorHex">HEX value</label><input id="colorHex" value="#9b7bff" oninput="colorFromHex()">
+      <div class="result" id="colorResult" aria-live="polite">RGB: 155, 123, 255</div>
+    </article>
+    <article class="tool-card tool" data-category="text" data-keywords="markdown preview editor formatting">
+      <h3><span class="tool-icon">📰</span>Markdown Preview</h3>
+      <textarea id="markdownInput" placeholder="# Heading\nWrite **bold** or *italic* text here..."></textarea>
+      <button class="btn" onclick="previewMarkdown()">Preview Markdown</button><div class="result markdown-preview" id="markdownResult" aria-live="polite"></div>
+      <p class="small">Basic headings, bold, italic and line breaks are supported. Raw HTML is escaped.</p>
+    </article>
+    <article class="tool-card tool" data-category="developer" data-keywords="csv json converter spreadsheet data">
+      <h3><span class="tool-icon">📊</span>CSV to JSON Converter</h3>
+      <textarea id="csvInput" placeholder="name,age\nAlex,25\nSam,30"></textarea>
+      <button class="btn" onclick="csvToJSON()">Convert CSV to JSON</button><div class="result" id="csvResult" aria-live="polite"></div>
+    </article>
+    <article class="tool-card tool" data-category="developer" data-keywords="json csv export spreadsheet data">
+      <h3><span class="tool-icon">📋</span>JSON to CSV Converter</h3>
+      <textarea id="jsonCsvInput" placeholder='[{"name":"Alex","age":25}]'></textarea>
+      <button class="btn" onclick="jsonToCSV()">Convert JSON to CSV</button><div class="result" id="jsonCsvResult" aria-live="polite"></div>
+    </article>
+    <article class="tool-card tool" data-category="other" data-keywords="email address validate check syntax">
+      <h3><span class="tool-icon">✉️</span>Email Validator</h3>
+      <label for="emailCheck">Email address</label><input id="emailCheck" type="email" placeholder="name@example.com">
+      <button class="btn" onclick="validateEmailAddress()">Check email</button><div class="result" id="emailResult" aria-live="polite"></div>
+    </article>
+    <article class="tool-card tool" data-category="text" data-keywords="word frequency count repeated words writing">
+      <h3><span class="tool-icon">📚</span>Word Frequency Counter</h3>
+      <textarea id="frequencyInput" placeholder="Paste text to analyse..."></textarea>
+      <button class="btn" onclick="countWordFrequency()">Count words</button><div class="result" id="frequencyResult" aria-live="polite"></div>
+    </article>
+    <article class="tool-card tool" data-category="other" data-keywords="password strength checker security">
+      <h3><span class="tool-icon">🛡️</span>Password Strength Checker</h3>
+      <input id="strengthInput" type="password" placeholder="Enter a password to check" autocomplete="off">
+      <button class="btn" onclick="checkPasswordStrength()">Check strength</button><div class="result" id="strengthResult" aria-live="polite"></div>
+      <p class="small">Your password is checked locally and is not sent anywhere.</p>
+    </article>
+    <article class="tool-card tool" data-category="productivity" data-keywords="stopwatch timer elapsed time">
+      <h3><span class="tool-icon">⏱️</span>Stopwatch</h3>
+      <div class="result clock-result" id="stopwatchDisplay">00:00.0</div>
+      <div class="btn-row"><button class="btn" onclick="startStopwatch()">Start</button><button class="btn btn-secondary" onclick="stopStopwatch()">Pause</button><button class="btn btn-secondary" onclick="resetStopwatch()">Reset</button></div>
+    </article>
+    <article class="tool-card tool" data-category="productivity" data-keywords="countdown timer minutes seconds">
+      <h3><span class="tool-icon">⏳</span>Countdown Timer</h3>
+      <label for="timerMinutes">Minutes</label><input id="timerMinutes" type="number" min="0" max="999" value="1">
+      <label for="timerSeconds">Seconds</label><input id="timerSeconds" type="number" min="0" max="59" value="0">
+      <div class="result clock-result" id="timerDisplay">01:00</div>
+      <div class="btn-row"><button class="btn" onclick="startCountdown()">Start</button><button class="btn btn-secondary" onclick="pauseCountdown()">Pause</button><button class="btn btn-secondary" onclick="resetCountdown()">Reset</button></div>
+    </article>
+    <article class="tool-card tool" data-category="files" data-keywords="merge combine join pdf documents">
+      <h3><span class="tool-icon">📚</span>Merge PDF Files</h3>
+      <label for="mergePDFs">Choose PDF files (in merge order)</label><input id="mergePDFFilesInput" type="file" accept="application/pdf,.pdf" multiple>
+      <button class="btn" onclick="mergePDFs()">Merge PDFs</button><div class="result" id="mergePDFResult" aria-live="polite"></div>
+    </article>
+    <article class="tool-card tool" data-category="files" data-keywords="split extract pages pdf document">
+      <h3><span class="tool-icon">✂️</span>Extract PDF Pages</h3>
+      <label for="splitPDF">Choose a PDF</label><input id="splitPDF" type="file" accept="application/pdf,.pdf">
+      <label for="splitPages">Pages to extract (e.g. 1,3-5)</label><input id="splitPages" placeholder="1,3-5">
+      <button class="btn" onclick="extractPDFPages()">Extract pages</button><div class="result" id="splitPDFResult" aria-live="polite"></div>
+    </article>
+    <article class="tool-card tool" data-category="files" data-keywords="images jpg png convert pdf create document">
+      <h3><span class="tool-icon">🖼️</span>Images to PDF</h3>
+      <label for="imagesPDF">Choose images (in page order)</label><input id="imagesPDF" type="file" accept="image/png,image/jpeg" multiple>
+      <button class="btn" onclick="imagesToPDF()">Create PDF</button><div class="result" id="imagesPDFResult" aria-live="polite"></div>
+      <p class="small">PNG and JPEG images are supported.</p>
+    </article>
+    <article class="tool-card tool" data-category="files" data-keywords="rotate pdf pages clockwise counterclockwise">
+      <h3><span class="tool-icon">🔄</span>Rotate PDF Pages</h3>
+      <label for="rotatePDF">Choose a PDF</label><input id="rotatePDF" type="file" accept="application/pdf,.pdf">
+      <label for="rotateDegrees">Rotation</label><select id="rotateDegrees"><option value="90">90° clockwise</option><option value="180">180°</option><option value="270">270° clockwise</option></select>
+      <button class="btn" onclick="rotatePDFPages()">Rotate and download</button><div class="result" id="rotatePDFResult" aria-live="polite"></div>
+    </article>
+
+  <p id="noTools" class="empty-message">No tools match that search. Try another word or category.</p>
 </section>
 
 <section id="account" class="page">
-  <h1 class="page-heading">Your Account</h1>
-  <div class="content-card account-card">
-    <h2>Welcome to SmartTools Hub</h2>
-    <p class="muted">Create an account or sign in to access your account.</p>
-    <label for="authEmail">Email address</label>
-    <input id="authEmail" type="email" placeholder="you@example.com" autocomplete="email">
-    <label for="authPassword">Password</label>
-    <input id="authPassword" type="password" placeholder="At least 6 characters" autocomplete="current-password">
-    <button class="btn" onclick="signUp()">Create account</button>
-    <button class="btn btn-secondary" onclick="signIn()">Sign in</button>
-    <hr>
-    <button class="btn btn-google btn-full" onclick="googleSignIn()">Continue with Google</button>
-    <div id="authStatus" class="result" aria-live="polite"></div>
+  <div class="page-intro"><h1>Your account</h1><p>Sign in securely to your SmartTools Hub account.</p></div>
+  <div class="content-card auth-card">
+    <h2>Welcome back</h2>
+    <p>Use your email and password, or continue with Google.</p>
+    <label for="authEmail">Email address</label><input id="authEmail" type="email" placeholder="you@example.com" autocomplete="email">
+    <label for="authPassword">Password</label><input id="authPassword" type="password" placeholder="Your password" autocomplete="current-password">
+    <button class="btn" onclick="signIn()">Sign in</button>
+    <button class="btn btn-secondary" onclick="signUp()">Create an account</button>
+    <div class="auth-divider">or</div>
+    <button class="btn btn-secondary" onclick="googleSignIn()">Continue with Google</button>
     <button class="btn btn-secondary" onclick="signOut()">Sign out</button>
-    <div class="account-note">Your account uses Supabase authentication. Notes and tasks are currently saved locally on this device and are not automatically synchronised between devices.</div>
+    <div id="authStatus" class="result" aria-live="polite">Checking your sign-in status…</div>
+    <p class="small">Your account is used for authentication. Notes and tasks currently stay in this browser and are not synchronised between devices.</p>
   </div>
 </section>
 
 <section id="about" class="page">
-  <h1 class="page-heading">About SmartTools Hub</h1>
+  <div class="page-intro"><h1>Tools that make life simpler.</h1><p>Get everyday digital tasks done in one convenient place.</p></div>
   <div class="content-card">
-    <h2>Tools that make everyday life easier.</h2>
-    <p>SmartTools Hub brings useful online tools together in one convenient place. From everyday calculations and unit conversions to PDF utilities, image tools and productivity features, our goal is to make common tasks simpler.</p>
-    <h3>Simple by design</h3>
-    <p>We aim to provide an easy-to-use experience across desktop, tablet and mobile devices.</p>
-    <h3>Our goal</h3>
-    <p>To make practical digital tools accessible and straightforward for everyone.</p>
+    <h2>About SmartTools Hub</h2>
+    <p>SmartTools Hub brings together practical browser-based utilities designed to help with calculations, conversions, writing, images and everyday organisation.</p>
+    <h3>Our approach</h3>
+    <p>We aim to make useful tools straightforward, accessible and easy to use across desktop and mobile devices. You can use the tools without installing desktop software.</p>
+    <h3>Using the tools</h3>
+    <p>Most tools process information directly in your browser. Some features rely on external services, as explained in our <a href="#privacy" onclick="showPage('privacy');return false">Privacy Policy</a>.</p>
   </div>
 </section>
 
 <section id="privacy" class="page">
-  <h1 class="page-heading">Privacy Policy</h1>
+  <div class="page-intro"><h1>Privacy policy</h1><p>Understand what happens when you use SmartTools Hub.</p></div>
   <div class="content-card">
     <p><strong>Last updated: 10 November 2026</strong></p>
     <h3>Information and accounts</h3>
-    <p>If you register or sign in, Supabase processes your email address and authentication information to provide account services. Google sign-in is handled through Google's authentication service.</p>
-    <h3>Local tools and storage</h3>
-    <p>Most tools run in your browser. PDF tools process the selected files locally in your browser using the pdf-lib library. Your selected PDF and image files are not uploaded by these tools to a SmartTools Hub server. Notes and tasks are saved in your browser's local storage on that device and are not automatically synchronised with your account.</p>
+    <p>If you register or sign in, Supabase processes account information such as your email address and authentication data to provide the account service. Google sign-in is handled through Google's and Supabase's authentication systems.</p>
+    <h3>Browser-based tools</h3>
+    <p>Most calculations, conversions and text utilities run in your browser. Image compression and resizing are performed locally in the browser. Notes and to-do items are stored in local storage on your device and are not automatically synchronised to your account.</p>
     <h3>QR code service</h3>
-    <p>The QR code generator sends the text you enter to the external QR Server service to create a QR image. Do not enter confidential or sensitive information into this tool.</p>
-    <h3>Browser storage</h3>
-    <p>This website uses local storage for notes and tasks. Supabase authentication may use browser storage to maintain your sign-in session.</p>
+    <p>The QR code generator sends the text or address you enter to the external QR Server service to create the QR image. Do not submit passwords, confidential information or sensitive personal data.</p>
+    <h3>Cookies and local storage</h3>
+    <p>Browser storage is used for local features. Supabase authentication may use browser storage to maintain your sign-in session. Clearing browser storage may remove locally saved notes and tasks and may sign you out.</p>
     <h3>Third-party services</h3>
-    <p>Supabase provides authentication services, Google provides Google sign-in, QR Server generates QR code images, and jsDelivr delivers the libraries used by this website. Their own privacy policies apply to their services.</p>
-    <h3>Your choices</h3>
-    <p>You can clear your browser storage to remove locally saved notes and tasks. You can contact us with privacy questions or requests.</p>
-    <h3>Contact</h3>
-    <p>Email: <a href="mailto:halimafatima0810@gmail.com">halimafatima0810@gmail.com</a></p>
-    <p class="small">If analytics, advertising or other third-party services are added, this policy should be reviewed and updated before using them.</p>
+    <p>SmartTools Hub is hosted by GitHub Pages and uses Supabase for authentication. The QR generator uses QR Server. The PDF tools load the pdf-lib library from jsDelivr; selected PDF and image files are processed in your browser and are not uploaded by these tools. These providers process information under their own policies and terms.</p>
+    <h3>Your choices and contact</h3>
+    <p>You can choose not to use account or QR features. For questions or privacy requests, email <a href="mailto:halimafatima0810@gmail.com">halimafatima0810@gmail.com</a>.</p>
+    <div class="privacy-note">Before a wider launch, review this policy against the services and data practices actually enabled on the website. Update it if analytics, advertising, payments or additional integrations are introduced.</div>
   </div>
 </section>
 
 <section id="contact" class="page">
-  <h1 class="page-heading">Contact Us</h1>
+  <div class="page-intro"><h1>We'd love to hear from you.</h1><p>Questions, feedback or ideas for a new tool? Get in touch.</p></div>
   <div class="content-card">
-    <h2>We would love to hear from you.</h2>
-    <p>Have a question, suggestion or encountered a problem? Get in touch with the SmartTools Hub team.</p>
+    <h2>Contact SmartTools Hub</h2>
+    <p>For help, suggestions or website feedback, send us an email. Please do not include passwords or sensitive account information.</p>
     <p><strong>Email:</strong> <a href="mailto:halimafatima0810@gmail.com">halimafatima0810@gmail.com</a></p>
-    <a class="btn" href="mailto:halimafatima0810@gmail.com?subject=SmartTools%20Hub%20Enquiry">✉ Send us an email</a>
+    <a class="btn" href="mailto:halimafatima0810@gmail.com?subject=SmartTools%20Hub%20Enquiry">✉ Send an email</a>
   </div>
 </section>
 </main>
 
-<footer>
-  <div class="footer-brand">SmartTools <span>Hub</span></div>
-  <p>Useful tools. Simple solutions.</p>
-  <div class="footer-links">
-    <a href="#home" onclick="showPage('home');return false">Home</a>
-    <a href="#about" onclick="showPage('about');return false">About</a>
-    <a href="#privacy" onclick="showPage('privacy');return false">Privacy Policy</a>
-    <a href="#contact" onclick="showPage('contact');return false">Contact</a>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div><div class="footer-brand">✦ SmartTools <span>Hub</span></div><div class="footer-copy">Useful tools for your everyday.</div></div>
+    <div class="footer-links">
+      <a href="#about" onclick="showPage('about');return false">About</a>
+      <a href="#privacy" onclick="showPage('privacy');return false">Privacy policy</a>
+      <a href="#contact" onclick="showPage('contact');return false">Contact</a>
+    </div>
+    <div class="footer-copy">© <span id="year"></span> SmartTools Hub</div>
   </div>
-  <p>© <span id="year"></span> SmartTools Hub. All rights reserved.</p>
 </footer>
-<div id="toast" role="status" aria-live="polite"></div>
 
-<!-- External libraries -->
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="https://cdn.jsdelivr.net/npm/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
 "use strict";
 
-/* SUPABASE CONFIGURATION */
-const SUPABASE_URL="https://gtehzjmcitbxzrxnatcz.supabase.co";
-const SUPABASE_ANON_KEY="sb_publishable_hMCcIJetUbklqgzpXYTCTQ_8UXoHqlu";
-let supabaseClient=null;
-
-try{
-  if(window.supabase){
-    supabaseClient=window.supabase.createClient(SUPABASE_URL,SUPABASE_ANON_KEY);
-  }
-}catch(error){console.error("Supabase setup error:",error)}
-
-/* NOTIFICATIONS */
-let toastTimer;
-function toast(message){
-  const box=document.getElementById("toast");
-  box.textContent=message;
-  box.classList.add("show");
-  clearTimeout(toastTimer);
-  toastTimer=setTimeout(()=>box.classList.remove("show"),2600);
+/* Supabase: keep the publishable key here; never add a service-role key or Google client secret. */
+const SUPABASE_URL = "https://gtehzjmcitbxzrxnatcz.supabase.co";
+const SUPABASE_ANON_KEY = "sb_publishable_hMCcIJetUbklqgzpXYTCTQ_8UXoHqlu";
+let supabaseClient = null;
+try {
+  if (window.supabase) supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+} catch (error) {
+  console.error("Supabase initialisation failed:", error);
 }
 
-/* PAGE NAVIGATION */
-function showPage(id){
-  document.querySelectorAll(".page").forEach(page=>page.classList.remove("active"));
-  const selected=document.getElementById(id);
-  if(!selected)return;
-  selected.classList.add("active");
-  document.querySelectorAll(".nav button").forEach(button=>{
-    button.classList.toggle("active",button.dataset.page===id);
+/* Navigation */
+function showPage(id) {
+  const page = document.getElementById(id);
+  if (!page || !page.classList.contains("page")) return;
+  document.querySelectorAll("section.page").forEach(item => item.classList.remove("active"));
+  page.classList.add("active");
+  document.querySelectorAll(".nav button").forEach(button => {
+    button.classList.toggle("active", button.dataset.page === id);
   });
-  window.scrollTo({top:0,behavior:"smooth"});
+  window.scrollTo({top:0,behavior:window.matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth"});
 }
 
-/* SEARCH AND FILTERS */
-let currentCategory="all";
-function filterTools(){
-  currentCategory="all";
-  document.querySelectorAll(".filter-btn").forEach(button=>button.classList.remove("selected"));
-  document.querySelector(".filter-btn").classList.add("selected");
+/* Search and category filters work together. */
+let activeCategory = "all";
+function setCategory(category) {
+  activeCategory = category;
+  document.querySelectorAll(".filter-btn").forEach(button => {
+    button.classList.toggle("active", button.dataset.category === category);
+  });
   applyToolFilters();
 }
-function filterCategory(category,button){
-  currentCategory=category;
-  document.getElementById("search").value="";
-  document.querySelectorAll(".filter-btn").forEach(item=>item.classList.remove("selected"));
-  if(button)button.classList.add("selected");
-  applyToolFilters();
-}
-function applyToolFilters(){
-  const query=document.getElementById("search").value.toLowerCase().trim();
-  let visible=0;
-  document.querySelectorAll(".tool").forEach(tool=>{
-    const categoryMatch=currentCategory==="all"||tool.dataset.category===currentCategory;
-    const searchMatch=tool.innerText.toLowerCase().includes(query);
-    const show=categoryMatch&&searchMatch;
-    tool.style.display=show?"":"none";
-    if(show)visible++;
+function applyToolFilters() {
+  const query = document.getElementById("search").value.trim().toLowerCase();
+  let visible = 0;
+  document.querySelectorAll(".tool").forEach(tool => {
+    const categoryMatch = activeCategory === "all" || tool.dataset.category === activeCategory;
+    const searchable = (tool.innerText + " " + (tool.dataset.keywords || "")).toLowerCase();
+    const searchMatch = !query || searchable.includes(query);
+    const show = categoryMatch && searchMatch;
+    tool.hidden = !show;
+    if (show) visible++;
   });
-  document.getElementById("noTools").style.display=visible?"none":"block";
+  document.getElementById("noTools").style.display = visible ? "none" : "block";
+  document.getElementById("toolCount").textContent = `${visible} of ${document.querySelectorAll(".tool").length} tools`;
 }
 
-/* 1. SAFE CALCULATOR */
-function calculate(){
-  const expression=document.getElementById("calcInput").value.trim();
-  const output=document.getElementById("calcResult");
-  if(!expression){output.textContent="Please enter a calculation.";return}
-  if(!/^[0-9+\-*/().%\s]+$/.test(expression)){
-    output.textContent="Please enter a valid maths expression.";return;
+/* Safe arithmetic parser: no eval() or Function(). Supports + - * / % and parentheses. */
+function calculate() {
+  const expression = document.getElementById("calcInput").value.trim();
+  const output = document.getElementById("calcResult");
+  if (!expression) { output.textContent = "Please enter a calculation."; return; }
+  if (expression.length > 120 || !/^[0-9+\-*/().%\s]+$/.test(expression)) {
+    output.textContent = "Enter a valid maths expression."; return;
   }
-  try{
-    const tokens=expression.match(/\d*\.?\d+|[()+\-*/%]/g);
-    if(!tokens||tokens.join("")!==expression.replace(/\s/g,""))throw Error("Invalid expression");
-    let position=0;
-    function parseExpression(){
-      let value=parseTerm();
-      while(position<tokens.length){
-        const op=tokens[position];
-        if(op!=="+"&&op!=="-")break;
-        position++;
-        const next=parseTerm();
-        value=op==="+"?value+next:value-next;
+  try {
+    const tokens = expression.match(/\d*\.?\d+|[()+\-*/%]/g);
+    if (!tokens || tokens.join("") !== expression.replace(/\s/g, "")) throw new Error("Invalid expression.");
+    let pos = 0;
+    function factor() {
+      const token = tokens[pos];
+      if (token === "+" || token === "-") { pos++; const n = factor(); return token === "-" ? -n : n; }
+      if (token === "(") {
+        pos++; const n = expressionPart();
+        if (tokens[pos] !== ")") throw new Error("Missing closing bracket.");
+        pos++; return n;
       }
-      return value;
+      if (token === undefined || !/^\d*\.?\d+$/.test(token)) throw new Error("Invalid number.");
+      pos++; return Number(token);
     }
-    function parseTerm(){
-      let value=parseFactor();
-      while(position<tokens.length){
-        const op=tokens[position];
-        if(!["*","/","%"].includes(op))break;
-        position++;
-        const next=parseFactor();
-        if((op==="/"||op==="%")&&next===0)throw Error("Cannot divide by zero.");
-        if(op==="*")value*=next;
-        if(op==="/")value/=next;
-        if(op==="%")value%=next;
+    function term() {
+      let n = factor();
+      while (["*","/","%"].includes(tokens[pos])) {
+        const op = tokens[pos++], rhs = factor();
+        if ((op === "/" || op === "%") && rhs === 0) throw new Error("Cannot divide by zero.");
+        n = op === "*" ? n * rhs : op === "/" ? n / rhs : n % rhs;
       }
-      return value;
+      return n;
     }
-    function parseFactor(){
-      const token=tokens[position];
-      if(token==="+"||token==="-"){
-        position++;
-        const value=parseFactor();
-        return token==="-"?-value:value;
+    function expressionPart() {
+      let n = term();
+      while (tokens[pos] === "+" || tokens[pos] === "-") {
+        const op = tokens[pos++], rhs = term();
+        n = op === "+" ? n + rhs : n - rhs;
       }
-      if(token==="("){
-        position++;
-        const value=parseExpression();
-        if(tokens[position]!==")")throw Error("Missing closing bracket.");
-        position++;
-        return value;
-      }
-      if(token===undefined||!/^\d*\.?\d+$/.test(token))throw Error("Invalid number.");
-      position++;
-      return Number(token);
+      return n;
     }
-    const result=parseExpression();
-    if(position!==tokens.length||!Number.isFinite(result))throw Error("Invalid calculation.");
-    output.textContent=Number(result.toPrecision(12)).toString();
-  }catch(error){output.textContent=error.message||"Invalid calculation."}
+    const result = expressionPart();
+    if (pos !== tokens.length || !Number.isFinite(result)) throw new Error("Invalid calculation.");
+    output.textContent = Number(result.toPrecision(12)).toString();
+  } catch (error) { output.textContent = error.message || "Could not calculate that expression."; }
 }
 
-/* 2. PERCENTAGE */
-function percentage(){
-  const p=document.getElementById("pct").value;
-  const n=document.getElementById("pctOf").value;
-  const output=document.getElementById("pctResult");
-  if(p===""||n===""){output.textContent="Please enter both numbers.";return}
-  output.textContent=((Number(p)*Number(n))/100).toLocaleString();
+/* Percentage */
+function percentage() {
+  const p = document.getElementById("pct").value, n = document.getElementById("pctOf").value;
+  const out = document.getElementById("pctResult");
+  if (p === "" || n === "" || !Number.isFinite(Number(p)) || !Number.isFinite(Number(n))) { out.textContent = "Please enter both numbers."; return; }
+  out.textContent = ((Number(p) * Number(n)) / 100).toLocaleString(undefined,{maximumFractionDigits:8});
 }
 
-/* 3. WORD COUNTER */
-function countWords(){
-  const value=document.getElementById("wordText").value;
-  const words=value.trim()?value.trim().split(/\s+/).length:0;
-  document.getElementById("wordResult").textContent=
-    `Words: ${words} | Characters: ${value.length} | Without spaces: ${value.replace(/\s/g,"").length}`;
+/* Word counter */
+function countWords() {
+  const value = document.getElementById("wordText").value;
+  const words = value.trim() ? value.trim().split(/\s+/u).length : 0;
+  document.getElementById("wordResult").textContent = `Words: ${words} | Characters: ${value.length} | Without spaces: ${value.replace(/\s/g,"").length}`;
 }
 
-/* 4. PASSWORD GENERATOR */
-function makePassword(){
-  const input=Number(document.getElementById("passLength").value);
-  const length=Math.max(6,Math.min(64,input||16));
-  document.getElementById("passLength").value=length;
-  const chars="ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz23456789!@#$%&*?";
-  const random=new Uint32Array(length);
-  crypto.getRandomValues(random);
-  document.getElementById("passResult").textContent=
-    Array.from(random,n=>chars[n%chars.length]).join("");
-}
-
-/* COPY */
-async function copyText(id){
-  const element=document.getElementById(id);
-  const value=element.innerText||element.textContent;
-  if(!value.trim()){toast("Nothing to copy yet.");return}
-  try{await navigator.clipboard.writeText(value);toast("Copied to clipboard!")}
-  catch(error){toast("Copy unavailable. Please copy manually.")}
-}
-
-/* 5. LENGTH CONVERTER */
-const metres={m:1,km:1000,cm:.01,mi:1609.344,ft:.3048,in:.0254};
-function convertLength(){
-  const input=document.getElementById("lengthValue").value;
-  const output=document.getElementById("lengthResult");
-  if(input===""||!Number.isFinite(Number(input))){output.textContent="Please enter a valid number.";return}
-  const from=document.getElementById("lengthFrom").value;
-  const to=document.getElementById("lengthTo").value;
-  output.textContent=(Number(input)*metres[from]/metres[to]).toLocaleString(undefined,{maximumFractionDigits:6});
-}
-
-/* 6. TEMPERATURE */
-function convertTemp(){
-  const input=document.getElementById("tempValue").value;
-  const output=document.getElementById("tempResult");
-  if(input===""){output.textContent="Please enter a temperature.";return}
-  let value=Number(input);
-  const from=document.getElementById("tempFrom").value;
-  const to=document.getElementById("tempTo").value;
-  if(from!==to)value=from==="C"?value*9/5+32:(value-32)*5/9;
-  output.textContent=value.toFixed(2)+"°"+to;
-}
-
-/* 7. TEXT CASE */
-function changeCase(type){
-  let value=document.getElementById("caseText").value;
-  if(type==="upper")value=value.toUpperCase();
-  if(type==="lower")value=value.toLowerCase();
-  if(type==="title")value=value.toLowerCase().replace(/\b\w/g,c=>c.toUpperCase());
-  document.getElementById("caseResult").textContent=value;
-}
-
-/* 8. TIP CALCULATOR */
-function tipCalc(){
-  const billInput=document.getElementById("bill").value;
-  const tipInput=document.getElementById("tip").value;
-  const peopleInput=document.getElementById("people").value;
-  const output=document.getElementById("tipResult");
-  if(billInput===""||tipInput===""||peopleInput===""){output.textContent="Please complete all fields.";return}
-  const bill=Number(billInput),tip=Number(tipInput),people=Number(peopleInput);
-  if(!Number.isFinite(bill)||!Number.isFinite(tip)||!Number.isFinite(people)||bill<0||tip<0||people<1){
-    output.textContent="Please enter valid positive numbers.";return;
+/* Password generator */
+function makePassword() {
+  const field = document.getElementById("passLength");
+  const length = Number(field.value);
+  if (!Number.isInteger(length) || length < 6 || length > 64) { document.getElementById("passResult").textContent = "Choose a length from 6 to 64."; return; }
+  const chars = "ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz23456789!@#$%&*?";
+  const limit = Math.floor(0x100000000 / chars.length) * chars.length;
+  let password = "";
+  while (password.length < length) {
+    const bytes = new Uint32Array(length);
+    crypto.getRandomValues(bytes);
+    for (const value of bytes) {
+      if (value < limit) password += chars[value % chars.length];
+      if (password.length === length) break;
+    }
   }
-  const tipAmount=bill*tip/100,total=bill+tipAmount;
-  output.textContent=`Tip: ${tipAmount.toFixed(2)} | Total: ${total.toFixed(2)} | Each person: ${(total/people).toFixed(2)}`;
+  document.getElementById("passResult").textContent = password;
 }
 
-/* 9. QR CODE */
-function makeQR(){
-  const value=document.getElementById("qrText").value.trim();
-  const area=document.getElementById("qrResult");
-  if(!value){area.textContent="Please enter text or a URL.";return}
-  const img=document.createElement("img");
-  img.alt="Generated QR code";img.width=200;img.height=200;img.loading="lazy";
-  img.src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data="+encodeURIComponent(value);
-  img.onerror=()=>{area.textContent="Could not load the QR code. Please try again."};
+/* Copy helper */
+async function copyText(id) {
+  const element = document.getElementById(id);
+  const value = (element.innerText || element.textContent || "").trim();
+  if (!value) { alert("There is nothing to copy."); return; }
+  try { await navigator.clipboard.writeText(value); alert("Copied successfully."); }
+  catch (_) { alert("Copy is unavailable in this browser. Please select and copy the text manually."); }
+}
+
+/* Length conversion */
+const metres = {m:1,km:1000,cm:.01,mi:1609.344,ft:.3048,in:.0254};
+function convertLength() {
+  const raw = document.getElementById("lengthValue").value, out = document.getElementById("lengthResult");
+  if (raw === "" || !Number.isFinite(Number(raw))) { out.textContent = "Please enter a valid number."; return; }
+  const result = Number(raw) * metres[document.getElementById("lengthFrom").value] / metres[document.getElementById("lengthTo").value];
+  out.textContent = result.toLocaleString(undefined,{maximumFractionDigits:8});
+}
+
+/* Temperature conversion */
+function convertTemp() {
+  const raw = document.getElementById("tempValue").value, out = document.getElementById("tempResult");
+  if (raw === "" || !Number.isFinite(Number(raw))) { out.textContent = "Please enter a valid temperature."; return; }
+  let value = Number(raw);
+  const from = document.getElementById("tempFrom").value, to = document.getElementById("tempTo").value;
+  if (from !== to) value = from === "C" ? value * 9 / 5 + 32 : (value - 32) * 5 / 9;
+  out.textContent = value.toFixed(2) + "°" + to;
+}
+
+/* Text case */
+function changeCase(type) {
+  let value = document.getElementById("caseText").value;
+  if (type === "upper") value = value.toLocaleUpperCase();
+  if (type === "lower") value = value.toLocaleLowerCase();
+  if (type === "title") value = value.toLocaleLowerCase().replace(/(^|[\s'-])\p{L}/gu, match => match.toLocaleUpperCase());
+  document.getElementById("caseResult").textContent = value;
+}
+
+/* Tip calculator */
+function tipCalc() {
+  const billRaw = document.getElementById("bill").value, tipRaw = document.getElementById("tip").value, peopleRaw = document.getElementById("people").value;
+  const out = document.getElementById("tipResult");
+  if (billRaw === "" || tipRaw === "" || peopleRaw === "") { out.textContent = "Please fill in all three fields."; return; }
+  const bill = Number(billRaw), tip = Number(tipRaw), people = Number(peopleRaw);
+  if (![bill,tip,people].every(Number.isFinite) || bill < 0 || tip < 0 || !Number.isInteger(people) || people < 1) { out.textContent = "Enter a non-negative bill and tip, and at least one person."; return; }
+  const tipAmount = bill * tip / 100, total = bill + tipAmount;
+  out.textContent = `Tip: ${tipAmount.toFixed(2)} | Total: ${total.toFixed(2)} | Each person: ${(total/people).toFixed(2)}`;
+}
+
+/* QR code: content is sent to the external QR Server endpoint. */
+function makeQR() {
+  const value = document.getElementById("qrText").value.trim(), area = document.getElementById("qrResult");
+  if (!value) { area.textContent = "Please enter text or a website address."; return; }
+  const img = document.createElement("img");
+  img.alt = "Generated QR code"; img.width = 200; img.height = 200; img.loading = "lazy";
+  img.src = "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=" + encodeURIComponent(value);
+  img.onerror = () => { area.textContent = "The QR service could not create the image. Please try again."; };
   area.replaceChildren(img);
 }
 
-/* IMAGE HELPER */
-function loadImage(file,callback){
-  if(!file||!file.type.startsWith("image/")){toast("Please choose a valid image.");return}
-  const url=URL.createObjectURL(file);
-  const img=new Image();
-  img.onload=()=>callback(img,url);
-  img.onerror=()=>{URL.revokeObjectURL(url);toast("Could not load image.")};
-  img.src=url;
+/* Image helper */
+function loadImage(file, callback) {
+  if (!file || !file.type.startsWith("image/")) { alert("Please choose a valid image."); return; }
+  const url = URL.createObjectURL(file), img = new Image();
+  img.onload = () => callback(img,url);
+  img.onerror = () => { URL.revokeObjectURL(url); alert("Could not load this image."); };
+  img.src = url;
+}
+function downloadBlob(blob, filename, areaId, label) {
+  if (!blob) { alert("Image processing failed. Please try another image."); return; }
+  const url = URL.createObjectURL(blob), link = document.createElement("a");
+  link.href = url; link.download = filename; link.textContent = label;
+  link.className = "btn";
+  const area = document.getElementById(areaId);
+  area.replaceChildren(link);
+  const note = document.createElement("p"); note.className = "small"; note.textContent = `File size: ${(blob.size/1024).toFixed(1)} KB`;
+  area.append(note);
+  link.addEventListener("click", () => setTimeout(() => URL.revokeObjectURL(url), 60000), {once:true});
 }
 
-/* 10. IMAGE COMPRESSOR */
-function compressImage(){
-  const file=document.getElementById("compressFile").files[0];
-  const quality=Number(document.getElementById("quality").value);
-  loadImage(file,(img,url)=>{
-    const canvas=document.createElement("canvas");
-    canvas.width=img.width;canvas.height=img.height;
+/* Image compressor */
+function compressImage() {
+  const file = document.getElementById("compressFile").files[0], quality = Number(document.getElementById("quality").value);
+  loadImage(file,(img,url) => {
+    const canvas = document.createElement("canvas"); canvas.width = img.naturalWidth; canvas.height = img.naturalHeight;
     canvas.getContext("2d").drawImage(img,0,0);
-    canvas.toBlob(blob=>{
+    canvas.toBlob(blob => {
       URL.revokeObjectURL(url);
-      if(!blob){toast("Image compression failed.");return}
-      const downloadUrl=URL.createObjectURL(blob);
-      const link=document.createElement("a");
-      link.href=downloadUrl;link.download="compressed-image.jpg";
-      link.className="btn";link.textContent="Download compressed image";
-      const area=document.getElementById("compressResult");
-      area.replaceChildren(link);
-      const info=document.createElement("p");
-      info.className="small";
-      info.textContent=`Original: ${(file.size/1024).toFixed(1)} KB | Compressed: ${(blob.size/1024).toFixed(1)} KB`;
-      area.append(info);
+      if (!blob) { alert("Compression failed. Try a different image."); return; }
+      downloadBlob(blob,"compressed-image.jpg","compressResult","Download compressed image");
+      const p = document.createElement("p"); p.className = "small"; p.textContent = `Original: ${(file.size/1024).toFixed(1)} KB · Compressed: ${(blob.size/1024).toFixed(1)} KB`;
+      document.getElementById("compressResult").append(p);
     },"image/jpeg",quality);
   });
 }
 
-/* 11. IMAGE RESIZER */
-function resizeImage(){
-  const file=document.getElementById("resizeFile").files[0];
-  const width=Number(document.getElementById("resizeWidth").value);
-  const height=Number(document.getElementById("resizeHeight").value);
-  if(!Number.isInteger(width)||!Number.isInteger(height)||width<1||height<1||width>6000||height>6000){
-    toast("Enter a width and height between 1 and 6000.");return;
-  }
-  loadImage(file,(img,url)=>{
-    const canvas=document.createElement("canvas");
-    canvas.width=width;canvas.height=height;
-    canvas.getContext("2d").drawImage(img,0,0,width,height);
-    URL.revokeObjectURL(url);
-    canvas.toBlob(blob=>{
-      if(!blob){toast("Image resizing failed.");return}
-      const downloadUrl=URL.createObjectURL(blob);
-      const link=document.createElement("a");
-      link.href=downloadUrl;link.download="resized-image.png";
-      link.className="btn";link.textContent="Download resized image";
-      document.getElementById("resizeResult").replaceChildren(link);
-    },"image/png");
+/* Image resizer */
+function resizeImage() {
+  const file = document.getElementById("resizeFile").files[0], width = Number(document.getElementById("resizeWidth").value), height = Number(document.getElementById("resizeHeight").value);
+  if (!Number.isInteger(width) || !Number.isInteger(height) || width < 1 || height < 1 || width > 6000 || height > 6000) { alert("Enter a width and height from 1 to 6000 pixels."); return; }
+  loadImage(file,(img,url) => {
+    const canvas = document.createElement("canvas"); canvas.width = width; canvas.height = height;
+    canvas.getContext("2d").drawImage(img,0,0,width,height); URL.revokeObjectURL(url);
+    canvas.toBlob(blob => downloadBlob(blob,"resized-image.png","resizeResult","Download resized image"),"image/png");
   });
 }
 
-/* 12. TO-DO LIST */
-let todos=[];
-try{
-  todos=JSON.parse(localStorage.getItem("sth_todos")||"[]");
-  if(!Array.isArray(todos))todos=[];
-}catch(error){todos=[]}
-function renderTodos(){
-  const list=document.getElementById("todoList");
-  list.replaceChildren();
-  todos.forEach((task,index)=>{
-    const li=document.createElement("li");
-    const label=document.createElement("span");
-    label.textContent=task;
-    const remove=document.createElement("button");
-    remove.className="btn btn-secondary";
-    remove.textContent="Remove";
-    remove.onclick=()=>{todos.splice(index,1);saveTodos()};
-    li.append(label," ",remove);list.append(li);
+/* To-do list: local to this browser/device. */
+let todos = [];
+try { const saved = JSON.parse(localStorage.getItem("sth_todos") || "[]"); if (Array.isArray(saved)) todos = saved.filter(item => typeof item === "string"); } catch (_) {}
+function renderTodos() {
+  const list = document.getElementById("todoList"); list.replaceChildren();
+  todos.forEach((task,index) => {
+    const li = document.createElement("li"), text = document.createElement("span"), remove = document.createElement("button");
+    text.textContent = task; remove.textContent = "Remove"; remove.className = "btn btn-secondary";
+    remove.onclick = () => { todos.splice(index,1); saveTodos(); };
+    li.append(text," ",remove); list.append(li);
   });
 }
-function addTodo(){
-  const input=document.getElementById("todoInput");
-  const value=input.value.trim();
-  if(!value)return;
-  todos.push(value);input.value="";saveTodos();
+function addTodo() {
+  const input = document.getElementById("todoInput"), value = input.value.trim();
+  if (!value) return;
+  if (value.length > 300) { alert("Please keep tasks under 300 characters."); return; }
+  todos.push(value); input.value = ""; saveTodos();
 }
-function saveTodos(){
-  try{localStorage.setItem("sth_todos",JSON.stringify(todos));renderTodos()}
-  catch(error){toast("Could not save tasks in this browser.")}
-}
-
-/* 13. NOTES */
-const notesInput=document.getElementById("notes");
-try{notesInput.value=localStorage.getItem("sth_notes")||""}catch(error){}
-function saveNotes(){
-  try{
-    localStorage.setItem("sth_notes",notesInput.value);
-    document.getElementById("notesStatus").textContent="Notes saved on this device.";
-    toast("Notes saved!");
-  }catch(error){document.getElementById("notesStatus").textContent="Could not save notes in this browser."}
+function saveTodos() {
+  try { localStorage.setItem("sth_todos",JSON.stringify(todos)); renderTodos(); }
+  catch (_) { alert("Could not save tasks in this browser. Check available storage."); }
 }
 
-/* 14. LIVE CLOCK */
-function tickClock(){document.getElementById("clock").textContent=new Date().toLocaleTimeString()}
-tickClock();
-setInterval(tickClock,1000);
+/* Notes: local to this browser/device. */
+const notesInput = document.getElementById("notes");
+try { notesInput.value = localStorage.getItem("sth_notes") || ""; } catch (_) {}
+function saveNotes() {
+  try { localStorage.setItem("sth_notes",notesInput.value); document.getElementById("notesStatus").textContent = "Notes saved on this device."; }
+  catch (_) { document.getElementById("notesStatus").textContent = "Could not save notes in this browser."; }
+}
 
-/* PDF TOOL HELPERS */
-function pdfLibraryReady(){
-  if(!window.PDFLib){
-    toast("The PDF library could not load. Check your internet connection and refresh.");
-    return false;
-  }
+/* Live clock */
+function tickClock() { document.getElementById("clock").textContent = new Date().toLocaleTimeString(); }
+tickClock(); setInterval(tickClock,1000);
+
+/* Footer and initial UI */
+document.getElementById("year").textContent = new Date().getFullYear();
+renderTodos(); applyToolFilters();
+
+
+
+/* EXTRA CALCULATORS AND UTILITIES — all calculations run in this browser. */
+const fmt = n => Number(n).toLocaleString(undefined,{maximumFractionDigits:6});
+function calculateBMI(){const w=Number(document.getElementById('bmiWeight').value),h=Number(document.getElementById('bmiHeight').value)/100;if(!(w>0&&h>0))return showResult('bmiResult','Enter a valid weight and height.');const bmi=w/(h*h);const band=bmi<18.5?'Below the usual adult range':bmi<25?'Within the usual adult range':bmi<30?'Above the usual adult range':'High adult BMI range';showResult('bmiResult',`BMI: ${bmi.toFixed(1)} — ${band}.`);}
+function calculateAge(){const raw=document.getElementById('birthDate').value;if(!raw)return showResult('ageResult','Choose your date of birth.');const born=new Date(raw+'T00:00:00');const now=new Date();if(born>now)return showResult('ageResult','Date of birth cannot be in the future.');let y=now.getFullYear()-born.getFullYear(),m=now.getMonth()-born.getMonth(),d=now.getDate()-born.getDate();if(d<0){m--;d+=new Date(now.getFullYear(),now.getMonth(),0).getDate();}if(m<0){y--;m+=12;}showResult('ageResult',`${y} years, ${m} months and ${d} days old.`);}
+function calculateDiscount(){const p=Number(document.getElementById('discountPrice').value),d=Number(document.getElementById('discountPercent').value);if(document.getElementById('discountPrice').value===''||document.getElementById('discountPercent').value===''||p<0||d<0||d>100)return showResult('discountResult','Enter a price and a discount from 0 to 100%.');const saved=p*d/100;showResult('discountResult',`You save ${fmt(saved)}. Sale price: ${fmt(p-saved)}.`);}
+function calculateLoan(){const a=Number(document.getElementById('loanAmount').value),r=Number(document.getElementById('loanRate').value)/1200,y=Number(document.getElementById('loanYears').value);if(!(a>0)||r<0||!(y>0)||y>50)return showResult('loanResult','Enter a positive loan, valid interest rate and term.');const n=y*12,monthly=r===0?a/n:a*r/(1-Math.pow(1+r,-n));showResult('loanResult',`Estimated monthly payment: ${fmt(monthly)} · Total repayment: ${fmt(monthly*n)} · Interest: ${fmt(monthly*n-a)}`);}
+function calculateCompound(){const p=Number(document.getElementById('compoundPrincipal').value),r=Number(document.getElementById('compoundRate').value)/100,y=Number(document.getElementById('compoundYears').value);if(p<0||r<0||y<0||y>100||!Number.isFinite(p+r+y))return showResult('compoundResult','Enter valid non-negative values.');const total=p*Math.pow(1+r,y);showResult('compoundResult',`Future value: ${fmt(total)} · Interest earned: ${fmt(total-p)}`);}
+function calculateDateDifference(){const a=document.getElementById('dateStart').value,b=document.getElementById('dateEnd').value;if(!a||!b)return showResult('dateDiffResult','Choose both dates.');const days=Math.round(Math.abs(new Date(a+'T00:00:00')-new Date(b+'T00:00:00'))/86400000);showResult('dateDiffResult',`${fmt(days)} days · ${(days/7).toFixed(1)} weeks.`);}
+function unitConvert(value,from,to,units,id,label){if(value==='')return showResult(id,'Enter a value.');const n=Number(value);if(!Number.isFinite(n))return showResult(id,'Enter a valid number.');showResult(id,`${fmt(n*units[from]/units[to])} ${to} ${label||''}`.trim());}
+function convertWeight(){unitConvert(document.getElementById('weightValue').value,document.getElementById('weightFrom').value,document.getElementById('weightTo').value,{kg:1,g:.001,lb:.45359237,oz:.028349523125},'weightResult');}
+function convertSpeed(){unitConvert(document.getElementById('speedValue').value,document.getElementById('speedFrom').value,document.getElementById('speedTo').value,{kmh:1,mph:1.609344,ms:3.6},'speedResult');}
+function convertArea(){unitConvert(document.getElementById('areaValue').value,document.getElementById('areaFrom').value,document.getElementById('areaTo').value,{m2:1,ft2:.09290304,acre:4046.8564224,ha:10000},'areaResult');}
+function convertVolume(){unitConvert(document.getElementById('volumeValue').value,document.getElementById('volumeFrom').value,document.getElementById('volumeTo').value,{l:1,ml:.001,gal:3.785411784,cup:.2365882365},'volumeResult');}
+function convertDataSize(){const v=document.getElementById('dataValue').value,from=document.getElementById('dataFrom').value,to=document.getElementById('dataTo').value;unitConvert(v,from,to,{Bytes:1,KB:1024,MB:1048576,GB:1073741824,TB:1099511627776},'dataResult');}
+function generateRandomNumber(){const a=Number(document.getElementById('randomMin').value),b=Number(document.getElementById('randomMax').value);if(!Number.isSafeInteger(a)||!Number.isSafeInteger(b)||a>b)return showResult('randomResult','Enter whole numbers with minimum no greater than maximum.');const range=b-a+1;if(!Number.isSafeInteger(range)||range>Number.MAX_SAFE_INTEGER)return showResult('randomResult','The selected range is too large.');const arr=new Uint32Array(1);crypto.getRandomValues(arr);showResult('randomResult',String(a+(arr[0]%range)));}
+function generateUUID(){const value=crypto.randomUUID?crypto.randomUUID():'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g,c=>{const r=crypto.getRandomValues(new Uint8Array(1))[0]%16;return(c==='x'?r:(r&3|8)).toString(16)});showResult('uuidResult',value);}
+function base64Convert(mode){const v=document.getElementById('base64Input').value;try{const out=mode==='encode'?btoa(unescape(encodeURIComponent(v))):decodeURIComponent(escape(atob(v.trim())));showResult('base64Result',out);}catch(e){showResult('base64Result','Could not process this input. Check the text or Base64 value.');}}
+function urlConvert(mode){const v=document.getElementById('urlInput').value;try{showResult('urlResult',mode==='encode'?encodeURIComponent(v):decodeURIComponent(v));}catch(e){showResult('urlResult','Invalid encoded URL text.');}}
+function formatJSON(minify){try{const obj=JSON.parse(document.getElementById('jsonInput').value);showResult('jsonResult',JSON.stringify(obj,null,minify?0:2));}catch(e){showResult('jsonResult','Invalid JSON: '+e.message);}}
+function removeDuplicateLines(){const v=document.getElementById('dedupeInput').value;const lines=v.split(/\r?\n/),seen=new Set(),out=[];for(const line of lines){if(!seen.has(line)){seen.add(line);out.push(line);}}showResult('dedupeResult',out.join('\n'));}
+function findReplace(){const v=document.getElementById('replaceInput').value,find=document.getElementById('findText').value,repl=document.getElementById('replaceText').value;if(!find)return showResult('replaceResult','Enter the text you want to find.');const out=v.split(find).join(repl);showResult('replaceResult',out);}
+function reverseText(){showResult('reverseResult',Array.from(document.getElementById('reverseInput').value).reverse().join(''));}
+function makeSlug(){const v=document.getElementById('slugInput').value;const slug=v.normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().trim().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');showResult('slugResult',slug||'Enter a title using Latin letters or numbers.');}
+function htmlConvert(mode){const v=document.getElementById('htmlInput').value;if(mode==='encode'){const el=document.createElement('div');el.textContent=v;showResult('htmlResult',el.innerHTML);}else{const el=document.createElement('textarea');el.innerHTML=v;showResult('htmlResult',el.value);}}
+function showColor(){const v=document.getElementById('colorPicker').value;document.getElementById('colorHex').value=v;const n=parseInt(v.slice(1),16);showResult('colorResult',`HEX: ${v.toUpperCase()} · RGB: ${(n>>16)&255}, ${(n>>8)&255}, ${n&255}`);}
+function colorFromHex(){const v=document.getElementById('colorHex').value.trim();if(!/^#[0-9a-fA-F]{6}$/.test(v))return showResult('colorResult','Enter a valid six-digit HEX colour.');document.getElementById('colorPicker').value=v;showColor();}
+function escapeHTML(v){return v.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function previewMarkdown(){let v=escapeHTML(document.getElementById('markdownInput').value);v=v.replace(/^### (.*)$/gm,'<h3>$1</h3>').replace(/^## (.*)$/gm,'<h2>$1</h2>').replace(/^# (.*)$/gm,'<h1>$1</h1>').replace(/\*\*(.*?)\*\*/g,'<strong>$1</strong>').replace(/\*(.*?)\*/g,'<em>$1</em>').replace(/`(.*?)`/g,'<code>$1</code>').replace(/\n/g,'<br>');document.getElementById('markdownResult').innerHTML=v;}
+function parseCSV(text){const rows=[];let row=[],cell='',quoted=false;for(let i=0;i<text.length;i++){const c=text[i];if(c==='"'&&quoted&&text[i+1]==='"'){cell+='"';i++;}else if(c==='"'){quoted=!quoted;}else if(c===','&&!quoted){row.push(cell);cell='';}else if((c==='\n'||c==='\r')&&!quoted){if(c==='\r'&&text[i+1]==='\n')i++;row.push(cell);if(row.some(x=>x!==''))rows.push(row);row=[];cell='';}else cell+=c;}row.push(cell);if(row.some(x=>x!==''))rows.push(row);if(quoted)throw new Error('Unclosed quoted field');return rows;}
+function csvToJSON(){try{const rows=parseCSV(document.getElementById('csvInput').value);if(rows.length<2)throw new Error('Add a header row and at least one data row.');const headers=rows[0];const data=rows.slice(1).map(r=>Object.fromEntries(headers.map((h,i)=>[h,r[i]??''])));showResult('csvResult',JSON.stringify(data,null,2));}catch(e){showResult('csvResult',e.message);}}
+function jsonToCSV(){try{const data=JSON.parse(document.getElementById('jsonCsvInput').value);if(!Array.isArray(data)||!data.length||data.some(x=>!x||typeof x!=='object'||Array.isArray(x)))throw new Error('Enter a non-empty JSON array of objects.');const keys=[...new Set(data.flatMap(Object.keys))];const quote=v=>'"'+String(v??'').replace(/"/g,'""')+'"';const rows=[keys.map(quote).join(','),...data.map(row=>keys.map(k=>quote(typeof row[k]==='object'?JSON.stringify(row[k]):row[k])).join(','))];showResult('jsonCsvResult',rows.join('\n'));}catch(e){showResult('jsonCsvResult',e.message);}}
+function validateEmailAddress(){const v=document.getElementById('emailCheck').value.trim();showResult('emailResult',/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v)?'The email format looks valid. This does not confirm the mailbox exists.':'Please enter an email address in a valid format.');}
+function countWordFrequency(){const words=(document.getElementById('frequencyInput').value.toLowerCase().match(/[\p{L}\p{N}']+/gu)||[]);if(!words.length)return showResult('frequencyResult','Enter some text first.');const counts={};words.forEach(w=>counts[w]=(counts[w]||0)+1);const top=Object.entries(counts).sort((a,b)=>b[1]-a[1]).slice(0,20);showResult('frequencyResult',`Total words: ${words.length} · Unique: ${top.length}\n`+top.map(([w,n])=>`${w}: ${n}`).join('\n'));}
+function checkPasswordStrength(){const p=document.getElementById('strengthInput').value;let score=0;if(p.length>=12)score++;if(p.length>=16)score++;if(/[a-z]/.test(p)&&/[A-Z]/.test(p))score++;if(/\d/.test(p))score++;if(/[^A-Za-z0-9]/.test(p))score++;const labels=['Very weak','Weak','Fair','Good','Strong','Very strong'];showResult('strengthResult',p?`${labels[score]} (${score}/5 checks).`:'Enter a password first.');}
+let stopwatchStart=0,stopwatchElapsed=0,stopwatchInterval=null;function updateStopwatch(){const ms=stopwatchElapsed+(stopwatchStart?Date.now()-stopwatchStart:0);const tenths=Math.floor(ms/100)%10,secs=Math.floor(ms/1000)%60,mins=Math.floor(ms/60000);document.getElementById('stopwatchDisplay').textContent=`${String(mins).padStart(2,'0')}:${String(secs).padStart(2,'0')}.${tenths}`;}function startStopwatch(){if(stopwatchInterval)return;stopwatchStart=Date.now();stopwatchInterval=setInterval(updateStopwatch,100);}function stopStopwatch(){if(!stopwatchInterval)return;stopwatchElapsed+=Date.now()-stopwatchStart;stopwatchStart=0;clearInterval(stopwatchInterval);stopwatchInterval=null;updateStopwatch();}function resetStopwatch(){stopStopwatch();stopwatchElapsed=0;updateStopwatch();}
+let countdownRemaining=60,countdownInterval=null;function readCountdown(){return Math.max(0,Number(document.getElementById('timerMinutes').value)*60+Number(document.getElementById('timerSeconds').value));}function paintCountdown(){const m=Math.floor(countdownRemaining/60),s=countdownRemaining%60;document.getElementById('timerDisplay').textContent=`${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;}function startCountdown(){if(countdownInterval)return;if(countdownRemaining<=0)countdownRemaining=readCountdown();if(countdownRemaining<=0)return showResult('timerDisplay','Set a time first.');countdownInterval=setInterval(()=>{countdownRemaining--;paintCountdown();if(countdownRemaining<=0){clearInterval(countdownInterval);countdownInterval=null;alert('Time is up!');}},1000);paintCountdown();}function pauseCountdown(){if(countdownInterval){clearInterval(countdownInterval);countdownInterval=null;}}function resetCountdown(){pauseCountdown();countdownRemaining=readCountdown();paintCountdown();}
+function pdfReady(){if(!window.PDFLib){alert('The PDF library did not load. Check your internet connection and try again.');return false;}return true;}
+async function savePDF(pdfBytes,filename,areaId){const blob=new Blob([pdfBytes],{type:'application/pdf'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=filename;a.className='btn';a.textContent='Download '+filename;const area=document.getElementById(areaId);area.replaceChildren(a);a.addEventListener('click',()=>setTimeout(()=>URL.revokeObjectURL(url),60000),{once:true});}
+async function mergePDFs(){if(!pdfReady())return;const files=[...document.getElementById('mergePDFFilesInput').files];if(files.length<2)return showResult('mergePDFResult','Choose at least two PDF files.');try{const out=await PDFLib.PDFDocument.create();for(const file of files){const src=await PDFLib.PDFDocument.load(await file.arrayBuffer());const pages=await out.copyPages(src,src.getPageIndices());pages.forEach(p=>out.addPage(p));}await savePDF(await out.save(),'merged.pdf','mergePDFResult');}catch(e){showResult('mergePDFResult','Could not merge these PDFs. Check that they are valid and not password-protected.');}}
+function parsePageRanges(value,max){const set=new Set();for(const part of value.split(',')){const m=part.trim().match(/^(\d+)(?:\s*-\s*(\d+))?$/);if(!m)throw new Error('Use a page list such as 1,3-5.');const a=Number(m[1]),b=Number(m[2]||m[1]);if(a<1||b<a||b>max)throw new Error(`Pages must be between 1 and ${max}.`);for(let n=a;n<=b;n++)set.add(n-1);}return [...set].sort((a,b)=>a-b);}
+async function extractPDFPages(){if(!pdfReady())return;const file=document.getElementById('splitPDF').files[0],range=document.getElementById('splitPages').value.trim();if(!file||!range)return showResult('splitPDFResult','Choose a PDF and enter page numbers.');try{const src=await PDFLib.PDFDocument.load(await file.arrayBuffer());const indexes=parsePageRanges(range,src.getPageCount());const out=await PDFLib.PDFDocument.create();const pages=await out.copyPages(src,indexes);pages.forEach(p=>out.addPage(p));await savePDF(await out.save(),'extracted-pages.pdf','splitPDFResult');}catch(e){showResult('splitPDFResult',e.message||'Could not extract these pages.');}}
+async function imagesToPDF(){if(!pdfReady())return;const files=[...document.getElementById('imagesPDF').files];if(!files.length)return showResult('imagesPDFResult','Choose one or more PNG or JPEG images.');try{const pdf=await PDFLib.PDFDocument.create();for(const file of files){const bytes=await file.arrayBuffer();const img=file.type==='image/png'?await pdf.embedPng(bytes):await pdf.embedJpg(bytes);const page=pdf.addPage([img.width,img.height]);page.drawImage(img,{x:0,y:0,width:img.width,height:img.height});}await savePDF(await pdf.save(),'images.pdf','imagesPDFResult');}catch(e){showResult('imagesPDFResult','Could not create a PDF from these images. Use PNG or JPEG files.');}}
+async function rotatePDFPages(){if(!pdfReady())return;const file=document.getElementById('rotatePDF').files[0];if(!file)return showResult('rotatePDFResult','Choose a PDF first.');try{const pdf=await PDFLib.PDFDocument.load(await file.arrayBuffer());const deg=Number(document.getElementById('rotateDegrees').value);pdf.getPages().forEach(page=>{const current=page.getRotation().angle;page.setRotation(PDFLib.degrees((current+deg)%360));});await savePDF(await pdf.save(),'rotated.pdf','rotatePDFResult');}catch(e){showResult('rotatePDFResult','Could not rotate this PDF. It may be invalid or password-protected.');}}
+
+/* Nine-language offline interface dictionary. User-entered content is never translated. */
+const languageNames={en:'English',ar:'العربية',ur:'اردو',fr:'Français',es:'Español',de:'Deutsch',it:'Italiano',tr:'Türkçe',hi:'हिन्दी'};
+const uiTranslations={
+ ar:{'Home':'الرئيسية','Account':'الحساب','About':'من نحن','Privacy':'الخصوصية','Contact':'اتصل بنا','Search':'بحث','All tools':'كل الأدوات','Calculators':'الحاسبات','Converters':'المحوّلات','Productivity':'الإنتاجية','Other tools':'أدوات أخرى','Text tools':'أدوات النص','Developer':'للمطورين','PDF & files':'ملفات PDF','Calculator':'آلة حاسبة','Percentage Calculator':'حاسبة النسبة المئوية','Word & Character Counter':'عداد الكلمات والأحرف','Password Generator':'مولّد كلمات المرور','Length Converter':'محول الطول','Temperature Converter':'محول الحرارة','Text Case Converter':'محول حالة النص','Tip Calculator':'حاسبة الإكرامية','QR Code Generator':'مولّد رمز QR','Image Compressor':'ضغط الصور','Image Resizer':'تغيير حجم الصور','To-do List':'قائمة المهام','Notes':'الملاحظات','Live Clock':'ساعة مباشرة','BMI Calculator':'حاسبة مؤشر كتلة الجسم','Age Calculator':'حاسبة العمر','Discount Calculator':'حاسبة الخصم','Loan Repayment Calculator':'حاسبة سداد القرض','Compound Interest Calculator':'حاسبة الفائدة المركبة','Date Difference Calculator':'حاسبة الفرق بين التواريخ','Weight Converter':'محول الوزن','Speed Converter':'محول السرعة','Area Converter':'محول المساحة','Volume Converter':'محول الحجم','Data Size Converter':'محول حجم البيانات','Random Number Generator':'مولّد أرقام عشوائية','UUID Generator':'مولّد UUID','Base64 Encoder / Decoder':'ترميز وفك ترميز Base64','URL Encoder / Decoder':'ترميز وفك ترميز URL','JSON Formatter & Validator':'تنسيق والتحقق من JSON','Duplicate Line Remover':'إزالة الأسطر المكررة','Find & Replace':'بحث واستبدال','Text Reverser':'عكس النص','URL Slug Generator':'مولّد رابط مختصر','HTML Entity Encoder':'ترميز HTML','Colour Picker & HEX / RGB':'منتقي الألوان HEX / RGB','Markdown Preview':'معاينة Markdown','CSV to JSON Converter':'تحويل CSV إلى JSON','JSON to CSV Converter':'تحويل JSON إلى CSV','Email Validator':'التحقق من البريد الإلكتروني','Word Frequency Counter':'عداد تكرار الكلمات','Password Strength Checker':'فاحص قوة كلمة المرور','Stopwatch':'ساعة إيقاف','Countdown Timer':'مؤقت تنازلي','Merge PDF Files':'دمج ملفات PDF','Extract PDF Pages':'استخراج صفحات PDF','Images to PDF':'تحويل الصور إلى PDF','Rotate PDF Pages':'تدوير صفحات PDF','Calculate':'احسب','Convert':'تحويل','Generate password':'إنشاء كلمة مرور','Create account':'إنشاء حساب','Sign in':'تسجيل الدخول','Sign out':'تسجيل الخروج','Continue with Google':'المتابعة باستخدام Google'},
+ ur:{'Home':'ہوم','Account':'اکاؤنٹ','About':'ہمارے بارے میں','Privacy':'رازداری','Contact':'رابطہ','Search':'تلاش','All tools':'تمام ٹولز','Calculators':'کیلکولیٹر','Converters':'کنورٹرز','Productivity':'پیداواری ٹولز','Other tools':'دیگر ٹولز','Text tools':'ٹیکسٹ ٹولز','Developer':'ڈیولپر','PDF & files':'PDF اور فائلیں','Calculator':'کیلکولیٹر','Percentage Calculator':'فیصد کیلکولیٹر','Word & Character Counter':'الفاظ اور حروف گننے والا','Password Generator':'پاس ورڈ بنانے والا','Length Converter':'لمبائی کنورٹر','Temperature Converter':'درجہ حرارت کنورٹر','Text Case Converter':'ٹیکسٹ کیس کنورٹر','Tip Calculator':'ٹپ کیلکولیٹر','QR Code Generator':'QR کوڈ بنانے والا','Image Compressor':'تصویر کا سائز کم کریں','Image Resizer':'تصویر کا سائز تبدیل کریں','To-do List':'کاموں کی فہرست','Notes':'نوٹس','Live Clock':'لائیو گھڑی','BMI Calculator':'BMI کیلکولیٹر','Age Calculator':'عمر کیلکولیٹر','Discount Calculator':'ڈسکاؤنٹ کیلکولیٹر','Loan Repayment Calculator':'قرض ادائیگی کیلکولیٹر','Compound Interest Calculator':'مرکب سود کیلکولیٹر','Date Difference Calculator':'تاریخ کا فرق','Weight Converter':'وزن کنورٹر','Speed Converter':'رفتار کنورٹر','Area Converter':'رقبہ کنورٹر','Volume Converter':'حجم کنورٹر','Data Size Converter':'ڈیٹا سائز کنورٹر','Random Number Generator':'رینڈم نمبر جنریٹر','UUID Generator':'UUID جنریٹر','Base64 Encoder / Decoder':'Base64 انکوڈر / ڈیکوڈر','URL Encoder / Decoder':'URL انکوڈر / ڈیکوڈر','JSON Formatter & Validator':'JSON فارمیٹر اور ویلیڈیٹر','Duplicate Line Remover':'دہرائی گئی لائنیں ہٹائیں','Find & Replace':'تلاش اور تبدیل','Text Reverser':'متن الٹا کریں','URL Slug Generator':'URL سلگ جنریٹر','HTML Entity Encoder':'HTML انکوڈر','Colour Picker & HEX / RGB':'رنگ منتخب کریں HEX / RGB','Markdown Preview':'Markdown پیش نظارہ','CSV to JSON Converter':'CSV سے JSON کنورٹر','JSON to CSV Converter':'JSON سے CSV کنورٹر','Email Validator':'ای میل چیکر','Word Frequency Counter':'الفاظ کی تعداد','Password Strength Checker':'پاس ورڈ مضبوطی چیکر','Stopwatch':'اسٹاپ واچ','Countdown Timer':'الٹی گنتی ٹائمر','Merge PDF Files':'PDF فائلیں جوڑیں','Extract PDF Pages':'PDF صفحات نکالیں','Images to PDF':'تصاویر کو PDF بنائیں','Rotate PDF Pages':'PDF صفحات گھمائیں','Calculate':'حساب کریں','Convert':'تبدیل کریں','Generate password':'پاس ورڈ بنائیں','Create account':'اکاؤنٹ بنائیں','Sign in':'سائن اِن','Sign out':'سائن آؤٹ','Continue with Google':'Google کے ساتھ جاری رکھیں'},
+ fr:{'Home':'Accueil','Account':'Compte','About':'À propos','Privacy':'Confidentialité','Contact':'Contact','Search':'Rechercher','All tools':'Tous les outils','Calculators':'Calculatrices','Converters':'Convertisseurs','Productivity':'Productivité','Other tools':'Autres outils','Text tools':'Outils de texte','Developer':'Développeur','PDF & files':'PDF et fichiers','Calculator':'Calculatrice','Percentage Calculator':'Calculatrice de pourcentage','Word & Character Counter':'Compteur de mots et caractères','Password Generator':'Générateur de mots de passe','Length Converter':'Convertisseur de longueur','Temperature Converter':'Convertisseur de température','Text Case Converter':'Convertisseur de casse','Tip Calculator':'Calculateur de pourboire','QR Code Generator':'Générateur de QR code','Image Compressor':'Compresseur d’images','Image Resizer':'Redimensionneur d’images','To-do List':'Liste de tâches','Notes':'Notes','Live Clock':'Horloge en direct','BMI Calculator':'Calculateur IMC','Age Calculator':'Calculateur d’âge','Discount Calculator':'Calculateur de remise','Loan Repayment Calculator':'Calculateur de prêt','Compound Interest Calculator':'Intérêts composés','Date Difference Calculator':'Différence entre dates','Weight Converter':'Convertisseur de poids','Speed Converter':'Convertisseur de vitesse','Area Converter':'Convertisseur de surface','Volume Converter':'Convertisseur de volume','Data Size Converter':'Convertisseur de données','Random Number Generator':'Générateur de nombres aléatoires','UUID Generator':'Générateur UUID','Base64 Encoder / Decoder':'Encodeur / décodeur Base64','URL Encoder / Decoder':'Encodeur / décodeur URL','JSON Formatter & Validator':'Formateur et validateur JSON','Duplicate Line Remover':'Supprimer les lignes en double','Find & Replace':'Rechercher et remplacer','Text Reverser':'Inverser le texte','URL Slug Generator':'Générateur de slug URL','HTML Entity Encoder':'Encodeur HTML','Colour Picker & HEX / RGB':'Sélecteur de couleur HEX / RGB','Markdown Preview':'Aperçu Markdown','CSV to JSON Converter':'Convertisseur CSV vers JSON','JSON to CSV Converter':'Convertisseur JSON vers CSV','Email Validator':'Validateur d’e-mail','Word Frequency Counter':'Fréquence des mots','Password Strength Checker':'Vérificateur de mot de passe','Stopwatch':'Chronomètre','Countdown Timer':'Compte à rebours','Merge PDF Files':'Fusionner des PDF','Extract PDF Pages':'Extraire des pages PDF','Images to PDF':'Images en PDF','Rotate PDF Pages':'Faire pivoter les pages PDF','Calculate':'Calculer','Convert':'Convertir','Generate password':'Générer un mot de passe','Create account':'Créer un compte','Sign in':'Se connecter','Sign out':'Se déconnecter','Continue with Google':'Continuer avec Google'},
+ es:{'Home':'Inicio','Account':'Cuenta','About':'Acerca de','Privacy':'Privacidad','Contact':'Contacto','Search':'Buscar','All tools':'Todas las herramientas','Calculators':'Calculadoras','Converters':'Convertidores','Productivity':'Productividad','Other tools':'Otras herramientas','Text tools':'Herramientas de texto','Developer':'Desarrollador','PDF & files':'PDF y archivos','Calculator':'Calculadora','Percentage Calculator':'Calculadora de porcentajes','Word & Character Counter':'Contador de palabras y caracteres','Password Generator':'Generador de contraseñas','Length Converter':'Convertidor de longitud','Temperature Converter':'Convertidor de temperatura','Text Case Converter':'Conversor de mayúsculas','Tip Calculator':'Calculadora de propinas','QR Code Generator':'Generador de códigos QR','Image Compressor':'Compresor de imágenes','Image Resizer':'Redimensionador de imágenes','To-do List':'Lista de tareas','Notes':'Notas','Live Clock':'Reloj en vivo','BMI Calculator':'Calculadora de IMC','Age Calculator':'Calculadora de edad','Discount Calculator':'Calculadora de descuentos','Loan Repayment Calculator':'Calculadora de préstamos','Compound Interest Calculator':'Interés compuesto','Date Difference Calculator':'Diferencia de fechas','Weight Converter':'Convertidor de peso','Speed Converter':'Convertidor de velocidad','Area Converter':'Convertidor de área','Volume Converter':'Convertidor de volumen','Data Size Converter':'Convertidor de datos','Random Number Generator':'Generador de números aleatorios','UUID Generator':'Generador UUID','Base64 Encoder / Decoder':'Codificador / decodificador Base64','URL Encoder / Decoder':'Codificador / decodificador URL','JSON Formatter & Validator':'Formateador y validador JSON','Duplicate Line Remover':'Eliminar líneas duplicadas','Find & Replace':'Buscar y reemplazar','Text Reverser':'Invertir texto','URL Slug Generator':'Generador de slug URL','HTML Entity Encoder':'Codificador HTML','Colour Picker & HEX / RGB':'Selector de color HEX / RGB','Markdown Preview':'Vista previa Markdown','CSV to JSON Converter':'Convertidor CSV a JSON','JSON to CSV Converter':'Convertidor JSON a CSV','Email Validator':'Validador de correo','Word Frequency Counter':'Frecuencia de palabras','Password Strength Checker':'Comprobador de contraseñas','Stopwatch':'Cronómetro','Countdown Timer':'Temporizador','Merge PDF Files':'Combinar archivos PDF','Extract PDF Pages':'Extraer páginas PDF','Images to PDF':'Imágenes a PDF','Rotate PDF Pages':'Girar páginas PDF','Calculate':'Calcular','Convert':'Convertir','Generate password':'Generar contraseña','Create account':'Crear cuenta','Sign in':'Iniciar sesión','Sign out':'Cerrar sesión','Continue with Google':'Continuar con Google'},
+ de:{'Home':'Startseite','Account':'Konto','About':'Über uns','Privacy':'Datenschutz','Contact':'Kontakt','Search':'Suchen','All tools':'Alle Tools','Calculators':'Rechner','Converters':'Umrechner','Productivity':'Produktivität','Other tools':'Weitere Tools','Text tools':'Textwerkzeuge','Developer':'Entwickler','PDF & files':'PDF und Dateien','Calculator':'Rechner','Percentage Calculator':'Prozentrechner','Word & Character Counter':'Wort- und Zeichenzähler','Password Generator':'Passwortgenerator','Length Converter':'Längenumrechner','Temperature Converter':'Temperaturumrechner','Text Case Converter':'Groß-/Kleinschreibung','Tip Calculator':'Trinkgeldrechner','QR Code Generator':'QR-Code-Generator','Image Compressor':'Bildkomprimierung','Image Resizer':'Bildgröße ändern','To-do List':'Aufgabenliste','Notes':'Notizen','Live Clock':'Live-Uhr','BMI Calculator':'BMI-Rechner','Age Calculator':'Altersrechner','Discount Calculator':'Rabattrechner','Loan Repayment Calculator':'Kreditrechner','Compound Interest Calculator':'Zinseszinsrechner','Date Difference Calculator':'Datumsdifferenz','Weight Converter':'Gewicht umrechnen','Speed Converter':'Geschwindigkeit umrechnen','Area Converter':'Fläche umrechnen','Volume Converter':'Volumen umrechnen','Data Size Converter':'Datengröße umrechnen','Random Number Generator':'Zufallszahlengenerator','UUID Generator':'UUID-Generator','Base64 Encoder / Decoder':'Base64-Kodierer / Dekodierer','URL Encoder / Decoder':'URL-Kodierer / Dekodierer','JSON Formatter & Validator':'JSON-Formatierer und Validator','Duplicate Line Remover':'Doppelte Zeilen entfernen','Find & Replace':'Suchen und ersetzen','Text Reverser':'Text umkehren','URL Slug Generator':'URL-Slug-Generator','HTML Entity Encoder':'HTML-Kodierer','Colour Picker & HEX / RGB':'Farbauswahl HEX / RGB','Markdown Preview':'Markdown-Vorschau','CSV to JSON Converter':'CSV zu JSON','JSON to CSV Converter':'JSON zu CSV','Email Validator':'E-Mail-Prüfer','Word Frequency Counter':'Worthäufigkeit','Password Strength Checker':'Passwortstärke prüfen','Stopwatch':'Stoppuhr','Countdown Timer':'Countdown-Timer','Merge PDF Files':'PDF-Dateien zusammenführen','Extract PDF Pages':'PDF-Seiten extrahieren','Images to PDF':'Bilder zu PDF','Rotate PDF Pages':'PDF-Seiten drehen','Calculate':'Berechnen','Convert':'Umrechnen','Generate password':'Passwort erstellen','Create account':'Konto erstellen','Sign in':'Anmelden','Sign out':'Abmelden','Continue with Google':'Mit Google fortfahren'},
+ it:{'Home':'Home','Account':'Account','About':'Informazioni','Privacy':'Privacy','Contact':'Contatti','Search':'Cerca','All tools':'Tutti gli strumenti','Calculators':'Calcolatrici','Converters':'Convertitori','Productivity':'Produttività','Other tools':'Altri strumenti','Text tools':'Strumenti di testo','Developer':'Sviluppatore','PDF & files':'PDF e file','Calculator':'Calcolatrice','Percentage Calculator':'Calcolatrice percentuale','Word & Character Counter':'Contatore parole e caratteri','Password Generator':'Generatore di password','Length Converter':'Convertitore di lunghezza','Temperature Converter':'Convertitore di temperatura','Text Case Converter':'Convertitore maiuscole/minuscole','Tip Calculator':'Calcolatore mancia','QR Code Generator':'Generatore codici QR','Image Compressor':'Compressione immagini','Image Resizer':'Ridimensiona immagini','To-do List':'Lista attività','Notes':'Note','Live Clock':'Orologio in tempo reale','BMI Calculator':'Calcolatore BMI','Age Calculator':'Calcolatore età','Discount Calculator':'Calcolatore sconti','Loan Repayment Calculator':'Calcolatore prestito','Compound Interest Calculator':'Interesse composto','Date Difference Calculator':'Differenza date','Weight Converter':'Convertitore peso','Speed Converter':'Convertitore velocità','Area Converter':'Convertitore area','Volume Converter':'Convertitore volume','Data Size Converter':'Convertitore dati','Random Number Generator':'Generatore numeri casuali','UUID Generator':'Generatore UUID','Base64 Encoder / Decoder':'Codifica / decodifica Base64','URL Encoder / Decoder':'Codifica / decodifica URL','JSON Formatter & Validator':'Formatta e valida JSON','Duplicate Line Remover':'Rimuovi righe duplicate','Find & Replace':'Trova e sostituisci','Text Reverser':'Inverti testo','URL Slug Generator':'Generatore slug URL','HTML Entity Encoder':'Codificatore HTML','Colour Picker & HEX / RGB':'Selettore colore HEX / RGB','Markdown Preview':'Anteprima Markdown','CSV to JSON Converter':'Convertitore CSV in JSON','JSON to CSV Converter':'Convertitore JSON in CSV','Email Validator':'Verifica email','Word Frequency Counter':'Frequenza parole','Password Strength Checker':'Verifica password','Stopwatch':'Cronometro','Countdown Timer':'Conto alla rovescia','Merge PDF Files':'Unisci PDF','Extract PDF Pages':'Estrai pagine PDF','Images to PDF':'Immagini in PDF','Rotate PDF Pages':'Ruota pagine PDF','Calculate':'Calcola','Convert':'Converti','Generate password':'Genera password','Create account':'Crea account','Sign in':'Accedi','Sign out':'Esci','Continue with Google':'Continua con Google'},
+ tr:{'Home':'Ana Sayfa','Account':'Hesap','About':'Hakkımızda','Privacy':'Gizlilik','Contact':'İletişim','Search':'Ara','All tools':'Tüm araçlar','Calculators':'Hesap makineleri','Converters':'Dönüştürücüler','Productivity':'Üretkenlik','Other tools':'Diğer araçlar','Text tools':'Metin araçları','Developer':'Geliştirici','PDF & files':'PDF ve dosyalar','Calculator':'Hesap makinesi','Percentage Calculator':'Yüzde hesaplayıcı','Word & Character Counter':'Kelime ve karakter sayacı','Password Generator':'Şifre oluşturucu','Length Converter':'Uzunluk dönüştürücü','Temperature Converter':'Sıcaklık dönüştürücü','Text Case Converter':'Metin biçimi dönüştürücü','Tip Calculator':'Bahşiş hesaplayıcı','QR Code Generator':'QR kod oluşturucu','Image Compressor':'Görsel sıkıştırıcı','Image Resizer':'Görsel boyutlandırıcı','To-do List':'Yapılacaklar listesi','Notes':'Notlar','Live Clock':'Canlı saat','BMI Calculator':'VKİ hesaplayıcı','Age Calculator':'Yaş hesaplayıcı','Discount Calculator':'İndirim hesaplayıcı','Loan Repayment Calculator':'Kredi ödeme hesaplayıcı','Compound Interest Calculator':'Bileşik faiz hesaplayıcı','Date Difference Calculator':'Tarih farkı hesaplayıcı','Weight Converter':'Ağırlık dönüştürücü','Speed Converter':'Hız dönüştürücü','Area Converter':'Alan dönüştürücü','Volume Converter':'Hacim dönüştürücü','Data Size Converter':'Veri boyutu dönüştürücü','Random Number Generator':'Rastgele sayı oluşturucu','UUID Generator':'UUID oluşturucu','Base64 Encoder / Decoder':'Base64 kodlayıcı / çözücü','URL Encoder / Decoder':'URL kodlayıcı / çözücü','JSON Formatter & Validator':'JSON biçimlendirici ve doğrulayıcı','Duplicate Line Remover':'Yinelenen satırları kaldır','Find & Replace':'Bul ve değiştir','Text Reverser':'Metni ters çevir','URL Slug Generator':'URL slug oluşturucu','HTML Entity Encoder':'HTML kodlayıcı','Colour Picker & HEX / RGB':'Renk seçici HEX / RGB','Markdown Preview':'Markdown önizleme','CSV to JSON Converter':'CSV JSON dönüştürücü','JSON to CSV Converter':'JSON CSV dönüştürücü','Email Validator':'E-posta doğrulayıcı','Word Frequency Counter':'Kelime sıklığı sayacı','Password Strength Checker':'Şifre gücü denetleyici','Stopwatch':'Kronometre','Countdown Timer':'Geri sayım sayacı','Merge PDF Files':'PDF dosyalarını birleştir','Extract PDF Pages':'PDF sayfalarını çıkar','Images to PDF':'Görselleri PDF yap','Rotate PDF Pages':'PDF sayfalarını döndür','Calculate':'Hesapla','Convert':'Dönüştür','Generate password':'Şifre oluştur','Create account':'Hesap oluştur','Sign in':'Giriş yap','Sign out':'Çıkış yap','Continue with Google':'Google ile devam et'},
+ hi:{'Home':'होम','Account':'खाता','About':'हमारे बारे में','Privacy':'गोपनीयता','Contact':'संपर्क','Search':'खोजें','All tools':'सभी टूल','Calculators':'कैलकुलेटर','Converters':'कन्वर्टर','Productivity':'उत्पादकता','Other tools':'अन्य टूल','Text tools':'टेक्स्ट टूल','Developer':'डेवलपर','PDF & files':'PDF और फ़ाइलें','Calculator':'कैलकुलेटर','Percentage Calculator':'प्रतिशत कैलकुलेटर','Word & Character Counter':'शब्द और अक्षर गिनें','Password Generator':'पासवर्ड जनरेटर','Length Converter':'लंबाई कन्वर्टर','Temperature Converter':'तापमान कन्वर्टर','Text Case Converter':'टेक्स्ट केस कन्वर्टर','Tip Calculator':'टिप कैलकुलेटर','QR Code Generator':'QR कोड जनरेटर','Image Compressor':'इमेज कंप्रेसर','Image Resizer':'इमेज का आकार बदलें','To-do List':'कामों की सूची','Notes':'नोट्स','Live Clock':'लाइव घड़ी','BMI Calculator':'BMI कैलकुलेटर','Age Calculator':'उम्र कैलकुलेटर','Discount Calculator':'छूट कैलकुलेटर','Loan Repayment Calculator':'लोन भुगतान कैलकुलेटर','Compound Interest Calculator':'चक्रवृद्धि ब्याज कैलकुलेटर','Date Difference Calculator':'तारीख का अंतर','Weight Converter':'वज़न कन्वर्टर','Speed Converter':'गति कन्वर्टर','Area Converter':'क्षेत्रफल कन्वर्टर','Volume Converter':'आयतन कन्वर्टर','Data Size Converter':'डेटा आकार कन्वर्टर','Random Number Generator':'रैंडम नंबर जनरेटर','UUID Generator':'UUID जनरेटर','Base64 Encoder / Decoder':'Base64 एन्कोडर / डिकोडर','URL Encoder / Decoder':'URL एन्कोडर / डिकोडर','JSON Formatter & Validator':'JSON फ़ॉर्मेटर और वैलिडेटर','Duplicate Line Remover':'डुप्लिकेट लाइन हटाएँ','Find & Replace':'खोजें और बदलें','Text Reverser':'टेक्स्ट उल्टा करें','URL Slug Generator':'URL स्लग जनरेटर','HTML Entity Encoder':'HTML एन्कोडर','Colour Picker & HEX / RGB':'रंग चयन HEX / RGB','Markdown Preview':'Markdown पूर्वावलोकन','CSV to JSON Converter':'CSV से JSON कन्वर्टर','JSON to CSV Converter':'JSON से CSV कन्वर्टर','Email Validator':'ईमेल वैलिडेटर','Word Frequency Counter':'शब्द आवृत्ति गणक','Password Strength Checker':'पासवर्ड मज़बूती जाँचें','Stopwatch':'स्टॉपवॉच','Countdown Timer':'काउंटडाउन टाइमर','Merge PDF Files':'PDF फ़ाइलें जोड़ें','Extract PDF Pages':'PDF पेज निकालें','Images to PDF':'इमेज से PDF','Rotate PDF Pages':'PDF पेज घुमाएँ','Calculate':'गणना करें','Convert':'बदलें','Generate password':'पासवर्ड बनाएँ','Create account':'खाता बनाएँ','Sign in':'साइन इन','Sign out':'साइन आउट','Continue with Google':'Google के साथ जारी रखें'}
+};
+let activeLanguage='en';
+const originalNodes=new WeakMap();
+function setLanguage(code){if(!languageNames[code])return;activeLanguage=code;try{localStorage.setItem('sth_language',code);}catch(e){}document.documentElement.lang=code;document.documentElement.dir=(code==='ar'||code==='ur')?'rtl':'ltr';const dict=uiTranslations[code]||{};const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);let node;while(node=walker.nextNode()){if(!originalNodes.has(node))originalNodes.set(node,node.nodeValue);const original=originalNodes.get(node);const key=original.trim();if(!key)continue;const translated=dict[key];const leading=original.match(/^\s*/)[0],trailing=original.match(/\s*$/)[0];node.nodeValue=translated?leading+translated+trailing:original;}document.querySelectorAll('[placeholder]').forEach(el=>{if(!el.dataset.originalPlaceholder)el.dataset.originalPlaceholder=el.placeholder;el.placeholder=dict[el.dataset.originalPlaceholder]||el.dataset.originalPlaceholder;});document.querySelectorAll('.filter-btn').forEach(btn=>{const labels={all:'All tools',calculators:'Calculators',converters:'Converters',productivity:'Productivity',other:'Other tools',text:'Text tools',developer:'Developer',files:'PDF & files'};const original=labels[btn.dataset.category]||btn.textContent.trim();btn.textContent=dict[original]||original;});document.getElementById('search').placeholder=code==='en'?'Search 48 free tools...':({ar:'ابحث في 48 أداة مجانية...',ur:'48 مفت ٹولز تلاش کریں...',fr:'Rechercher parmi 48 outils gratuits...',es:'Buscar entre 48 herramientas gratis...',de:'48 kostenlose Tools durchsuchen...',it:'Cerca tra 48 strumenti gratuiti...',tr:'48 ücretsiz araçta ara...',hi:'48 मुफ़्त टूल खोजें...'}[code]||'Search 48 free tools...');document.getElementById('languageSelect').value=code;applyToolFilters();}
+try{const savedLang=localStorage.getItem('sth_language');if(savedLang&&languageNames[savedLang]){activeLanguage=savedLang;document.getElementById('languageSelect').value=savedLang;}}catch(e){}
+if(activeLanguage!=='en')setLanguage(activeLanguage);
+
+/* Supabase authentication */
+function authMessage(message,isError=false) {
+  const status = document.getElementById("authStatus");
+  status.textContent = message;
+  status.className = "result " + (isError ? "status-error" : "status-success");
+}
+function validAuthDetails() {
+  const email = document.getElementById("authEmail").value.trim(), password = document.getElementById("authPassword").value;
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { authMessage("Please enter a valid email address.",true); return false; }
+  if (!password || password.length < 6) { authMessage("Your password must be at least 6 characters.",true); return false; }
   return true;
 }
-function setPdfMessage(id,message,isError=false){
-  const area=document.getElementById(id);
-  area.textContent=message;
-  area.className="result "+(isError?"status-error":"status-success");
+async function signUp() {
+  if (!supabaseClient) { authMessage("Account service is unavailable. Please try again later.",true); return; }
+  if (!validAuthDetails()) return;
+  authMessage("Creating your account…");
+  try {
+    const {error} = await supabaseClient.auth.signUp({email:document.getElementById("authEmail").value.trim(),password:document.getElementById("authPassword").value});
+    if (error) throw error;
+    authMessage("Your sign-up request was sent. Check your email if confirmation is enabled.");
+  } catch (error) { authMessage(error.message || "Could not create your account.",true); }
 }
-function downloadPDF(bytes,filename){
-  const blob=new Blob([bytes],{type:"application/pdf"});
-  const url=URL.createObjectURL(blob);
-  const link=document.createElement("a");
-  link.href=url;link.download=filename;
-  document.body.appendChild(link);
-  link.click();
-  link.remove();
-  setTimeout(()=>URL.revokeObjectURL(url),60000);
+async function signIn() {
+  if (!supabaseClient) { authMessage("Account service is unavailable. Please try again later.",true); return; }
+  if (!validAuthDetails()) return;
+  authMessage("Signing in…");
+  try {
+    const {error} = await supabaseClient.auth.signInWithPassword({email:document.getElementById("authEmail").value.trim(),password:document.getElementById("authPassword").value});
+    if (error) throw error;
+    authMessage("You are signed in successfully.");
+  } catch (error) { authMessage(error.message || "Sign-in failed.",true); }
 }
-function safePDFName(name){
-  return name.replace(/\.pdf$/i,"").replace(/[^a-z0-9_-]/gi,"-").slice(0,60)||"document";
+async function googleSignIn() {
+  if (!supabaseClient) { authMessage("Account service is unavailable. Please try again later.",true); return; }
+  authMessage("Connecting to Google…");
+  try {
+    const {error} = await supabaseClient.auth.signInWithOAuth({provider:"google",options:{redirectTo:"https://hd2bg.github.io/smarttools-hub/"}});
+    if (error) throw error;
+  } catch (error) { authMessage(error.message || "Google sign-in failed.",true); }
 }
-
-/* 15. MERGE PDF FILES */
-async function mergePDFs(){
-  if(!pdfLibraryReady())return;
-  const files=Array.from(document.getElementById("mergeFiles").files);
-  if(files.length<2){setPdfMessage("mergeResult","Please select at least two PDF files.",true);return}
-  try{
-    setPdfMessage("mergeResult","Merging your PDFs. Please wait...");
-    const merged=await PDFLib.PDFDocument.create();
-    for(const file of files){
-      const source=await PDFLib.PDFDocument.load(await file.arrayBuffer());
-      const copied=await merged.copyPages(source,source.getPageIndices());
-      copied.forEach(page=>merged.addPage(page));
-    }
-    const bytes=await merged.save();
-    downloadPDF(bytes,"merged-document.pdf");
-    setPdfMessage("mergeResult",`Success! ${files.length} PDF files have been merged and downloaded.`);
-  }catch(error){
-    console.error(error);
-    setPdfMessage("mergeResult","Could not merge these files. Check that they are valid, unencrypted PDFs.",true);
-  }
+async function signOut() {
+  if (!supabaseClient) { authMessage("Account service is unavailable.",true); return; }
+  try { const {error} = await supabaseClient.auth.signOut(); if (error) throw error; authMessage("You have signed out."); }
+  catch (error) { authMessage(error.message || "Sign-out failed.",true); }
 }
-
-/* 16. SPLIT PDF: EXTRACT SELECTED PAGES */
-function parsePageSelection(value,total){
-  const pages=new Set();
-  const parts=value.split(",").map(part=>part.trim()).filter(Boolean);
-  if(!parts.length)throw Error("Enter the page numbers you want to extract.");
-  for(const part of parts){
-    const match=part.match(/^(\d+)\s*-\s*(\d+)$/);
-    if(match){
-      const start=Number(match[1]),end=Number(match[2]);
-      if(start<1||end<start||end>total)throw Error(`Enter page ranges between 1 and ${total}.`);
-      for(let page=start;page<=end;page++)pages.add(page-1);
-    }else if(/^\d+$/.test(part)){
-      const page=Number(part);
-      if(page<1||page>total)throw Error(`Page numbers must be between 1 and ${total}.`);
-      pages.add(page-1);
-    }else{
-      throw Error("Use a format such as 1-3 or 1,3,5.");
-    }
-  }
-  return Array.from(pages).sort((a,b)=>a-b);
-}
-async function splitPDF(){
-  if(!pdfLibraryReady())return;
-  const file=document.getElementById("splitFile").files[0];
-  if(!file){setPdfMessage("splitResult","Please choose a PDF file.",true);return}
-  try{
-    setPdfMessage("splitResult","Preparing your selected pages...");
-    const source=await PDFLib.PDFDocument.load(await file.arrayBuffer());
-    const selected=parsePageSelection(document.getElementById("splitPages").value,source.getPageCount());
-    const output=await PDFLib.PDFDocument.create();
-    const pages=await output.copyPages(source,selected);
-    pages.forEach(page=>output.addPage(page));
-    const bytes=await output.save();
-    downloadPDF(bytes,safePDFName(file.name)+"-pages.pdf");
-    setPdfMessage("splitResult",`Success! Extracted ${selected.length} page(s) into a new PDF.`);
-  }catch(error){
-    console.error(error);
-    setPdfMessage("splitResult",error.message||"Could not split this PDF. Check that it is a valid, unencrypted PDF.",true);
-  }
-}
-
-/* 17. IMAGES TO PDF */
-async function imagesToPDF(){
-  if(!pdfLibraryReady())return;
-  const files=Array.from(document.getElementById("imagePDFfiles").files);
-  if(!files.length){setPdfMessage("imagePDFresult","Please choose one or more images.",true);return}
-  try{
-    setPdfMessage("imagePDFresult","Creating your PDF. Please wait...");
-    const pdf=await PDFLib.PDFDocument.create();
-    for(const file of files){
-      if(!file.type.startsWith("image/"))continue;
-      const bitmap=await createImageBitmap(file);
-      const canvas=document.createElement("canvas");
-      canvas.width=bitmap.width;canvas.height=bitmap.height;
-      const context=canvas.getContext("2d");
-      context.fillStyle="#ffffff";
-      context.fillRect(0,0,canvas.width,canvas.height);
-      context.drawImage(bitmap,0,0);
-      bitmap.close();
-      const pngBlob=await new Promise(resolve=>canvas.toBlob(resolve,"image/png"));
-      if(!pngBlob)throw Error("One of the images could not be processed.");
-      const image=await pdf.embedPng(await pngBlob.arrayBuffer());
-      const pageWidth=595.28,pageHeight=841.89,margin=30;
-      const scale=Math.min((pageWidth-margin*2)/image.width,(pageHeight-margin*2)/image.height);
-      const width=image.width*scale,height=image.height*scale;
-      const page=pdf.addPage([pageWidth,pageHeight]);
-      page.drawImage(image,{
-        x:(pageWidth-width)/2,
-        y:(pageHeight-height)/2,
-        width,height
-      });
-    }
-    if(pdf.getPageCount()===0)throw Error("No supported images were selected.");
-    const bytes=await pdf.save();
-    downloadPDF(bytes,"images-to-pdf.pdf");
-    setPdfMessage("imagePDFresult",`Success! Created a PDF with ${pdf.getPageCount()} page(s).`);
-  }catch(error){
-    console.error(error);
-    setPdfMessage("imagePDFresult",error.message||"Could not create the PDF from these images.",true);
-  }
-}
-
-/* 18. ROTATE PDF */
-async function rotatePDF(){
-  if(!pdfLibraryReady())return;
-  const file=document.getElementById("rotateFile").files[0];
-  if(!file){setPdfMessage("rotateResult","Please choose a PDF file.",true);return}
-  try{
-    setPdfMessage("rotateResult","Rotating your PDF. Please wait...");
-    const pdf=await PDFLib.PDFDocument.load(await file.arrayBuffer());
-    const amount=Number(document.getElementById("rotateDegrees").value);
-    pdf.getPages().forEach(page=>{
-      const current=page.getRotation().angle;
-      page.setRotation(PDFLib.degrees((current+amount)%360));
+async function checkAuthSession() {
+  if (!supabaseClient) { authMessage("Account service could not be reached. Please try again later.",true); return; }
+  try {
+    const {data,error} = await supabaseClient.auth.getSession(); if (error) throw error;
+    authMessage(data.session ? "Signed in as " + data.session.user.email : "You are not currently signed in.");
+    supabaseClient.auth.onAuthStateChange((event,session) => {
+      if (event === "SIGNED_IN" && session) authMessage("Signed in as " + session.user.email);
+      if (event === "SIGNED_OUT") authMessage("You have signed out.");
     });
-    const bytes=await pdf.save();
-    downloadPDF(bytes,safePDFName(file.name)+"-rotated.pdf");
-    setPdfMessage("rotateResult",`Success! Rotated all ${pdf.getPageCount()} page(s) and downloaded the PDF.`);
-  }catch(error){
-    console.error(error);
-    setPdfMessage("rotateResult","Could not rotate this file. Check that it is a valid, unencrypted PDF.",true);
-  }
-}
-
-/* FOOTER AND INITIAL DISPLAY */
-document.getElementById("year").textContent=new Date().getFullYear();
-renderTodos();
-
-/* ACCOUNT AUTHENTICATION */
-function authMessage(message,isError=false){
-  const status=document.getElementById("authStatus");
-  status.textContent=message;
-  status.className="result "+(isError?"status-error":"status-success");
-}
-function validAuthDetails(){
-  const email=document.getElementById("authEmail").value.trim();
-  const password=document.getElementById("authPassword").value;
-  if(!email||!email.includes("@")){authMessage("Please enter a valid email address.",true);return false}
-  if(!password||password.length<6){authMessage("Your password must be at least 6 characters.",true);return false}
-  return true;
-}
-async function signUp(){
-  if(!supabaseClient){authMessage("Supabase could not connect. Please check your configuration.",true);return}
-  if(!validAuthDetails())return;
-  const email=document.getElementById("authEmail").value.trim();
-  const password=document.getElementById("authPassword").value;
-  authMessage("Creating your account...");
-  try{
-    const {error}=await supabaseClient.auth.signUp({email,password});
-    if(error)throw error;
-    authMessage("Account request sent! Check your email if email confirmation is enabled.");
-  }catch(error){authMessage(error.message||"Could not create your account.",true)}
-}
-async function signIn(){
-  if(!supabaseClient){authMessage("Supabase could not connect. Please check your configuration.",true);return}
-  if(!validAuthDetails())return;
-  const email=document.getElementById("authEmail").value.trim();
-  const password=document.getElementById("authPassword").value;
-  authMessage("Signing in...");
-  try{
-    const {error}=await supabaseClient.auth.signInWithPassword({email,password});
-    if(error)throw error;
-    authMessage("You are signed in successfully!");
-  }catch(error){authMessage(error.message||"Sign-in failed.",true)}
-}
-async function googleSignIn(){
-  if(!supabaseClient){authMessage("Supabase could not connect. Please check your configuration.",true);return}
-  authMessage("Connecting to Google...");
-  try{
-    const {error}=await supabaseClient.auth.signInWithOAuth({
-      provider:"google",
-      options:{redirectTo:"https://hd2bg.github.io/smarttools-hub/"}
-    });
-    if(error)throw error;
-  }catch(error){authMessage(error.message||"Google sign-in failed.",true)}
-}
-async function signOut(){
-  if(!supabaseClient){authMessage("Supabase is not connected.",true);return}
-  try{
-    const {error}=await supabaseClient.auth.signOut();
-    if(error)throw error;
-    authMessage("You have signed out successfully.");
-  }catch(error){authMessage(error.message||"Sign-out failed.",true)}
-}
-async function checkAuthSession(){
-  if(!supabaseClient)return;
-  try{
-    const {data,error}=await supabaseClient.auth.getSession();
-    if(error)throw error;
-    if(data.session)authMessage("Signed in as "+data.session.user.email);
-    supabaseClient.auth.onAuthStateChange((event,session)=>{
-      if(event==="SIGNED_IN"&&session)authMessage("Signed in as "+session.user.email);
-      if(event==="SIGNED_OUT")authMessage("You are signed out.");
-    });
-  }catch(error){console.error("Session check failed:",error)}
+  } catch (error) { authMessage(error.message || "Could not check your account status.",true); }
 }
 checkAuthSession();
 
-/* PROGRESSIVE WEB APP */
-if("serviceWorker" in navigator&&location.protocol==="https:"){
-  window.addEventListener("load",()=>{
-    navigator.serviceWorker.register("./sw.js").catch(error=>{
-      console.error("Service worker registration failed:",error);
-    });
-  });
+/* Progressive Web App service worker */
+if ("serviceWorker" in navigator && location.protocol === "https:") {
+  window.addEventListener("load",() => navigator.serviceWorker.register("./sw.js").catch(error => console.error("Service worker registration failed:",error)));
 }
 </script>
 </body>
