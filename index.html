@@ -1,72 +1,308 @@
+
 <!DOCTYPE html>
-<html lang="en"> 
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "SmartTools Hub",
-  "url": "https://hd2bg.github.io/smarttools-hub/",
-  "description": "Free online tools for calculations, conversions, productivity and more."
-}
-</script> 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="SmartTools Hub - Free Online Tools">
-<meta property="og:description" content="Explore free online calculators, converters, productivity tools and more.">
-<meta property="og:url" content="https://hd2bg.github.io/smarttools-hub/">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SmartTools Hub - Free Online Tools">
-<meta name="twitter:description" content="Free online tools for calculations, conversions and productivity.">
-<head> 
-  <link rel="icon" type="image/svg+xml" href="./icon.svg"> 
-  <meta name="theme-color" content="#0f172a">
-  <meta name="google-site-verification" content="O4-X0IK6p27OpMJeA9PyBkZ2OqKrADu7Bu0OMQJTPeg" />
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SmartTools Hub – Free Online Tools</title> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101827">
+
+  <title>SmartTools Hub – Free Online Tools</title>
+  <meta name="description" content="SmartTools Hub offers free online calculators, converters, QR codes, image tools, password generators and productivity tools.">
+  <meta name="keywords" content="free online tools, calculator, QR code generator, image compressor, password generator, converter">
+  <meta name="author" content="SmartTools Hub">
+  <meta name="robots" content="index, follow">
+
   <link rel="canonical" href="https://hd2bg.github.io/smarttools-hub/">
-<meta name="description" content="SmartTools Hub offers free online calculators, converters, QR codes, image tools, password generators and productivity tools.">
-<meta name="keywords" content="free online tools, calculator, QR code generator, image compressor, password generator, converter">
-<meta name="author" content="SmartTools Hub">
-<meta name="theme-color" content="#101827">
-<link rel="manifest" href="manifest.webmanifest">
-<link rel="icon" href="icon.svg" type="image/svg+xml">
-<style>
-:root{--bg:#0b1220;--panel:#151f32;--text:#f4f7ff;--muted:#aab6ca;--accent:#7c5cff;--border:#29364d}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,sans-serif;line-height:1.5}
-header{background:#111b2d;padding:22px 5%;display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap;border-bottom:1px solid var(--border)}
-.logo{font-size:24px;font-weight:bold;color:white}
-.logo span{color:#9b86ff}
-nav{display:flex;gap:9px;flex-wrap:wrap}
-button,a.nav{border:0;border-radius:9px;padding:10px 14px;background:var(--accent);color:white;cursor:pointer;text-decoration:none;font-weight:600}
-button:hover,a.nav:hover{opacity:.85}
-button.secondary{background:#29364d}
-main{max-width:1150px;margin:auto;padding:28px 18px}
-.hero{text-align:center;padding:45px 10px}
-.hero h1{font-size:clamp(30px,5vw,48px);margin:0 0 10px}
-.hero p,.muted{color:var(--muted)}
-.search{width:100%;max-width:550px;margin:20px auto;padding:14px;border-radius:10px;border:1px solid var(--border);background:var(--panel);color:white;font-size:16px;display:block}
-.filters{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin:15px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
-.card{background:var(--panel);border:1px solid var(--border);border-radius:15px;padding:20px;min-width:0}
-.card h2,.card h3{margin-top:0}
-input,textarea,select{width:100%;padding:12px;margin:7px 0 12px;border:1px solid var(--border);border-radius:8px;background:#0d1728;color:white;font-size:15px}
-textarea{min-height:90px;resize:vertical}
-.result{padding:10px;background:#0d1728;border-radius:8px;overflow-wrap:anywhere;margin-top:10px}
-section.page{display:none}
-section.page.active{display:block}
-.tool{scroll-margin-top:20px}
-footer{text-align:center;padding:30px;color:var(--muted);border-top:1px solid var(--border);margin-top:40px}
-footer a{color:#b6a8ff;margin:0 8px}
-.small{font-size:13px;color:var(--muted)}
-hr{border:0;border-top:1px solid var(--border);margin:20px 0}
-@media(max-width:600px){header{justify-content:center}nav{justify-content:center}.hero{padding:25px 5px}}
-</style>
+  <link rel="icon" href="./icon.svg" type="image/svg+xml">
+  <link rel="manifest" href="./manifest.webmanifest">
+
+  <meta name="google-site-verification" content="O4-X0IK6p27OpMJeA9PyBkZ2OqKrADu7Bu0OMQJTPeg">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="SmartTools Hub - Free Online Tools">
+  <meta property="og:description" content="Explore free online calculators, converters, productivity tools and more.">
+  <meta property="og:url" content="https://hd2bg.github.io/smarttools-hub/">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="SmartTools Hub - Free Online Tools">
+  <meta name="twitter:description" content="Free online tools for calculations, conversions and productivity.">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "SmartTools Hub",
+    "url": "https://hd2bg.github.io/smarttools-hub/",
+    "description": "Free online tools for calculations, conversions, productivity and more."
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #0b1220;
+      --panel: #151f32;
+      --panel2: #1c2940;
+      --text: #f4f7ff;
+      --muted: #aab6ca;
+      --accent: #795cff;
+      --accent2: #9b86ff;
+      --border: #29364d;
+      --success: #38d996;
+      --danger: #ff7373;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
+
+    button, input, textarea, select { font: inherit; }
+
+    button, .nav-link {
+      border: 0;
+      border-radius: 10px;
+      padding: 11px 16px;
+      background: var(--accent);
+      color: white;
+      cursor: pointer;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-block;
+      transition: opacity .2s, transform .2s;
+    }
+
+    button:hover, .nav-link:hover {
+      opacity: .88;
+      transform: translateY(-1px);
+    }
+
+    button:focus-visible, a:focus-visible, input:focus-visible,
+    textarea:focus-visible, select:focus-visible {
+      outline: 3px solid var(--accent2);
+      outline-offset: 3px;
+    }
+
+    button.secondary {
+      background: var(--panel2);
+      border: 1px solid var(--border);
+    }
+
+    header {
+      background: #111b2d;
+      padding: 18px 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: 800;
+      color: white;
+      letter-spacing: -.7px;
+    }
+
+    .logo span { color: var(--accent2); }
+
+    nav {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    nav button { padding: 9px 13px; }
+
+    main {
+      max-width: 1200px;
+      margin: auto;
+      padding: 25px 18px;
+      min-height: 65vh;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 45px 10px 35px;
+    }
+
+    .hero h1 {
+      font-size: clamp(30px, 5vw, 50px);
+      line-height: 1.15;
+      margin: 0 0 12px;
+      letter-spacing: -1.5px;
+    }
+
+    .hero p, .muted { color: var(--muted); }
+
+    .hero p { font-size: 18px; }
+
+    .search {
+      width: 100%;
+      max-width: 580px;
+      margin: 22px auto;
+      padding: 15px 17px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: var(--panel);
+      color: white;
+      font-size: 16px;
+      display: block;
+    }
+
+    .filters {
+      display: flex;
+      gap: 9px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 15px 0 25px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 270px), 1fr));
+      gap: 17px;
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 21px;
+      min-width: 0;
+      box-shadow: 0 8px 25px rgba(0,0,0,.12);
+    }
+
+    .card h2, .card h3 { margin-top: 0; }
+
+    .card h3 { font-size: 19px; }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 12px;
+      margin: 7px 0 13px;
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      background: #0d1728;
+      color: white;
+      font-size: 15px;
+    }
+
+    input[type="range"] { padding: 0; }
+
+    input[type="file"] { font-size: 13px; }
+
+    textarea { min-height: 95px; resize: vertical; }
+
+    label {
+      display: block;
+      color: var(--muted);
+      font-size: 14px;
+      margin-top: 5px;
+    }
+
+    .result {
+      padding: 12px;
+      background: #0d1728;
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      overflow-wrap: anywhere;
+      margin-top: 12px;
+      min-height: 20px;
+    }
+
+    .result img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 8px;
+    }
+
+    .result a { color: var(--accent2); }
+
+    section.page { display: none; }
+    section.page.active { display: block; }
+
+    .tool { scroll-margin-top: 20px; }
+
+    .small { font-size: 13px; color: var(--muted); }
+
+    .page-heading { margin: 10px 0 22px; }
+
+    .empty-message {
+      text-align: center;
+      color: var(--muted);
+      padding: 20px;
+      display: none;
+    }
+
+    #todoList {
+      padding-left: 22px;
+    }
+
+    #todoList li {
+      margin: 10px 0;
+      overflow-wrap: anywhere;
+    }
+
+    #todoList button {
+      padding: 5px 9px;
+      margin-left: 7px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 15px;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      margin-top: 40px;
+    }
+
+    footer a {
+      color: var(--accent2);
+      margin: 0 9px;
+    }
+
+    .status-success { color: var(--success); }
+    .status-error { color: var(--danger); }
+
+    hr {
+      border: 0;
+      border-top: 1px solid var(--border);
+      margin: 22px 0;
+    }
+
+    @media (max-width: 650px) {
+      header { justify-content: center; }
+      nav { justify-content: center; }
+      nav button { padding: 9px 11px; font-size: 13px; }
+      .hero { padding: 28px 5px; }
+      main { padding: 18px 13px; }
+      .card { padding: 17px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
 </head>
+
 <body>
+
 <header>
   <div class="logo">SmartTools <span>Hub</span></div>
-  <nav>
+
+  <nav aria-label="Main navigation">
     <button onclick="showPage('home')">Home</button>
     <button onclick="showPage('account')">Account</button>
     <button onclick="showPage('about')">About</button>
@@ -76,11 +312,22 @@ hr{border:0;border-top:1px solid var(--border);margin:20px 0}
 </header>
 
 <main>
+
 <section id="home" class="page active">
+
   <div class="hero">
-    <h1>All your smart tools in one place</h1>
+    <h1>All Your Smart Tools in One Place</h1>
     <p>Free, fast and easy-to-use tools for everyday tasks.</p>
-    <input class="search" id="search" placeholder="Search for a tool..." oninput="filterTools()">
+
+    <input
+      class="search"
+      id="search"
+      type="search"
+      placeholder="Search for a tool..."
+      aria-label="Search tools"
+      oninput="filterTools()"
+    >
+
     <div class="filters">
       <button class="secondary" onclick="filterCategory('all')">All tools</button>
       <button class="secondary" onclick="filterCategory('calculators')">Calculators</button>
@@ -92,104 +339,144 @@ hr{border:0;border-top:1px solid var(--border);margin:20px 0}
 
   <div class="grid" id="tools">
 
+    <!-- 1. Calculator -->
     <div class="card tool" data-category="calculators">
       <h3>🧮 Calculator</h3>
-      <input id="calcInput" placeholder="Example: (12+5)*3">
+      <input id="calcInput" placeholder="Example: (12+5)*3" aria-label="Math expression">
       <button onclick="calculate()">Calculate</button>
-      <div class="result" id="calcResult">Your answer will appear here.</div>
+      <div class="result" id="calcResult" aria-live="polite">Your answer will appear here.</div>
     </div>
 
+    <!-- 2. Percentage Calculator -->
     <div class="card tool" data-category="calculators">
-      <h3>Percentage Calculator</h3>
-      <label>What percentage?</label><input id="pct" type="number" placeholder="20">
-      <label>Of what number?</label><input id="pctOf" type="number" placeholder="150">
+      <h3>📊 Percentage Calculator</h3>
+      <label for="pct">What percentage?</label>
+      <input id="pct" type="number" placeholder="20">
+      <label for="pctOf">Of what number?</label>
+      <input id="pctOf" type="number" placeholder="150">
       <button onclick="percentage()">Calculate</button>
-      <div class="result" id="pctResult"></div>
+      <div class="result" id="pctResult" aria-live="polite"></div>
     </div>
 
+    <!-- 3. Word Counter -->
     <div class="card tool" data-category="productivity">
       <h3>📝 Word & Character Counter</h3>
       <textarea id="wordText" placeholder="Type or paste your text..." oninput="countWords()"></textarea>
-      <div class="result" id="wordResult">Words: 0 | Characters: 0</div>
+      <div class="result" id="wordResult" aria-live="polite">Words: 0 | Characters: 0</div>
     </div>
 
+    <!-- 4. Password Generator -->
     <div class="card tool" data-category="other">
       <h3>🔐 Password Generator</h3>
-      <label>Password length</label><input id="passLength" type="number" min="6" max="64" value="16">
+      <label for="passLength">Password length</label>
+      <input id="passLength" type="number" min="6" max="64" value="16">
       <button onclick="makePassword()">Generate password</button>
-      <div class="result" id="passResult"></div>
+      <div class="result" id="passResult" aria-live="polite"></div>
       <button class="secondary" onclick="copyText('passResult')">Copy password</button>
     </div>
 
+    <!-- 5. Length Converter -->
     <div class="card tool" data-category="converters">
       <h3>📏 Length Converter</h3>
       <input id="lengthValue" type="number" placeholder="Enter value">
+      <label for="lengthFrom">From</label>
       <select id="lengthFrom">
-        <option value="m">Metres</option><option value="km">Kilometres</option>
-        <option value="cm">Centimetres</option><option value="mi">Miles</option>
-        <option value="ft">Feet</option><option value="in">Inches</option>
+        <option value="m">Metres</option>
+        <option value="km">Kilometres</option>
+        <option value="cm">Centimetres</option>
+        <option value="mi">Miles</option>
+        <option value="ft">Feet</option>
+        <option value="in">Inches</option>
       </select>
+      <label for="lengthTo">To</label>
       <select id="lengthTo">
-        <option value="ft">Feet</option><option value="m">Metres</option>
-        <option value="km">Kilometres</option><option value="cm">Centimetres</option>
-        <option value="mi">Miles</option><option value="in">Inches</option>
+        <option value="ft">Feet</option>
+        <option value="m">Metres</option>
+        <option value="km">Kilometres</option>
+        <option value="cm">Centimetres</option>
+        <option value="mi">Miles</option>
+        <option value="in">Inches</option>
       </select>
       <button onclick="convertLength()">Convert</button>
-      <div class="result" id="lengthResult"></div>
+      <div class="result" id="lengthResult" aria-live="polite"></div>
     </div>
 
+    <!-- 6. Temperature Converter -->
     <div class="card tool" data-category="converters">
       <h3>🌡️ Temperature Converter</h3>
       <input id="tempValue" type="number" placeholder="Temperature">
-      <select id="tempFrom"><option value="C">Celsius</option><option value="F">Fahrenheit</option></select>
-      <select id="tempTo"><option value="F">Fahrenheit</option><option value="C">Celsius</option></select>
+      <label for="tempFrom">From</label>
+      <select id="tempFrom">
+        <option value="C">Celsius</option>
+        <option value="F">Fahrenheit</option>
+      </select>
+      <label for="tempTo">To</label>
+      <select id="tempTo">
+        <option value="F">Fahrenheit</option>
+        <option value="C">Celsius</option>
+      </select>
       <button onclick="convertTemp()">Convert</button>
-      <div class="result" id="tempResult"></div>
+      <div class="result" id="tempResult" aria-live="polite"></div>
     </div>
 
+    <!-- 7. Case Converter -->
     <div class="card tool" data-category="productivity">
       <h3>🔠 Text Case Converter</h3>
       <textarea id="caseText" placeholder="Enter text..."></textarea>
       <button onclick="changeCase('upper')">UPPERCASE</button>
       <button onclick="changeCase('lower')">lowercase</button>
       <button class="secondary" onclick="changeCase('title')">Title Case</button>
-      <div class="result" id="caseResult"></div>
+      <div class="result" id="caseResult" aria-live="polite"></div>
+      <button class="secondary" onclick="copyText('caseResult')">Copy text</button>
     </div>
 
+    <!-- 8. Tip Calculator -->
     <div class="card tool" data-category="calculators">
       <h3>🍕 Tip Calculator</h3>
-      <label>Bill amount</label><input id="bill" type="number" placeholder="50">
-      <label>Tip percentage</label><input id="tip" type="number" value="10">
-      <label>Number of people</label><input id="people" type="number" value="1">
+      <label for="bill">Bill amount</label>
+      <input id="bill" type="number" min="0" placeholder="50">
+      <label for="tip">Tip percentage</label>
+      <input id="tip" type="number" min="0" value="10">
+      <label for="people">Number of people</label>
+      <input id="people" type="number" min="1" value="1">
       <button onclick="tipCalc()">Calculate</button>
-      <div class="result" id="tipResult"></div>
+      <div class="result" id="tipResult" aria-live="polite"></div>
     </div>
 
+    <!-- 9. QR Code Generator -->
     <div class="card tool" data-category="other">
       <h3>📱 QR Code Generator</h3>
       <input id="qrText" placeholder="Enter text or a website URL">
       <button onclick="makeQR()">Create QR code</button>
-      <div class="result" id="qrResult"></div>
+      <div class="result" id="qrResult" aria-live="polite"></div>
       <p class="small">QR creation uses the external QR Server service. Avoid entering private information.</p>
     </div>
 
+    <!-- 10. Image Compressor -->
     <div class="card tool" data-category="other">
       <h3>🖼️ Image Compressor</h3>
+      <label for="compressFile">Choose an image</label>
       <input id="compressFile" type="file" accept="image/*">
-      <label>Image quality</label><input id="quality" type="range" min=".1" max="1" step=".1" value=".7">
+      <label for="quality">Image quality</label>
+      <input id="quality" type="range" min=".1" max="1" step=".1" value=".7">
       <button onclick="compressImage()">Compress image</button>
-      <div id="compressResult" class="result"></div>
+      <div id="compressResult" class="result" aria-live="polite"></div>
     </div>
 
+    <!-- 11. Image Resizer -->
     <div class="card tool" data-category="other">
       <h3>📐 Image Resizer</h3>
+      <label for="resizeFile">Choose an image</label>
       <input id="resizeFile" type="file" accept="image/*">
-      <input id="resizeWidth" type="number" placeholder="New width in pixels">
-      <input id="resizeHeight" type="number" placeholder="New height in pixels">
+      <label for="resizeWidth">New width in pixels</label>
+      <input id="resizeWidth" type="number" min="1" max="6000" placeholder="Width">
+      <label for="resizeHeight">New height in pixels</label>
+      <input id="resizeHeight" type="number" min="1" max="6000" placeholder="Height">
       <button onclick="resizeImage()">Resize image</button>
-      <div id="resizeResult" class="result"></div>
+      <div id="resizeResult" class="result" aria-live="polite"></div>
     </div>
 
+    <!-- 12. To-do List -->
     <div class="card tool" data-category="productivity">
       <h3>✅ To-do List</h3>
       <input id="todoInput" placeholder="Add a task...">
@@ -197,251 +484,964 @@ hr{border:0;border-top:1px solid var(--border);margin:20px 0}
       <ul id="todoList"></ul>
     </div>
 
+    <!-- 13. Notes -->
     <div class="card tool" data-category="productivity">
       <h3>📒 Notes</h3>
       <textarea id="notes" placeholder="Write your notes here..."></textarea>
       <button onclick="saveNotes()">Save notes</button>
-      <div id="notesStatus" class="result"></div>
+      <div id="notesStatus" class="result" aria-live="polite"></div>
     </div>
 
+    <!-- 14. Live Clock -->
     <div class="card tool" data-category="other">
       <h3>🕒 Live Clock</h3>
-      <div class="result" id="clock" style="font-size:26px;text-align:center"></div>
+      <div class="result" id="clock" style="font-size:26px;text-align:center" aria-live="off"></div>
     </div>
+
   </div>
+
+  <p id="noTools" class="empty-message">No tools found. Try another search.</p>
 </section>
 
+<!-- ACCOUNT -->
 <section id="account" class="page">
-  <h1>Your Account</h1>
+  <h1 class="page-heading">Your Account</h1>
+
   <div class="card">
     <p>Create an account or sign in to SmartTools Hub.</p>
-    <label>Email address</label><input id="authEmail" type="email" placeholder="you@example.com">
-    <label>Password</label><input id="authPassword" type="password" placeholder="At least 6 characters">
+
+    <label for="authEmail">Email address</label>
+    <input id="authEmail" type="email" placeholder="you@example.com" autocomplete="email">
+
+    <label for="authPassword">Password</label>
+    <input id="authPassword" type="password" placeholder="At least 6 characters" autocomplete="current-password">
+
     <button onclick="signUp()">Create account</button>
     <button class="secondary" onclick="signIn()">Sign in</button>
     <button class="secondary" onclick="googleSignIn()">Continue with Google</button>
     <button class="secondary" onclick="signOut()">Sign out</button>
-    <div id="authStatus" class="result"></div>
-    <p class="small">Your account is for signing in. To synchronise notes and tasks across devices, a separate cloud-saving feature must be configured.</p>
+
+    <div id="authStatus" class="result" aria-live="polite"></div>
+
+    <p class="small">
+      Your account provides sign-in services. Notes and tasks are currently saved
+      locally on your device and are not automatically synchronised between devices.
+    </p>
   </div>
 </section>
 
+<!-- ABOUT -->
 <section id="about" class="page">
-  <h1>About SmartTools Hub</h1>
+  <h1 class="page-heading">About SmartTools Hub</h1>
+
   <div class="card">
-    <p>SmartTools Hub is a collection of useful online tools designed to make everyday tasks easier. Use calculators, converters, text tools, image utilities and productivity features in one place.</p>
-    <p>Our goal is to keep useful tools simple, accessible and easy to use.</p>
+    <p>
+      SmartTools Hub is a collection of useful online tools designed to make
+      everyday tasks easier. Use calculators, converters, text tools, image
+      utilities and productivity features in one place.
+    </p>
+    <p>
+      Our goal is to keep useful tools simple, accessible and easy to use.
+    </p>
   </div>
 </section>
 
+<!-- PRIVACY -->
 <section id="privacy" class="page">
-  <h1>Privacy Policy</h1>
+  <h1 class="page-heading">Privacy Policy</h1>
+
   <div class="card">
-    <p><strong>Last updated: 9 November 2026</strong></p>
+    <p><strong>Last updated: 10 November 2026</strong></p>
+
     <h3>Information you provide</h3>
-    <p>If account registration is enabled, Supabase processes your email address and authentication information to provide sign-in services.</p>
+    <p>
+      If account registration is enabled, Supabase processes your email address
+      and authentication information to provide sign-in services.
+    </p>
+
     <h3>Tools and information</h3>
-    <p>Most tools run in your browser. Notes and tasks are saved in your browser's local storage on that device. They are not automatically synchronised to your account.</p>
+    <p>
+      Most tools run in your browser. Notes and tasks are saved in your browser's
+      local storage on that device. They are not automatically synchronised to
+      your account.
+    </p>
+
     <h3>Third-party services</h3>
-    <p>The QR code tool sends the text you enter to QR Server to generate an image. Do not submit confidential information to this tool.</p>
+    <p>
+      The QR code tool sends the text you enter to QR Server to generate an image.
+      Do not submit confidential information to this tool.
+    </p>
+
     <h3>Cookies and storage</h3>
-    <p>This website uses browser storage for local features. Supabase authentication may use browser storage to maintain your sign-in session.</p>
+    <p>
+      This website uses browser storage for local features. Supabase authentication
+      may use browser storage to maintain your sign-in session.
+    </p>
+
     <h3>Your choices</h3>
-    <p>You can clear your browser storage to remove locally saved notes and tasks. You can contact us with privacy questions or requests.</p>
+    <p>
+      You can clear your browser storage to remove locally saved notes and tasks.
+      You can contact us with privacy questions or requests.
+    </p>
+
     <h3>Contact</h3>
-    <p>Email: <a href="mailto:halimafatima0810@gmail.com">halimafatima0810@gmail.com</a></p>
-    <p class="small">Before launching publicly, review this policy and update it to reflect any analytics, advertising, or additional services you add.</p>
+    <p>
+      Email:
+      <a href="mailto:halimafatima0810@gmail.com">halimafatima0810@gmail.com</a>
+    </p>
+
+    <p class="small">
+      Review this policy before launching publicly and update it if you add
+      analytics, advertising, or additional services.
+    </p>
   </div>
 </section>
 
+<!-- CONTACT -->
 <section id="contact" class="page">
-  <h1>Contact Us</h1>
+  <h1 class="page-heading">Contact Us</h1>
+
   <div class="card">
-    <p>Have a question, suggestion or problem? Contact the SmartTools Hub team.</p>
-    <p>Email: <a href="mailto:halimafatima0810@gmail.com">halimafatima0810@gmail.com</a></p>
-    <a class="nav" href="mailto:halimafatima0810@gmail.com?subject=SmartTools%20Hub%20Enquiry">Send us an email</a>
+    <p>
+      Have a question, suggestion or problem? Contact the SmartTools Hub team.
+    </p>
+
+    <p>
+      Email:
+      <a href="mailto:halimafatima0810@gmail.com">halimafatima0810@gmail.com</a>
+    </p>
+
+    <a class="nav-link" href="mailto:halimafatima0810@gmail.com?subject=SmartTools%20Hub%20Enquiry">
+      Send us an email
+    </a>
   </div>
 </section>
+
 </main>
 
 <footer>
   <p>© <span id="year"></span> SmartTools Hub. All rights reserved.</p>
-  <a href="#" onclick="showPage('about');return false">About</a>
-  <a href="#" onclick="showPage('privacy');return false">Privacy Policy</a>
-  <a href="#" onclick="showPage('contact');return false">Contact</a>
+  <a href="#about" onclick="showPage('about');return false">About</a>
+  <a href="#privacy" onclick="showPage('privacy');return false">Privacy Policy</a>
+  <a href="#contact" onclick="showPage('contact');return false">Contact</a>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
 <script>
-// SUPABASE SETUP: replace these two values with your own project details.
+"use strict";
+
+/* ==========================================
+   SUPABASE CONFIGURATION
+   ========================================== */
+
 const SUPABASE_URL = "https://gtehzjmcitbxzrxnatcz.supabase.co";
+
 const SUPABASE_ANON_KEY = "sb_publishable_hMCcIJetUbklqgzpXYTCTQ_8UXoHqlu";
+
 let supabaseClient = null;
 
-if (SUPABASE_URL.startsWith("https://") && !SUPABASE_URL.includes("YOUR_") && !SUPABASE_ANON_KEY.includes("YOUR_")) {
-  supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+try {
+  if (window.supabase && SUPABASE_URL.startsWith("https://")) {
+    supabaseClient = window.supabase.createClient(
+      SUPABASE_URL,
+      SUPABASE_ANON_KEY
+    );
+  }
+} catch (error) {
+  console.error("Supabase setup error:", error);
 }
 
-function showPage(id){
-  document.querySelectorAll("section.page").forEach(p=>p.classList.remove("active"));
-  document.getElementById(id).classList.add("active");
-  window.scrollTo(0,0);
-}
-function filterTools(){
-  const q=document.getElementById("search").value.toLowerCase();
-  document.querySelectorAll(".tool").forEach(t=>{
-    t.style.display=t.innerText.toLowerCase().includes(q)?"block":"none";
+/* ==========================================
+   PAGE NAVIGATION
+   ========================================== */
+
+function showPage(id) {
+  document.querySelectorAll("section.page").forEach(page => {
+    page.classList.remove("active");
   });
+
+  const selected = document.getElementById(id);
+
+  if (selected) {
+    selected.classList.add("active");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
 }
-function filterCategory(cat){
-  document.getElementById("search").value="";
-  document.querySelectorAll(".tool").forEach(t=>{
-    t.style.display=cat==="all"||t.dataset.category===cat?"block":"none";
+
+/* ==========================================
+   TOOL SEARCH AND FILTERING
+   ========================================== */
+
+function filterTools() {
+  const query = document.getElementById("search").value.toLowerCase().trim();
+
+  let visible = 0;
+
+  document.querySelectorAll(".tool").forEach(tool => {
+    const matches = tool.innerText.toLowerCase().includes(query);
+
+    tool.style.display = matches ? "" : "none";
+
+    if (matches) visible++;
   });
+
+  document.getElementById("noTools").style.display =
+    visible === 0 ? "block" : "none";
 }
-function calculate(){
-  const s=document.getElementById("calcInput").value.trim();
-  if(!/^[0-9+\-*/().%\s]+$/.test(s)){document.getElementById("calcResult").textContent="Please enter a valid maths expression.";return;}
-  try{
-    const result=Function('"use strict";return ('+s+')')();
-    document.getElementById("calcResult").textContent=Number.isFinite(result)?result:"Invalid calculation";
-  }catch(e){document.getElementById("calcResult").textContent="Invalid calculation";}
+
+function filterCategory(category) {
+  document.getElementById("search").value = "";
+
+  let visible = 0;
+
+  document.querySelectorAll(".tool").forEach(tool => {
+    const matches =
+      category === "all" || tool.dataset.category === category;
+
+    tool.style.display = matches ? "" : "none";
+
+    if (matches) visible++;
+  });
+
+  document.getElementById("noTools").style.display =
+    visible === 0 ? "block" : "none";
 }
-function percentage(){
-  const p=Number(document.getElementById("pct").value),n=Number(document.getElementById("pctOf").value);
-  document.getElementById("pctResult").textContent=(p*n/100).toLocaleString();
+
+/* ==========================================
+   1. SAFE MATHEMATICAL CALCULATOR
+   ========================================== */
+
+function calculate() {
+  const expression = document.getElementById("calcInput").value.trim();
+  const output = document.getElementById("calcResult");
+
+  if (!expression) {
+    output.textContent = "Please enter a calculation.";
+    return;
+  }
+
+  if (!/^[0-9+\-*/().%\s]+$/.test(expression)) {
+    output.textContent = "Please enter a valid maths expression.";
+    return;
+  }
+
+  try {
+    const tokens = expression.match(/\d*\.?\d+|[()+\-*/%]/g);
+
+    if (!tokens || tokens.join("") !== expression.replace(/\s/g, "")) {
+      throw new Error("Invalid expression");
+    }
+
+    let position = 0;
+
+    function parseExpression() {
+      let value = parseTerm();
+
+      while (position < tokens.length) {
+        const operator = tokens[position];
+
+        if (operator !== "+" && operator !== "-") break;
+
+        position++;
+        const next = parseTerm();
+
+        value = operator === "+" ? value + next : value - next;
+      }
+
+      return value;
+    }
+
+    function parseTerm() {
+      let value = parseFactor();
+
+      while (position < tokens.length) {
+        const operator = tokens[position];
+
+        if (!["*", "/", "%"].includes(operator)) break;
+
+        position++;
+        const next = parseFactor();
+
+        if ((operator === "/" || operator === "%") && next === 0) {
+          throw new Error("Cannot divide by zero");
+        }
+
+        if (operator === "*") value *= next;
+        if (operator === "/") value /= next;
+        if (operator === "%") value %= next;
+      }
+
+      return value;
+    }
+
+    function parseFactor() {
+      const token = tokens[position];
+
+      if (token === "+" || token === "-") {
+        position++;
+        const value = parseFactor();
+        return token === "-" ? -value : value;
+      }
+
+      if (token === "(") {
+        position++;
+        const value = parseExpression();
+
+        if (tokens[position] !== ")") {
+          throw new Error("Missing closing bracket");
+        }
+
+        position++;
+        return value;
+      }
+
+      if (token === undefined || !/^\d*\.?\d+$/.test(token)) {
+        throw new Error("Invalid number");
+      }
+
+      position++;
+      return Number(token);
+    }
+
+    const result = parseExpression();
+
+    if (position !== tokens.length || !Number.isFinite(result)) {
+      throw new Error("Invalid calculation");
+    }
+
+    output.textContent = Number(result.toPrecision(12)).toString();
+
+  } catch (error) {
+    output.textContent = error.message || "Invalid calculation.";
+  }
 }
-function countWords(){
-  const s=document.getElementById("wordText").value;
-  const words=s.trim()?s.trim().split(/\s+/).length:0;
-  document.getElementById("wordResult").textContent=`Words: ${words} | Characters: ${s.length} | Characters without spaces: ${s.replace(/\s/g,"").length}`;
+
+/* ==========================================
+   2. PERCENTAGE CALCULATOR
+   ========================================== */
+
+function percentage() {
+  const p = Number(document.getElementById("pct").value);
+  const n = Number(document.getElementById("pctOf").value);
+
+  if (
+    document.getElementById("pct").value === "" ||
+    document.getElementById("pctOf").value === ""
+  ) {
+    document.getElementById("pctResult").textContent =
+      "Please enter both numbers.";
+    return;
+  }
+
+  document.getElementById("pctResult").textContent =
+    ((p * n) / 100).toLocaleString();
 }
-function makePassword(){
-  const len=Math.max(6,Math.min(64,Number(document.getElementById("passLength").value)||16));
-  const chars="ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz23456789!@#$%&*?";
-  const random=new Uint32Array(len);crypto.getRandomValues(random);
-  document.getElementById("passResult").textContent=Array.from(random,x=>chars[x%chars.length]).join("");
+
+/* ==========================================
+   3. WORD AND CHARACTER COUNTER
+   ========================================== */
+
+function countWords() {
+  const text = document.getElementById("wordText").value;
+
+  const words = text.trim()
+    ? text.trim().split(/\s+/).length
+    : 0;
+
+  document.getElementById("wordResult").textContent =
+    `Words: ${words} | Characters: ${text.length} | Characters without spaces: ${text.replace(/\s/g, "").length}`;
 }
-function copyText(id){
-  const value=document.getElementById(id).innerText;
-  if(value)navigator.clipboard.writeText(value).then(()=>alert("Copied!")).catch(()=>alert("Copy was not available."));
+
+/* ==========================================
+   4. PASSWORD GENERATOR
+   ========================================== */
+
+function makePassword() {
+  const input = Number(document.getElementById("passLength").value);
+  const length = Math.max(6, Math.min(64, input || 16));
+
+  document.getElementById("passLength").value = length;
+
+  const chars =
+    "ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz23456789!@#$%&*?";
+
+  const random = new Uint32Array(length);
+
+  crypto.getRandomValues(random);
+
+  const password = Array.from(random, number => {
+    return chars[number % chars.length];
+  }).join("");
+
+  document.getElementById("passResult").textContent = password;
 }
-const metres={m:1,km:1000,cm:.01,mi:1609.344,ft:.3048,in:.0254};
-function convertLength(){
-  const v=Number(document.getElementById("lengthValue").value);
-  const a=document.getElementById("lengthFrom").value,b=document.getElementById("lengthTo").value;
-  document.getElementById("lengthResult").textContent=Number.isFinite(v)?(v*metres[a]/metres[b]).toLocaleString(undefined,{maximumFractionDigits:6}):"Enter a number.";
+
+/* ==========================================
+   COPY TEXT
+   ========================================== */
+
+async function copyText(id) {
+  const element = document.getElementById(id);
+  const value = element.innerText || element.textContent;
+
+  if (!value.trim()) {
+    alert("There is nothing to copy.");
+    return;
+  }
+
+  try {
+    await navigator.clipboard.writeText(value);
+    alert("Copied successfully!");
+  } catch (error) {
+    alert("Copy was not available. Please copy the text manually.");
+  }
 }
-function convertTemp(){
-  let v=Number(document.getElementById("tempValue").value);
-  const a=document.getElementById("tempFrom").value,b=document.getElementById("tempTo").value;
-  if(a===b){}else if(a==="C")v=v*9/5+32;else v=(v-32)*5/9;
-  document.getElementById("tempResult").textContent=v.toFixed(2)+"°"+b;
+
+/* ==========================================
+   5. LENGTH CONVERTER
+   ========================================== */
+
+const metres = {
+  m: 1,
+  km: 1000,
+  cm: 0.01,
+  mi: 1609.344,
+  ft: 0.3048,
+  in: 0.0254
+};
+
+function convertLength() {
+  const input = document.getElementById("lengthValue").value;
+  const value = Number(input);
+
+  const from = document.getElementById("lengthFrom").value;
+  const to = document.getElementById("lengthTo").value;
+
+  if (input === "" || !Number.isFinite(value)) {
+    document.getElementById("lengthResult").textContent =
+      "Please enter a valid number.";
+    return;
+  }
+
+  const result = value * metres[from] / metres[to];
+
+  document.getElementById("lengthResult").textContent =
+    result.toLocaleString(undefined, { maximumFractionDigits: 6 });
 }
-function changeCase(type){
-  let s=document.getElementById("caseText").value;
-  if(type==="upper")s=s.toUpperCase();
-  if(type==="lower")s=s.toLowerCase();
-  if(type==="title")s=s.toLowerCase().replace(/\b\w/g,c=>c.toUpperCase());
-  document.getElementById("caseResult").textContent=s;
+
+/* ==========================================
+   6. TEMPERATURE CONVERTER
+   ========================================== */
+
+function convertTemp() {
+  const input = document.getElementById("tempValue").value;
+
+  if (input === "") {
+    document.getElementById("tempResult").textContent =
+      "Please enter a temperature.";
+    return;
+  }
+
+  let value = Number(input);
+
+  const from = document.getElementById("tempFrom").value;
+  const to = document.getElementById("tempTo").value;
+
+  if (from !== to) {
+    if (from === "C") {
+      value = value * 9 / 5 + 32;
+    } else {
+      value = (value - 32) * 5 / 9;
+    }
+  }
+
+  document.getElementById("tempResult").textContent =
+    value.toFixed(2) + "°" + to;
 }
-function tipCalc(){
-  const bill=Number(document.getElementById("bill").value),tip=Number(document.getElementById("tip").value),people=Math.max(1,Number(document.getElementById("people").value)||1);
-  const total=bill*(1+tip/100);
-  document.getElementById("tipResult").textContent=`Total: ${total.toFixed(2)} | Each person: ${(total/people).toFixed(2)}`;
+
+/* ==========================================
+   7. TEXT CASE CONVERTER
+   ========================================== */
+
+function changeCase(type) {
+  let text = document.getElementById("caseText").value;
+
+  if (type === "upper") {
+    text = text.toUpperCase();
+  }
+
+  if (type === "lower") {
+    text = text.toLowerCase();
+  }
+
+  if (type === "title") {
+    text = text.toLowerCase().replace(/\b\w/g, char => char.toUpperCase());
+  }
+
+  document.getElementById("caseResult").textContent = text;
 }
-function makeQR(){
-  const value=document.getElementById("qrText").value.trim();
-  if(!value)return;
-  const img=document.createElement("img");
-  img.alt="Generated QR code";img.width=200;img.height=200;
-  img.src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data="+encodeURIComponent(value);
-  const area=document.getElementById("qrResult");area.replaceChildren(img);
+
+/* ==========================================
+   8. TIP CALCULATOR
+   ========================================== */
+
+function tipCalc() {
+  const billInput = document.getElementById("bill").value;
+  const tipInput = document.getElementById("tip").value;
+  const peopleInput = document.getElementById("people").value;
+
+  if (billInput === "" || tipInput === "") {
+    document.getElementById("tipResult").textContent =
+      "Please enter the bill and tip percentage.";
+    return;
+  }
+
+  const bill = Number(billInput);
+  const tip = Number(tipInput);
+  const people = Number(peopleInput);
+
+  if (bill < 0 || tip < 0 || people < 1 ||
+      !Number.isFinite(bill) ||
+      !Number.isFinite(tip) ||
+      !Number.isFinite(people)) {
+    document.getElementById("tipResult").textContent =
+      "Please enter valid positive numbers.";
+    return;
+  }
+
+  const total = bill * (1 + tip / 100);
+
+  document.getElementById("tipResult").textContent =
+    `Tip: ${(bill * tip / 100).toFixed(2)} | Total: ${total.toFixed(2)} | Each person: ${(total / people).toFixed(2)}`;
 }
-function loadImage(file,callback){
-  if(!file||!file.type.startsWith("image/")){alert("Please choose an image.");return;}
-  const url=URL.createObjectURL(file),img=new Image();
-  img.onload=()=>callback(img,url);img.onerror=()=>{URL.revokeObjectURL(url);alert("Could not load image.");};
-  img.src=url;
+
+/* ==========================================
+   9. QR CODE GENERATOR
+   ========================================== */
+
+function makeQR() {
+  const value = document.getElementById("qrText").value.trim();
+  const area = document.getElementById("qrResult");
+
+  if (!value) {
+    area.textContent = "Please enter some text or a URL.";
+    return;
+  }
+
+  const img = document.createElement("img");
+
+  img.alt = "Generated QR code";
+  img.width = 200;
+  img.height = 200;
+  img.loading = "lazy";
+
+  img.src =
+    "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=" +
+    encodeURIComponent(value);
+
+  area.replaceChildren(img);
 }
-function compressImage(){
-  const file=document.getElementById("compressFile").files[0];
-  loadImage(file,(img,url)=>{
-    const c=document.createElement("canvas");c.width=img.width;c.height=img.height;
-    c.getContext("2d").drawImage(img,0,0);
-    c.toBlob(blob=>{
+
+/* ==========================================
+   IMAGE LOADING HELPER
+   ========================================== */
+
+function loadImage(file, callback) {
+  if (!file || !file.type.startsWith("image/")) {
+    alert("Please choose an image.");
+    return;
+  }
+
+  const url = URL.createObjectURL(file);
+  const img = new Image();
+
+  img.onload = () => callback(img, url);
+
+  img.onerror = () => {
+    URL.revokeObjectURL(url);
+    alert("Could not load image.");
+  };
+
+  img.src = url;
+}
+
+/* ==========================================
+   10. IMAGE COMPRESSOR
+   ========================================== */
+
+function compressImage() {
+  const file = document.getElementById("compressFile").files[0];
+  const quality = Number(document.getElementById("quality").value);
+
+  loadImage(file, (img, url) => {
+    const canvas = document.createElement("canvas");
+
+    canvas.width = img.width;
+    canvas.height = img.height;
+
+    const context = canvas.getContext("2d");
+    context.drawImage(img, 0, 0);
+
+    canvas.toBlob(blob => {
       URL.revokeObjectURL(url);
-      if(!blob)return;
-      const link=document.createElement("a");link.href=URL.createObjectURL(blob);link.download="compressed-image.jpg";link.textContent="Download compressed image";
-      const area=document.getElementById("compressResult");area.replaceChildren(link);
-      const info=document.createElement("p");info.textContent=`Original: ${(file.size/1024).toFixed(1)} KB | Compressed: ${(blob.size/1024).toFixed(1)} KB`;area.append(info);
-    },"image/jpeg",Number(document.getElementById("quality").value));
-  });
-}
-function resizeImage(){
-  const file=document.getElementById("resizeFile").files[0];
-  const w=Number(document.getElementById("resizeWidth").value),h=Number(document.getElementById("resizeHeight").value);
-  if(!w||!h||w<1||h<1||w>6000||h>6000){alert("Enter a width and height between 1 and 6000.");return;}
-  loadImage(file,(img,url)=>{
-    const c=document.createElement("canvas");c.width=w;c.height=h;
-    c.getContext("2d").drawImage(img,0,0,w,h);URL.revokeObjectURL(url);
-    c.toBlob(blob=>{
-      if(!blob)return;
-      const link=document.createElement("a");link.href=URL.createObjectURL(blob);link.download="resized-image.png";link.textContent="Download resized image";
-      document.getElementById("resizeResult").replaceChildren(link);
-    },"image/png");
-  });
-}
-let todos=JSON.parse(localStorage.getItem("sth_todos")||"[]");
-function renderTodos(){
-  const ul=document.getElementById("todoList");ul.replaceChildren();
-  todos.forEach((t,i)=>{
-    const li=document.createElement("li");
-    const label=document.createElement("span");label.textContent=t;
-    const del=document.createElement("button");del.textContent="Remove";del.className="secondary";del.onclick=()=>{todos.splice(i,1);saveTodos();};
-    li.append(label," ",del);ul.append(li);
-  });
-}
-function addTodo(){
-  const el=document.getElementById("todoInput"),v=el.value.trim();if(!v)return;
-  todos.push(v);el.value="";saveTodos();
-}
-function saveTodos(){localStorage.setItem("sth_todos",JSON.stringify(todos));renderTodos();}
-function saveNotes(){
-  localStorage.setItem("sth_notes",document.getElementById("notes").value);
-  document.getElementById("notesStatus").textContent="Notes saved on this device.";
-}
-document.getElementById("notes").value=localStorage.getItem("sth_notes")||"";
-function tickClock(){document.getElementById("clock").textContent=new Date().toLocaleTimeString();}
-setInterval(tickClock,1000);tickClock();renderTodos();
-document.getElementById("year").textContent=new Date().getFullYear();
 
-async function signUp(){
-  if(!supabaseClient){authMessage("Add your Supabase URL and key in the code first.");return;}
-  const email=document.getElementById("authEmail").value,password=document.getElementById("authPassword").value;
-  const {error}=await supabaseClient.auth.signUp({email,password});
-  authMessage(error?error.message:"Account request sent. Check your email if confirmation is enabled.");
+      if (!blob) {
+        alert("Image compression failed.");
+        return;
+      }
+
+      const downloadUrl = URL.createObjectURL(blob);
+
+      const link = document.createElement("a");
+      link.href = downloadUrl;
+      link.download = "compressed-image.jpg";
+      link.textContent = "Download compressed image";
+
+      const area = document.getElementById("compressResult");
+      area.replaceChildren(link);
+
+      const info = document.createElement("p");
+
+      info.textContent =
+        `Original: ${(file.size / 1024).toFixed(1)} KB | Compressed: ${(blob.size / 1024).toFixed(1)} KB`;
+
+      area.append(info);
+
+    }, "image/jpeg", quality);
+  });
 }
-async function signIn(){
-  if(!supabaseClient){authMessage("Add your Supabase URL and key in the code first.");return;}
-  const email=document.getElementById("authEmail").value,password=document.getElementById("authPassword").value;
-  const {error}=await supabaseClient.auth.signInWithPassword({email,password});
-  authMessage(error?error.message:"You are signed in!");
+
+/* ==========================================
+   11. IMAGE RESIZER
+   ========================================== */
+
+function resizeImage() {
+  const file = document.getElementById("resizeFile").files[0];
+
+  const width = Number(document.getElementById("resizeWidth").value);
+  const height = Number(document.getElementById("resizeHeight").value);
+
+  if (
+    !Number.isInteger(width) ||
+    !Number.isInteger(height) ||
+    width < 1 || height < 1 ||
+    width > 6000 || height > 6000
+  ) {
+    alert("Enter a width and height between 1 and 6000.");
+    return;
+  }
+
+  loadImage(file, (img, url) => {
+    const canvas = document.createElement("canvas");
+
+    canvas.width = width;
+    canvas.height = height;
+
+    canvas.getContext("2d").drawImage(img, 0, 0, width, height);
+
+    URL.revokeObjectURL(url);
+
+    canvas.toBlob(blob => {
+      if (!blob) {
+        alert("Image resizing failed.");
+        return;
+      }
+
+      const downloadUrl = URL.createObjectURL(blob);
+
+      const link = document.createElement("a");
+      link.href = downloadUrl;
+      link.download = "resized-image.png";
+      link.textContent = "Download resized image";
+
+      document.getElementById("resizeResult").replaceChildren(link);
+
+    }, "image/png");
+  });
 }
-async function googleSignIn(){
-  if(!supabaseClient){authMessage("Add your Supabase URL and key in the code first.");return;}
-  const {error}=await supabaseClient.auth.signInWithOAuth({provider:"google",options:{redirectTo:location.origin+location.pathname}});
-  if(error)authMessage(error.message);
+
+/* ==========================================
+   12. TO-DO LIST
+   ========================================== */
+
+let todos = [];
+
+try {
+  todos = JSON.parse(localStorage.getItem("sth_todos") || "[]");
+
+  if (!Array.isArray(todos)) {
+    todos = [];
+  }
+} catch (error) {
+  todos = [];
 }
-async function signOut(){
-  if(!supabaseClient){authMessage("Supabase is not configured yet.");return;}
-  const {error}=await supabaseClient.auth.signOut();
-  authMessage(error?error.message:"You have signed out.");
+
+function renderTodos() {
+  const list = document.getElementById("todoList");
+
+  list.replaceChildren();
+
+  todos.forEach((task, index) => {
+    const li = document.createElement("li");
+
+    const label = document.createElement("span");
+    label.textContent = task;
+
+    const remove = document.createElement("button");
+    remove.textContent = "Remove";
+    remove.className = "secondary";
+
+    remove.onclick = () => {
+      todos.splice(index, 1);
+      saveTodos();
+    };
+
+    li.append(label, " ", remove);
+    list.append(li);
+  });
 }
-function authMessage(message){document.getElementById("authStatus").textContent=message;}
-if("serviceWorker" in navigator && location.protocol.startsWith("http")){
-  window.addEventListener("load",()=>navigator.serviceWorker.register("./sw.js").catch(console.error));
+
+function addTodo() {
+  const input = document.getElementById("todoInput");
+  const value = input.value.trim();
+
+  if (!value) return;
+
+  todos.push(value);
+
+  input.value = "";
+
+  saveTodos();
 }
+
+function saveTodos() {
+  try {
+    localStorage.setItem("sth_todos", JSON.stringify(todos));
+    renderTodos();
+  } catch (error) {
+    alert("Could not save tasks in this browser.");
+  }
+}
+
+/* ==========================================
+   13. NOTES
+   ========================================== */
+
+const notesInput = document.getElementById("notes");
+
+try {
+  notesInput.value = localStorage.getItem("sth_notes") || "";
+} catch (error) {
+  notesInput.value = "";
+}
+
+function saveNotes() {
+  try {
+    localStorage.setItem("sth_notes", notesInput.value);
+
+    document.getElementById("notesStatus").textContent =
+      "Notes saved on this device.";
+  } catch (error) {
+    document.getElementById("notesStatus").textContent =
+      "Could not save notes in this browser.";
+  }
+}
+
+/* ==========================================
+   14. LIVE CLOCK
+   ========================================== */
+
+function tickClock() {
+  document.getElementById("clock").textContent =
+    new Date().toLocaleTimeString();
+}
+
+tickClock();
+setInterval(tickClock, 1000);
+
+/* ==========================================
+   FOOTER YEAR AND INITIAL DISPLAY
+   ========================================== */
+
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+
+renderTodos();
+
+/* ==========================================
+   ACCOUNT AND SUPABASE AUTHENTICATION
+   ========================================== */
+
+function authMessage(message, isError = false) {
+  const status = document.getElementById("authStatus");
+
+  status.textContent = message;
+
+  status.className = isError
+    ? "result status-error"
+    : "result status-success";
+}
+
+function validAuthDetails() {
+  const email = document.getElementById("authEmail").value.trim();
+  const password = document.getElementById("authPassword").value;
+
+  if (!email || !email.includes("@")) {
+    authMessage("Please enter a valid email address.", true);
+    return false;
+  }
+
+  if (!password || password.length < 6) {
+    authMessage("Your password must be at least 6 characters.", true);
+    return false;
+  }
+
+  return true;
+}
+
+async function signUp() {
+  if (!supabaseClient) {
+    authMessage("Supabase could not be connected. Please check your configuration.", true);
+    return;
+  }
+
+  if (!validAuthDetails()) return;
+
+  const email = document.getElementById("authEmail").value.trim();
+  const password = document.getElementById("authPassword").value;
+
+  authMessage("Creating your account...");
+
+  try {
+    const { error } = await supabaseClient.auth.signUp({
+      email,
+      password
+    });
+
+    if (error) throw error;
+
+    authMessage("Account request sent! Check your email if email confirmation is enabled.");
+
+  } catch (error) {
+    authMessage(error.message || "Could not create your account.", true);
+  }
+}
+
+async function signIn() {
+  if (!supabaseClient) {
+    authMessage("Supabase could not be connected. Please check your configuration.", true);
+    return;
+  }
+
+  if (!validAuthDetails()) return;
+
+  const email = document.getElementById("authEmail").value.trim();
+  const password = document.getElementById("authPassword").value;
+
+  authMessage("Signing in...");
+
+  try {
+    const { error } = await supabaseClient.auth.signInWithPassword({
+      email,
+      password
+    });
+
+    if (error) throw error;
+
+    authMessage("You are signed in successfully!");
+
+  } catch (error) {
+    authMessage(error.message || "Sign-in failed.", true);
+  }
+}
+
+async function googleSignIn() {
+  if (!supabaseClient) {
+    authMessage("Supabase could not be connected. Please check your configuration.", true);
+    return;
+  }
+
+  authMessage("Connecting to Google...");
+
+  try {
+    const { error } = await supabaseClient.auth.signInWithOAuth({
+      provider: "google",
+      options: {
+        redirectTo: "https://hd2bg.github.io/smarttools-hub/"
+      }
+    });
+
+    if (error) throw error;
+
+  } catch (error) {
+    authMessage(error.message || "Google sign-in failed.", true);
+  }
+}
+
+async function signOut() {
+  if (!supabaseClient) {
+    authMessage("Supabase is not connected.", true);
+    return;
+  }
+
+  try {
+    const { error } = await supabaseClient.auth.signOut();
+
+    if (error) throw error;
+
+    authMessage("You have signed out successfully.");
+
+  } catch (error) {
+    authMessage(error.message || "Sign-out failed.", true);
+  }
+}
+
+/* Show the current signed-in user when the page loads. */
+
+async function checkAuthSession() {
+  if (!supabaseClient) return;
+
+  try {
+    const { data, error } = await supabaseClient.auth.getSession();
+
+    if (error) throw error;
+
+    if (data.session) {
+      authMessage("Signed in as " + data.session.user.email);
+    }
+
+    supabaseClient.auth.onAuthStateChange((event, session) => {
+      if (event === "SIGNED_IN" && session) {
+        authMessage("Signed in as " + session.user.email);
+      }
+
+      if (event === "SIGNED_OUT") {
+        authMessage("You are signed out.");
+      }
+    });
+
+  } catch (error) {
+    console.error("Could not check account session:", error);
+  }
+}
+
+checkAuthSession();
+
+/* ==========================================
+   PROGRESSIVE WEB APP SERVICE WORKER
+   ========================================== */
+
+if ("serviceWorker" in navigator && location.protocol === "https:") {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./sw.js")
+      .catch(error => {
+        console.error("Service worker registration failed:", error);
+      });
+  });
+}
+
 </script>
+
 </body>
 </html>
